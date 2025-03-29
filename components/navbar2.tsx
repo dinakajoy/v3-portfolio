@@ -1,5 +1,4 @@
 "use client";
-import { ModeToggle } from "@/components/theme-toggle";
 import { HexagonIcon } from "lucide-react";
 import Link from "next/link";
 import Anchor from "./anchor";

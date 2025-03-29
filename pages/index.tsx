@@ -1,13 +1,8 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import {
-  FaBlog,
-  FaBlogger,
-  FaBloggerB,
   FaChalkboard,
   FaDirections,
-  FaGithub,
   FaMicroblog,
   FaUserNinja,
 } from "react-icons/fa";
