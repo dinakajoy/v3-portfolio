@@ -37,7 +37,7 @@ export default function BlogPage() {
 
   return (
     <Layout>
-      <div className="text-gray-700 dark:text-white py-6 flex flex-col items-center">
+      <div className="text-gray-700 dark:text-white p-6 flex flex-col items-center">
         <motion.h1
           className="text-4xl font-bold mb-6"
           initial={{ opacity: 0, y: -20 }}

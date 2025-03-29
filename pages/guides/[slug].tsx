@@ -1,91 +1,110 @@
-import { useEffect, useState } from "react";
-import { GetStaticProps, GetStaticPaths, GetStaticPropsContext } from "next";
-// import { useRouter } from "next/router";
-// import Link from "next/link";
-import { GuideProps, Heading } from "@/intefaces";
-import { motion } from "framer-motion";
-import Markdown from "react-markdown";
-import { getGuide, getAllGuides } from "@/utils/contentLoader";
+import { GetStaticPaths, GetStaticProps } from "next";
+import React, { useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
+import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import { GuideProps } from "@/intefaces";
+import Link from "next/link";
+import { getAllGuides, getGuide } from "@/utils/contentLoader";
+import Layout from "@/components/layout";
 
-export default function GuidePage({ metadata, content }: GuideProps) {
-  const [headings, setHeadings] = useState<Heading[]>([]);
+interface GuidePageProps {
+  guide: GuideProps;
+}
+
+export default function GuidePage({ guide }: GuidePageProps) {
+  const [activeId, setActiveId] = useState<string | null>(null);
 
   useEffect(() => {
-    const headingElements: NodeListOf<HTMLHeadingElement> =
-      document.querySelectorAll("h2, h3");
+    const handleScroll = () => {
+      const headings = document.querySelectorAll("h2, h3");
+      let current = null;
+      headings.forEach((heading) => {
+        const rect = heading.getBoundingClientRect();
+        if (rect.top >= 0 && rect.top <= 200) {
+          current = heading.id;
+        }
+      });
+      setActiveId(current);
+    };
 
-    const extractedHeadings: Heading[] = Array.from(headingElements).map(
-      (h: HTMLHeadingElement) => ({
-        id: h.id,
-        text: h.innerText,
-        level: h.tagName.toLowerCase(), // Optional: Normalize to lowercase
-      })
-    );
-
-    setHeadings(extractedHeadings);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <div className="flex max-w-6xl mx-auto">
-      {/* Main Guide Content */}
-      <motion.div
-        className="w-3/4 p-6"
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <h1 className="text-4xl font-bold mb-4">{metadata.title}</h1>
-        <p className="text-gray-400 mb-6">{metadata.description}</p>
-        <Markdown>{content}</Markdown>
-        {/* <Markdown className="prose prose-invert">{content}</Markdown> */}
-      </motion.div>
+    <Layout>
+      <div className="flex max-w-5xl mx-auto mt-10 space-x-8">
+        {/* Main Content */}
+        <div className="w-3/4">
+          <h1 className="text-3xl font-bold mb-6">{guide.metadata.title}</h1>
+          {/* <ReactMarkdown
+            rehypePlugins={[rehypeSlug, rehypeAutolinkHeadings]}
+            components={{
+              h2: ({ node, ...props }) => (
+                <h2 className="text-xl font-bold mt-6" {...props} />
+              ),
+              h3: ({ node, ...props }) => (
+                <h3 className="text-lg font-semibold mt-4" {...props} />
+              ),
+              p: ({ node, ...props }) => (
+                <p className="mt-2 text-gray-500 dark:text-gray-400" {...props} />
+              ),
+              li: ({ node, ...props }) => (
+                <li className="mt-2 text-gray-500 dark:text-gray-400" {...props} />
+              ),
+            }}
+          >
+            {guide.content}
+          </ReactMarkdown> */}
+          <div className="prose dark:prose-invert">
+            <ReactMarkdown rehypePlugins={[rehypeSlug, rehypeAutolinkHeadings]}>
+              {guide.content}
+            </ReactMarkdown>
+          </div>
+        </div>
 
-      {/* Right Navigation (Table of Contents) */}
-      <aside className="w-1/4 sticky top-20 p-4 bg-gray-800 rounded-lg h-screen overflow-auto">
-        <h2 className="text-lg font-semibold mb-3">On This Page</h2>
-        <ul>
-          {headings.map((heading) => (
-            <li key={heading.id} className="mb-2">
-              <a
-                href={`#${heading.id}`}
-                className="text-gray-300 hover:text-white"
-              >
-                {heading.text}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </aside>
-    </div>
+        {/* Table of Contents */}
+        <aside className="w-1/4 border-l pl-4">
+          <h2 className="text-lg font-semibold">On this page</h2>
+          <ul className="mt-2 space-y-2 text-sm">
+            {guide.content.match(/(##|###) (.+)/g)?.map((heading, index) => {
+              const text = heading.replace(/(##|###) /, "");
+              const id = text.toLowerCase().replace(/\s+/g, "-");
+              return (
+                <li key={index}>
+                  <Link
+                    href={`#${id}`}
+                    className={`block ${
+                      activeId === id
+                        ? "text-blue-600 font-bold hover:text-blue-600"
+                        : "text-gray-500 dark:text-gray-400 dark:hover:text-blue-600"
+                    }`}
+                  >
+                    {text}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </aside>
+      </div>
+    </Layout>
   );
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
+// Get all guide slugs for static paths
+export const getStaticPaths: GetStaticPaths = () => {
   const guides = getAllGuides();
-  const paths = guides.map((guide) => ({ params: { slug: guide.slug } }));
-  return { paths, fallback: false };
+  return {
+    paths: guides.map((guide) => ({ params: { slug: guide.slug } })),
+    fallback: false,
+  };
 };
 
-export const getStaticProps: GetStaticProps<
-  GuideProps,
-  { slug: string }
-> = async (context: GetStaticPropsContext<{ slug: string }>) => {
-  const { params } = context;
-
-  if (!params?.slug) {
-    return { notFound: true } as const;
-  }
-
-  const guide = getGuide(params.slug);
-
-  if (!guide) {
-    return { notFound: true } as const;
-  }
-
-  return {
-    props: {
-      metadata: guide.metadata,
-      content: guide.content,
-    },
-  };
+// Fetch guide content at build time
+export const getStaticProps: GetStaticProps = ({ params }) => {
+  if (!params?.slug) return { notFound: true };
+  const guide = getGuide(params.slug as string);
+  return { props: { guide } };
 };

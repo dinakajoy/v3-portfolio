@@ -22,7 +22,28 @@ export default function ProjectsPage() {
           and tech stacks.
         </p>
 
-        <div className="w-full max-w-6xl flex gap-6">
+        <div className="text-white my-12 flex space-x-4">
+          <Link
+            href="/"
+            className="px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg text-lg font-semibold"
+          >
+            Home
+          </Link>
+          <Link
+            href="/profile"
+            className="px-4 py-2 bg-green-600 hover:bg-green-500 rounded-lg text-lg font-semibold"
+          >
+            Profile
+          </Link>
+          <Link
+            href="/profile/talks"
+            className="px-4 py-2 bg-purple-600 hover:bg-purple-500 rounded-lg text-lg font-semibold"
+          >
+            Talks
+          </Link>
+        </div>
+
+        <div className="flex gap-6">
           {/* Project List */}
           <div className="w-1/3 bg-white dark:bg-gray-800 p-4 rounded-lg overflow-y-auto">
             <h2 className="text-xl font-semibold mb-3">Project List</h2>
@@ -85,27 +106,6 @@ export default function ProjectsPage() {
               View Project
             </a>
           </div>
-        </div>
-
-        <div className="mt-16 flex space-x-4">
-          <Link
-            href="/"
-            className="px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg text-lg font-semibold"
-          >
-            Home
-          </Link>
-          <Link
-            href="/profile"
-            className="px-4 py-2 bg-green-600 hover:bg-green-500 rounded-lg text-lg font-semibold"
-          >
-            Profile
-          </Link>
-          <Link
-            href="/profile/talks"
-            className="px-4 py-2 bg-purple-600 hover:bg-purple-500 rounded-lg text-lg font-semibold"
-          >
-            Talks
-          </Link>
         </div>
       </div>
     </Layout>

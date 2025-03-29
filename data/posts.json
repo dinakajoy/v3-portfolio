@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "Web Development Roadmap - Beginner to Intermediate",
+    "readTime": "~3mins",
+    "tags": ["webdev", "codeNewBie", "productivity"],
+    "LiveLink": "https://dev.to/dev-odinakajoy/web-development-roadmap-beginner-to-intermediate-1k6b",
+    "date": "2025-02-01"
+  },
+  {
+    "id": 2,
+    "title": "Git and Its Workflows: A Beginner’s Guide to Version Control Success",
+    "readTime": "~5mins",
+    "tags": ["git", "beginners", "productivity"],
+    "LiveLink": "https://dev.to/dev-odinakajoy/git-and-its-workflows-a-beginners-guide-to-version-control-success-49n6",
+    "date": "2025-02-01"
+  },
+  {
+    "id": 3,
+    "title": "Clean Up Your Git History: How to Squash Commits Before Pushing to Production",
+    "readTime": "~3mins",
+    "tags": ["git", "beginners"],
+    "LiveLink": "https://dev.to/dev-odinakajoy/clean-up-your-git-history-how-to-squash-commits-before-pushing-to-production-15a",
+    "date": "2025-02-01"
+  },
+  {
+    "id": 4,
+    "title": "Inside the Engine: How JavaScript Really Works",
+    "readTime": "~3mins",
+    "tags": ["webdev", "javascript", "knowyourtools"],
+    "LiveLink": "https://dev.to/dev-odinakajoy/inside-the-engine-how-javascript-really-works-2006",
+    "date": "2025-02-10"
+  },
+  {
+    "id": 5,
+    "title": "Session vs Token-Based Authentication: Which One Should You Choose?",
+    "readTime": "~4mins",
+    "tags": ["authentication", "programming", "discuss", "learning"],
+    "LiveLink": "https://dev.to/dev-odinakajoy/session-vs-token-based-authentication-which-one-should-you-choose-hcj",
+    "date": "2025-02-10"
+  },
+  {
+    "id": 6,
+    "title": "Mastering Programming: The Essential Guide to Coding, Problem-Solving, and Writing Clean Code",
+    "readTime": "~3mins",
+    "tags": ["webdev", "programming", "learning"],
+    "LiveLink": "https://dev.to/dev-odinakajoy/mastering-programming-the-essential-guide-to-coding-problem-solving-and-writing-clean-code-5bk7",
+    "date": "2025-02-15"
+  },
+  {
+    "id": 7,
+    "title": "Microservices vs Monolithic vs Modular Architecture: Choosing the Right Approach",
+    "readTime": "~3mins",
+    "tags": ["webdev", "architecture", "learning"],
+    "LiveLink": "https://dev.to/dev-odinakajoy/microservices-vs-monolithic-vs-modular-architecture-choosing-the-right-approach-1jn7",
+    "date": "2025-02-24"
+  }
+]

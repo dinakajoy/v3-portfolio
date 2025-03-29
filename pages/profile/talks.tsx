@@ -20,49 +20,7 @@ export default function TalksPage() {
           Recordings, slides, and keynotes from past presentations.
         </p>
 
-        <div className="w-full max-w-4xl space-y-6">
-          {talks.map((talk, index) => (
-            <div
-              key={index}
-              className="bg-white dark:bg-gray-800 p-6 rounded-lg"
-            >
-              <h2 className="text-2xl font-bold mb-1">{talk.title}</h2>
-              <p className="text-gray-400 text-sm">
-                {talk.event} - {talk.date}
-              </p>
-              <p className="text-gray-500 dark:text-gray-300 mt-2">
-                {talk.description}
-              </p>
-              <div className="flex gap-4 mt-4">
-                <a
-                  href={talk.slides}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Slides
-                </a>
-                <a
-                  href={talk.recording}
-                  className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Recording
-                </a>
-                <a
-                  href={talk.keynote}
-                  className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Keynote
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="mt-16 flex space-x-4">
+        <div className="text-white my-12 flex space-x-4">
           <Link
             href="/"
             className="px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg text-lg font-semibold"
@@ -81,6 +39,49 @@ export default function TalksPage() {
           >
             Projects
           </Link>
+        </div>
+
+        <div className="w-full space-y-6">
+          {talks.map((talk, index) => (
+            <div
+              key={index}
+              className="bg-white dark:bg-gray-800 p-6 rounded-lg"
+            >
+              <h2 className="text-2xl font-bold mb-1">{talk.title}</h2>
+              <p className="text-gray-400 text-sm">
+                {talk.event} - {talk.date}
+              </p>
+              <p className="text-gray-500 dark:text-gray-300 mt-2">
+                {talk.description}
+              </p>
+              <div className="flex gap-4 mt-4">
+                <a
+                  href={talk.slides}
+                  className="underline hover:underline-offset-4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Slides
+                </a>
+                <a
+                  href={talk.recording}
+                  className="underline hover:underline-offset-4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Recording
+                </a>
+                <a
+                  href={talk.keynote}
+                  className="underline hover:underline-offset-4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Keynote
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </Layout>

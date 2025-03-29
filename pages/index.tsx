@@ -1,9 +1,20 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import {
+  FaBlog,
+  FaBlogger,
+  FaBloggerB,
+  FaChalkboard,
+  FaDirections,
+  FaGithub,
+  FaMicroblog,
+  FaUserNinja,
+} from "react-icons/fa";
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center text-gray-700 dark:text-white p-6">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 text-gray-700 dark:bg-gray-900 dark:text-slate-50">
       <motion.h1
         className="text-5xl font-bold text-center mb-4 text-gray-700 dark:text-gray-200"
         initial={{ opacity: 0, y: -20 }}
@@ -22,33 +33,37 @@ export default function LandingPage() {
       </motion.p>
 
       <motion.div
-        className="flex space-x-4"
+        className="flex space-x-4 row-start-3 gap-6 flex-wrap items-center justify-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
       >
         <Link
           href="/profile"
-          className="px-6 py-3 bg-blue-600 hover:bg-blue-500 rounded-lg text-lg font-semibold"
+          className="flex items-center gap-2 px-4 py-2 rounded-lg text-xl transition text-gray-800 bg-gray-200 hover:bg-gray-300 dark:text-gray-700 dark:bg-gray-200 dark:hover:bg-gray-300"
         >
+          <FaUserNinja />
           Profile
         </Link>
         <Link
           href="/blog"
-          className="px-6 py-3 bg-green-600 hover:bg-green-500 rounded-lg text-lg font-semibold"
+          className="flex items-center gap-2 px-4 py-2 rounded-lg text-xl transition text-gray-800 bg-gray-200 hover:bg-gray-300 dark:text-gray-700 dark:bg-gray-200 dark:hover:bg-gray-300"
         >
+          <FaMicroblog />
           Blog
         </Link>
         <Link
           href="/guides"
-          className="px-6 py-3 bg-purple-600 hover:bg-purple-500 rounded-lg text-lg font-semibold"
+          className="flex items-center gap-2 px-4 py-2 rounded-lg text-xl transition text-gray-800 bg-gray-200 hover:bg-gray-300 dark:text-gray-700 dark:bg-gray-200 dark:hover:bg-gray-300"
         >
+          <FaDirections />
           Guides
         </Link>
         <Link
-          href="/tech-tomes"
-          className="px-6 py-3 bg-red-600 hover:bg-red-500 rounded-lg text-lg font-semibold"
+          href="/techtomes"
+          className="flex items-center gap-2 px-4 py-2 rounded-lg text-xl transition text-gray-800 bg-gray-200 hover:bg-gray-300 dark:text-gray-700 dark:bg-gray-200 dark:hover:bg-gray-300"
         >
+          <FaChalkboard />
           Tech Tomes
         </Link>
       </motion.div>

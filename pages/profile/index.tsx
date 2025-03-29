@@ -27,7 +27,28 @@ export default function ProfilePage() {
           Express.js, AI-powered systems, and system design.
         </motion.p>
 
-        <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="text-white my-12 flex space-x-4">
+          <Link
+            href="/"
+            className="px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg text-lg font-semibold"
+          >
+            Home
+          </Link>
+          <Link
+            href="/profile/projects"
+            className="px-4 py-2 bg-green-600 hover:bg-green-500 rounded-lg text-lg font-semibold"
+          >
+            Projects
+          </Link>
+          <Link
+            href="/profile/talks"
+            className="px-4 py-2 bg-purple-600 hover:bg-purple-500 rounded-lg text-lg font-semibold"
+          >
+            Talks
+          </Link>
+        </div>
+
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
           <motion.div
             className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 p-8 rounded-lg"
             initial={{ opacity: 0, x: -20 }}
@@ -53,7 +74,7 @@ export default function ProfilePage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.7 }}
           >
-            <h2 className="text-xl font-semibold mb-4">Work History</h2>
+            <h2 className="text-xl font-semibold mb-2">Work History</h2>
             <ul className="list-disc list-inside text-gray-600 dark:text-gray-400">
               <li>Senior Web Developer – AcceleratorApp (2022 - 2024)</li>
               <li>Software Developer – Tarides (2022)</li>
@@ -64,17 +85,17 @@ export default function ProfilePage() {
           </motion.div>
         </div>
 
-        <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
           <motion.div
-            className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 p-8 rounded-lg"
+            className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 p-8 rounded-lgg"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9 }}
           >
-            <h2 className="text-xl font-semibold mb-4">
+            <h2 className="text-xl font-semibold mb-2">
               Open Source Contributions
             </h2>
-            <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 pl-5 space-y-2">
+            <ul className="list-disc list-inside text-gray-600 dark:text-gray-400">
               <li>Contributor & Mentor – Outreachy (2022, 2024)</li>
               <li>GraphQL API Development – OCaml (opam packages)</li>
               <li>Irmin in the browser – OCaml</li>
@@ -94,7 +115,7 @@ export default function ProfilePage() {
             <p className="text-gray-600 dark:text-gray-400">
               Spoken at various events on Web Development & AI.
             </p>
-            <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 pl-5 space-y-2">
+            <ul className="list-disc list-inside text-gray-600 dark:text-gray-400">
               <li>Advancing Your Business & Career Using ICT (2022)</li>
               <li>
                 Boosting Your Business Using Social Media & ICT In Nigeria(2022)
@@ -108,27 +129,6 @@ export default function ProfilePage() {
               View my talks
             </Link>
           </motion.div>
-        </div>
-
-        <div className="text-white mt-16 flex space-x-4">
-          <Link
-            href="/"
-            className="px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg text-lg font-semibold"
-          >
-            Home
-          </Link>
-          <Link
-            href="/profile/projects"
-            className="px-4 py-2 bg-green-600 hover:bg-green-500 rounded-lg text-lg font-semibold"
-          >
-            Projects
-          </Link>
-          <Link
-            href="/profile/talks"
-            className="px-4 py-2 bg-purple-600 hover:bg-purple-500 rounded-lg text-lg font-semibold"
-          >
-            Talks
-          </Link>
         </div>
       </div>
     </Layout>

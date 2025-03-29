@@ -117,7 +117,7 @@ pre {
   overflow-x: auto;
 }
 
-pre>code {
+pre > code {
   display: grid;
   max-width: inherit !important;
   padding: 14px 0 !important;
@@ -156,6 +156,20 @@ pre>code {
   font-family: var(--font-code) !important;
 }
 
-.highlight-comp>code {
+.highlight-comp > code {
   background-color: transparent !important;
+}
+
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  scroll-margin-top: 100px;
+  font-weight: 300;
+}
+
+.prose pre > code {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
 }
