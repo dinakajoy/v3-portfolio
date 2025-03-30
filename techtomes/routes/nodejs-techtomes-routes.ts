@@ -32,13 +32,13 @@ export const NODEJS_ROUTES: EachRoute[] = [
     //   },
     // ],
   },
-  {
-    title: "Setting Up Node.js",
-    href: "/server-actions",
-    noLink: true,
-    items: [
-      { title: "getSession", href: "/getSession" },
-      { title: "getToken", href: "/getToken" },
-    ],
-  },
+  // {
+  //   title: "Setting Up Node.js",
+  //   href: "/server-actions",
+  //   noLink: true,
+  //   items: [
+  //     { title: "getSession", href: "/getSession" },
+  //     { title: "getToken", href: "/getToken" },
+  //   ],
+  // },
 ];
