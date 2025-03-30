@@ -35,7 +35,8 @@ export const NAVLINKS = [
 export function Navbar() {
   const pathname = usePathname();
   const path = pathname && pathname.split("/")[1];
-  const pathToComponent = {
+
+  const pathToComponent: { [key: string]: React.FC} = {
     docs: DocsMenu,
     "nodejs-mastery": NodejsMasteryDocsMenu,
   };
@@ -43,7 +44,13 @@ export function Navbar() {
   return (
     <nav className="w-full h-14 sticky top-0 z-50 lg:px-4 backdrop-filter backdrop-blur-xl bg-opacity-5">
       <div className="sm:container h-full max-sm:px-3 flex items-center justify-between">
-        {path && <SheetLeftbar menuComponent={pathToComponent[path]} />}
+        {path && (
+          <SheetLeftbar
+            menuComponent={
+              pathToComponent[path.trim().toLowerCase()] || DocsMenu
+            }
+          />
+        )}
         <div className="w-full flex items-center justify-between gap-9">
           <Logo />
           <div className="lg:flex hidden items-center gap-5 text-sm font-medium text-muted-foreground mr-4">
