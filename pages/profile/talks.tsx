@@ -2,7 +2,8 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "@/components/layout";
-import { talks } from "@/data/talsk";
+import { talks } from "@/data/talks";
+import TalkCard from "@/components/talk-card";
 
 export default function TalksPage() {
   return (
@@ -43,44 +44,7 @@ export default function TalksPage() {
 
         <div className="w-full space-y-6">
           {talks.map((talk, index) => (
-            <div
-              key={index}
-              className="bg-white dark:bg-gray-800 p-6 rounded-lg"
-            >
-              <h2 className="text-2xl font-bold mb-1">{talk.title}</h2>
-              <p className="text-gray-400 text-sm">
-                {talk.event} - {talk.date}
-              </p>
-              <p className="text-gray-500 dark:text-gray-300 mt-2">
-                {talk.description}
-              </p>
-              <div className="flex gap-4 mt-4">
-                <a
-                  href={talk.slides}
-                  className="underline hover:underline-offset-4"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Slides
-                </a>
-                <a
-                  href={talk.recording}
-                  className="underline hover:underline-offset-4"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Recording
-                </a>
-                <a
-                  href={talk.keynote}
-                  className="underline hover:underline-offset-4"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Keynote
-                </a>
-              </div>
-            </div>
+            <TalkCard talk={talk} key={index} />
           ))}
         </div>
       </div>

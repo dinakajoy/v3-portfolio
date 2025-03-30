@@ -1,4 +1,4 @@
-import Layout from "@/components/layout";
+import DocsMenu from "@/components/docs-menu";
 import { Leftbar } from "@/components/leftbar";
 
 export default function DocsLayout({
@@ -8,7 +8,7 @@ export default function DocsLayout({
 }>) {
   return (
     <div className="flex items-start gap-14">
-      <Leftbar key="leftbar" />
+      <Leftbar key="leftbar" menuComponent={DocsMenu} />
       <div className="flex-[4]">{children}</div>{" "}
     </div>
   );

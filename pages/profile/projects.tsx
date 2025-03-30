@@ -53,7 +53,7 @@ export default function ProjectsPage() {
                   key={index}
                   className={`cursor-pointer p-2 rounded ${
                     selectedProject.title === project.title
-                      ? "bg-blue-500 text-white"
+                      ? "bg-[#0ea5e9] text-white"
                       : "text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
                   }`}
                   onClick={() => setSelectedProject(project)}
@@ -90,7 +90,7 @@ export default function ProjectsPage() {
               {selectedProject.techStack.map((tech, index) => (
                 <span
                   key={index}
-                  className="bg-blue-500 text-white px-3 py-1 rounded-lg text-sm"
+                  className="bg-[#0ea5e9] text-white px-3 py-1 rounded-lg text-sm"
                 >
                   {tech}
                 </span>
@@ -101,7 +101,7 @@ export default function ProjectsPage() {
               href={selectedProject.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block mt-6 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+              className="inline-block mt-6 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700"
             >
               View Project
             </a>

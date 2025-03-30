@@ -19,9 +19,9 @@ const codeFont = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AriaDocsLite - Template",
+  title: "Portfolio - Odinaka Joy",
   description:
-    "This comprehensive documentation template, crafted with Next.js and available as open-source, delivers a sleek and responsive design, tailored to meet all your project documentation requirements.",
+    "Meet Odinaka Joy, a Software Engineer specializing in Web Development and AI integration. With over 5 years of experience building scalable applications, contributing to open-source projects, and mentoring developers.",
 };
 
 export default function RootLayout({

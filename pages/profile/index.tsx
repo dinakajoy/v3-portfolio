@@ -20,10 +20,10 @@ export default function ProfilePage() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          I&apos;m Odinaka Joy, a Senior Software Engineer specializing in Web
-          Development and AI integration. I have over 5 years of experience
+          I&apos;m Odinaka Joy, a Software Engineer specializing in Web
+          Development and AI integration. With over 5 years of experience
           building scalable applications, contributing to open-source projects,
-          and mentoring developers. My expertise lies in TypeScript, React,
+          and mentoring developers. My expertise includes TypeScript, React,
           Express.js, AI-powered systems, and system design.
         </motion.p>
 
@@ -76,8 +76,8 @@ export default function ProfilePage() {
           >
             <h2 className="text-xl font-semibold mb-2">Work History</h2>
             <ul className="list-disc list-inside text-gray-600 dark:text-gray-400">
-              <li>Senior Web Developer – AcceleratorApp (2022 - 2024)</li>
-              <li>Software Developer – Tarides (2022)</li>
+              <li>Web Developer – AcceleratorApp (2022 - 2024)</li>
+              <li>Software Engineer – Tarides (2022)</li>
               <li>Outreachy Intern – OCaml (2021)</li>
               <li>Software Engineer – Loctech Nigeria Limited (2020)</li>
               <li>Web Engineer II – Codelab Projects (2019)</li>
@@ -125,7 +125,10 @@ export default function ProfilePage() {
                 The Road Map To Becoming A Full Stack Web Developer (2020)
               </li>
             </ul>
-            <Link href="/talks" className="text-blue-500 hover:underline">
+            <Link
+              href="/profile/talks"
+              className="text-blue-500 hover:underline"
+            >
               View my talks
             </Link>
           </motion.div>

@@ -1,39 +1,61 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import { motion } from "framer-motion";
 import Layout from "@/components/layout";
 import { articles } from "@/data/posts";
 
-const uniqueTags = [
-  "All",
-  ...new Set(articles.flatMap((article) => article.tags)),
-];
-
 export default function BlogPage() {
-  const [visibleArticles, setVisibleArticles] = useState(5);
-  const [selectedTag, setSelectedTag] = useState("All");
+  const [showArticles, setShowArticles] = useState(10);
+  const [selectedTag, setSelectedTag] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
-  const loadMoreRef = useRef(null);
+  const loadMoreRef = useRef<HTMLDivElement | null>(null);
+
+  const uniqueTags = useMemo(() => {
+    return ["All", ...new Set(articles.flatMap((article) => article.tags))];
+  }, [articles]);
+
+  const filteredArticles = useMemo(() => {
+    return articles.filter(
+      (article) =>
+        (selectedTag === "All" || article.tags.includes(selectedTag)) &&
+        (article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()))
+    );
+  }, [selectedTag, searchQuery, articles]);
+
+  const visibleArticles = useMemo(() => {
+    return filteredArticles ? filteredArticles.slice(0, showArticles) : [];
+  }, [filteredArticles, showArticles]);
+
+  const [isFirstEffectDone, setIsFirstEffectDone] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting) {
-        setVisibleArticles((prev) => prev + 3);
-      }
-    });
-
-    if (loadMoreRef.current) {
-      observer.observe(loadMoreRef.current);
+    const target = loadMoreRef.current;
+    if (!target || showArticles >= filteredArticles.length) {
+      setIsFirstEffectDone(true);
+      return;
     }
 
-    return () => observer.disconnect();
-  }, []);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setShowArticles((prev) => prev + 5);
+        }
+      },
+      { rootMargin: "100px 0px", threshold: 1 }
+    );
 
-  const filteredArticles = articles.filter(
-    (article) =>
-      (selectedTag === "All" || article.tags.includes(selectedTag)) &&
-      (article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()))
-  );
+    observer.observe(target);
+
+    return () => {
+      if (target) observer.unobserve(target);
+      setIsFirstEffectDone(true);
+    };
+  }, [showArticles, visibleArticles]);
+
+  useEffect(() => {
+    if (!isFirstEffectDone) return;
+    setSelectedTag("All");
+  }, [isFirstEffectDone]);
 
   return (
     <Layout>
@@ -61,7 +83,7 @@ export default function BlogPage() {
                   key={index}
                   className={`cursor-pointer p-2 rounded ${
                     selectedTag === tag
-                      ? "bg-blue-500 text-white"
+                      ? "bg-[#0ea5e9] text-white"
                       : "text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
                   }`}
                   onClick={() => setSelectedTag(tag)}
@@ -83,50 +105,48 @@ export default function BlogPage() {
               onChange={(e) => setSearchQuery(e.target.value)}
             />
 
-            {filteredArticles
-              .slice(0, visibleArticles)
-              .map((article, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white dark:bg-gray-800 p-4 rounded-lg mb-4"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
+            {visibleArticles.map((article, index) => (
+              <motion.div
+                key={index}
+                className="bg-white dark:bg-gray-800 p-4 rounded-lg mb-4"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <p className="mt-1 text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                  {article.date}
+                </p>
+                <a
+                  href={article.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-900 hover:text-[#0ea5e9] dark:text-gray-100 hover:dark:text-[#0ea5e9] text-2xl font-bold leading-8 tracking-tight my-4"
                 >
-                  <p className="mt-1 text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                    {article.date}
-                  </p>
-                  <a
-                    href={article.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-900 dark:text-gray-100 hover:dark:text-[#0ea5e9] text-2xl font-bold leading-8 tracking-tight my-4"
-                  >
-                    {article.title}
-                  </a>
-                  <div className="flex flex-wrap">
-                    {article.tags.length > 0 &&
-                      article.tags.map((tag, index) => (
-                        <a
-                          key={index}
-                          className="mr-3 mt-1 text-sm font-semibold uppercase text-blue-600 dark:text-sky-500 hover:text-zinc-900 hover:underline underline-offset-4 hover:decoration-wavy dark:hover:text-gray-400"
-                          href="/tags/svelte"
-                        >
-                          {tag}
-                        </a>
-                      ))}
-                  </div>
+                  {article.title}
+                </a>
+                <div className="flex flex-wrap">
+                  {article.tags.length > 0 &&
+                    article.tags.map((tag, index) => (
+                      <a
+                        key={index}
+                        className="mr-3 mt-1 text-sm font-semibold uppercase text-[#0ea5e9] hover:text-zinc-900 hover:underline underline-offset-4 hover:decoration-wavy dark:hover:text-gray-400"
+                        href="/tags/svelte"
+                      >
+                        {tag}
+                      </a>
+                    ))}
+                </div>
 
-                  <p className="prose max-w-none text-gray-500 dark:text-gray-400 mt-3">
-                    {article.excerpt}
-                  </p>
-                </motion.div>
-              ))}
+                <p className="prose max-w-none text-gray-500 dark:text-gray-400 mt-3">
+                  {article.excerpt}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
-
-        <div ref={loadMoreRef} className="h-10"></div>
       </div>
+
+      <div ref={loadMoreRef} />
     </Layout>
   );
 }

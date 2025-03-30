@@ -1,9 +1,4 @@
-export type EachRoute = {
-  title: string;
-  href: string;
-  noLink?: true;
-  items?: EachRoute[];
-};
+import { EachRoute } from "@/interfaces/routes.interface";
 
 export const ROUTES: EachRoute[] = [
   {

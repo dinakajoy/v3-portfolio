@@ -1,16 +1,18 @@
 import Toc from "@/components/toc";
-import { page_routes } from "@/lib/routes-config";
 import { notFound } from "next/navigation";
 import { getDocsForSlug } from "@/lib/markdown";
 import { Typography } from "@/components/typography";
+import { nodejs_page_routes } from "@/techtomes/config/nodejs-routes-config";
 
 type PageProps = {
   params: { slug: string[] };
 };
 
+const dir = "nodejs-mastery";
+
 export default async function DocsPage({ params: { slug = [] } }: PageProps) {
   const pathName = slug.join("/");
-  const res = await getDocsForSlug(pathName);
+  const res = await getDocsForSlug(dir, pathName);
 
   if (!res) notFound();
   return (
@@ -24,14 +26,14 @@ export default async function DocsPage({ params: { slug = [] } }: PageProps) {
           <div>{res.content}</div>
         </Typography>
       </div>
-      <Toc path={pathName} />
+      <Toc path={pathName} dir={dir} />
     </div>
   );
 }
 
 export async function generateMetadata({ params: { slug = [] } }: PageProps) {
   const pathName = slug.join("/");
-  const res = await getDocsForSlug(pathName);
+  const res = await getDocsForSlug(dir, pathName);
   if (!res) return null;
   const { frontmatter } = res;
   return {
@@ -41,7 +43,7 @@ export async function generateMetadata({ params: { slug = [] } }: PageProps) {
 }
 
 export function generateStaticParams() {
-  return page_routes.map((item) => ({
+  return nodejs_page_routes.map((item) => ({
     slug: item.href.split("/").slice(1),
   }));
 }

@@ -1,12 +1,12 @@
-import { GetStaticPaths, GetStaticProps } from "next";
 import React, { useEffect, useState } from "react";
+import { GetStaticPaths, GetStaticProps } from "next";
+import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import { GuideProps } from "@/intefaces";
-import Link from "next/link";
-import { getAllGuides, getGuide } from "@/utils/contentLoader";
 import Layout from "@/components/layout";
+import { getAllGuides, getGuide } from "@/lib/contentLoader";
+import { GuideProps } from "@/intefaces";
 
 interface GuidePageProps {
   guide: GuideProps;

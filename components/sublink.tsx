@@ -1,6 +1,5 @@
 "use client";
 
-import { EachRoute } from "@/lib/routes-config";
 import Anchor from "./anchor";
 import {
   Collapsible,
@@ -12,6 +11,7 @@ import { SheetClose } from "@/components/ui/sheet";
 import { Button } from "./ui/button";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { useState } from "react";
+import { EachRoute } from "@/interfaces/routes.interface";
 
 export default function SubLink({
   title,

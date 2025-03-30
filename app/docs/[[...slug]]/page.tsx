@@ -8,9 +8,11 @@ type PageProps = {
   params: { slug: string[] };
 };
 
+const dir = "docs";
+
 export default async function DocsPage({ params: { slug = [] } }: PageProps) {
   const pathName = slug.join("/");
-  const res = await getDocsForSlug(pathName);
+  const res = await getDocsForSlug(dir, pathName);
 
   if (!res) notFound();
   return (
@@ -24,14 +26,14 @@ export default async function DocsPage({ params: { slug = [] } }: PageProps) {
           <div>{res.content}</div>
         </Typography>
       </div>
-      <Toc path={pathName} />
+      <Toc path={pathName} dir={dir} />
     </div>
   );
 }
 
 export async function generateMetadata({ params: { slug = [] } }: PageProps) {
   const pathName = slug.join("/");
-  const res = await getDocsForSlug(pathName);
+  const res = await getDocsForSlug(dir, pathName);
   if (!res) return null;
   const { frontmatter } = res;
   return {

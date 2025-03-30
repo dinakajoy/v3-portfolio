@@ -18,13 +18,22 @@ export default function LandingPage() {
       >
         Odinaka Joy
       </motion.h1>
+      <motion.h2
+        className="text-2xl text-gray-900 dark:text-gray-400 text-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+      >
+        Software Engineer | AI & Backend Developer
+      </motion.h2>
       <motion.p
         className="text-lg text-gray-900 dark:text-gray-400 text-center mb-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        Senior Software Engineer | AI & Web Developer | Mentor
+        Building intelligent web experiences with AI & scalable software
+        solutions.
       </motion.p>
 
       <motion.div
@@ -35,28 +44,28 @@ export default function LandingPage() {
       >
         <Link
           href="/profile"
-          className="flex items-center gap-2 px-4 py-2 rounded-lg text-xl transition text-gray-800 bg-gray-200 hover:bg-gray-300 dark:text-gray-700 dark:bg-gray-200 dark:hover:bg-gray-300"
+          className="flex items-center gap-2 px-4 py-2 rounded-lg text-xl transition font-semibold text-gray-100 bg-[#0ea5e9] hover:bg-gray-600"
         >
           <FaUserNinja />
           Profile
         </Link>
         <Link
           href="/blog"
-          className="flex items-center gap-2 px-4 py-2 rounded-lg text-xl transition text-gray-800 bg-gray-200 hover:bg-gray-300 dark:text-gray-700 dark:bg-gray-200 dark:hover:bg-gray-300"
+          className="flex items-center gap-2 px-4 py-2 rounded-lg text-xl transition font-semibold text-gray-100 bg-[#0ea5e9] hover:bg-gray-600"
         >
           <FaMicroblog />
           Blog
         </Link>
         <Link
           href="/guides"
-          className="flex items-center gap-2 px-4 py-2 rounded-lg text-xl transition text-gray-800 bg-gray-200 hover:bg-gray-300 dark:text-gray-700 dark:bg-gray-200 dark:hover:bg-gray-300"
+          className="flex items-center gap-2 px-4 py-2 rounded-lg text-xl transition font-semibold text-gray-100 bg-[#0ea5e9] hover:bg-gray-600"
         >
           <FaDirections />
           Guides
         </Link>
         <Link
           href="/techtomes"
-          className="flex items-center gap-2 px-4 py-2 rounded-lg text-xl transition text-gray-800 bg-gray-200 hover:bg-gray-300 dark:text-gray-700 dark:bg-gray-200 dark:hover:bg-gray-300"
+          className="flex items-center gap-2 px-4 py-2 rounded-lg text-xl transition font-semibold text-gray-100 bg-[#0ea5e9] hover:bg-gray-600"
         >
           <FaChalkboard />
           Tech Tomes

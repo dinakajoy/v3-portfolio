@@ -6,7 +6,7 @@ export function Navbar() {
     <nav className="p-4 shadow-md">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         <Link href="/">
-          <span className="text-xl font-bold">Odinaka Joy</span>
+          <img src="/logo.png" alt="Odinaka Joy" />
         </Link>
         <div className="flex space-x-4 items-center font-semibold">
           <Link href="/profile">Profile</Link>
