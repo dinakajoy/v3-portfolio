@@ -73,9 +73,9 @@ export default function BlogPage() {
           to Dev.to for a wider audience.
         </p>
 
-        <div className="w-full flex gap-6">
+        <div className="w-full block md:flex gap-6">
           {/* Tags List */}
-          <div className="w-1/3 bg-white dark:bg-gray-800 p-4 rounded-lg h-full">
+          <div className="w-full md:w-1/3 bg-white dark:bg-gray-800 p-4 rounded-lg h-full mb-8 md:mb-0">
             <h2 className="text-xl font-semibold mb-3">Tags</h2>
             <ul>
               {uniqueTags.map((tag, index) => (
@@ -95,7 +95,7 @@ export default function BlogPage() {
           </div>
 
           {/* Blog Posts Section */}
-          <div className="w-2/3">
+          <div className="w-full md:w-2/3">
             {/* Search Bar */}
             <input
               type="text"
@@ -120,7 +120,7 @@ export default function BlogPage() {
                   href={article.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-900 hover:text-[#0ea5e9] dark:text-gray-100 hover:dark:text-[#0ea5e9] text-2xl font-bold leading-8 tracking-tight my-4"
+                  className="text-gray-900 hover:text-[#0ea5e9] dark:text-gray-100 hover:dark:text-[#0ea5e9] text-2xl font-semibold leading-8 tracking-tight my-4"
                 >
                   {article.title}
                 </a>

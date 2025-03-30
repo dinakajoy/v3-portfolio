@@ -1,7 +1,7 @@
 "use client";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { Navbar } from "./navbar";
+import { Navbar } from "./navbar2";
 import { Footer } from "./footer";
 
 export default function Layout({ children }: { children: React.ReactNode }) {

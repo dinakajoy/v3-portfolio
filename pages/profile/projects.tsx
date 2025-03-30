@@ -43,9 +43,9 @@ export default function ProjectsPage() {
           </Link>
         </div>
 
-        <div className="flex gap-6">
+        <div className="block md:flex gap-6">
           {/* Project List */}
-          <div className="w-1/3 bg-white dark:bg-gray-800 p-4 rounded-lg overflow-y-auto">
+          <div className="w-full mb-8 md:mb-0 md:w-1/3 bg-white dark:bg-gray-800 p-4 rounded-lg overflow-y-auto">
             <h2 className="text-xl font-semibold mb-3">Project List</h2>
             <ul>
               {projects.map((project, index) => (
@@ -65,7 +65,7 @@ export default function ProjectsPage() {
           </div>
 
           {/* Project Details */}
-          <div className="w-2/3 bg-white dark:bg-gray-800 p-6 rounded-lg">
+          <div className="w-full md:w-2/3 bg-white dark:bg-gray-800 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-2">{selectedProject.title}</h2>
             <p className="text-gray-500 dark:text-gray-400 mb-4">
               {selectedProject.description}

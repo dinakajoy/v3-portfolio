@@ -56,7 +56,7 @@ export default function ProfilePage() {
             transition={{ delay: 0.7 }}
           >
             <h2 className="text-xl font-semibold mb-2">Skills</h2>
-            <ul className="list-disc list-inside text-gray-600 dark:text-gray-400">
+            <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 text-md">
               <li>
                 JavaScript (TypeScript, React, Next.js, Node.js, Express.js)
               </li>
@@ -75,7 +75,7 @@ export default function ProfilePage() {
             transition={{ delay: 0.7 }}
           >
             <h2 className="text-xl font-semibold mb-2">Work History</h2>
-            <ul className="list-disc list-inside text-gray-600 dark:text-gray-400">
+            <ul className="list-disc list-inside text-gray-600 dark:text-gray-400  text-md">
               <li>Web Developer – AcceleratorApp (2022 - 2024)</li>
               <li>Software Engineer – Tarides (2022)</li>
               <li>Outreachy Intern – OCaml (2021)</li>
@@ -95,7 +95,7 @@ export default function ProfilePage() {
             <h2 className="text-xl font-semibold mb-2">
               Open Source Contributions
             </h2>
-            <ul className="list-disc list-inside text-gray-600 dark:text-gray-400">
+            <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 text-md">
               <li>Contributor & Mentor – Outreachy (2022, 2024)</li>
               <li>GraphQL API Development – OCaml (opam packages)</li>
               <li>Irmin in the browser – OCaml</li>
@@ -115,7 +115,7 @@ export default function ProfilePage() {
             <p className="text-gray-600 dark:text-gray-400">
               Spoken at various events on Web Development & AI.
             </p>
-            <ul className="list-disc list-inside text-gray-600 dark:text-gray-400">
+            <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 text-md">
               <li>Advancing Your Business & Career Using ICT (2022)</li>
               <li>
                 Boosting Your Business Using Social Media & ICT In Nigeria(2022)
@@ -127,7 +127,7 @@ export default function ProfilePage() {
             </ul>
             <Link
               href="/profile/talks"
-              className="text-blue-500 hover:underline"
+              className="text-[#0ea5e9] hover:underline"
             >
               View my talks
             </Link>

@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${regularFont.variable} ${codeFont.variable} font-regular`}
+        className={`${regularFont.variable} ${codeFont.variable} font-regular flex flex-col min-h-screen bg-slate-50 text-gray-700 dark:bg-gray-900 dark:text-slate-50`}
         suppressHydrationWarning
       >
         <ThemeProvider

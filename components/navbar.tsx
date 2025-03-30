@@ -8,7 +8,7 @@ export function Navbar() {
         <Link href="/">
           <img src="/logo.png" alt="Odinaka Joy" />
         </Link>
-        <div className="flex space-x-4 items-center font-semibold">
+        <div className="flex space-x-4 md:space-x-8 items-center font-semibold">
           <Link href="/profile">Profile</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/guides">Guides</Link>

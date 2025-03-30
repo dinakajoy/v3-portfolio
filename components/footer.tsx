@@ -6,19 +6,19 @@ const socials = [
   {
     name: "GitHub",
     icon: <FaGithub />,
-    link: "https://github.com/yourusername",
+    link: "https://github.com/dinakajoy",
   },
   {
     name: "LinkedIn",
     icon: <FaLinkedin />,
-    link: "https://linkedin.com/in/yourusername",
+    link: "https://linkedin.com/in/dinakajoy",
   },
   {
     name: "Twitter",
     icon: <FaTwitter />,
-    link: "https://twitter.com/yourusername",
+    link: "https://twitter.com/dinakajoy",
   },
-  { name: "Email", icon: <FaEnvelope />, link: "mailto:your@email.com" },
+  { name: "Email", icon: <FaEnvelope />, link: "mailto:dinakajoy@gmail.com" },
 ];
 
 export function Footer() {
@@ -39,14 +39,14 @@ export function Footer() {
         Contact & Socials
       </motion.h2>
       <p
-        className={`text-lg  mb-6 text-center max-w-3xl ${
+        className={`text-lg  mb-6 text-center max-w-3xl  px-4 ${
           isDarkMode ? "text-gray-400" : "text-gray-500"
         }`}
       >
         Connect with me through my social links or reach out directly via email.
       </p>
 
-      <div className="flex flex-wrap gap-6">
+      <div className="flex flex-wrap align-center justify-center gap-6">
         {socials.map((social, index) => (
           <a
             key={index}
