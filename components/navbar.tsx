@@ -38,12 +38,12 @@ export function Navbar() {
             <Menu size={28} />
           </button>
           {isOpen && (
-            <div className="absolute right-6 top-16 w-52 bg-gray-800 shadow-lg rounded-lg p-4 flex flex-col gap-y-2 md:hidden">
+            <div className="absolute right-6 top-16 w-52 bg-gray-200 dark:bg-gray-800 shadow-lg rounded-lg p-4 flex flex-col gap-y-2 md:hidden">
               {NAVLINKS.map((item) => (
                 <Anchor
                   key={item.title + item.href}
                   activeClassName="text-primary font-semibold"
-                  className="block px-4 py-2 rounded hover:bg-gray-100"
+                  className="block px-4 py-2 rounded hover:bg-gray-100 hover:dark:bg-gray-400"
                   href={item.href}
                 >
                   {item.title}

@@ -19,7 +19,6 @@ export function Navbar() {
     docs: DocsMenu,
     "nodejs-mastery": NodejsMasteryDocsMenu,
   };
-  // const component = path ? pathToComponent[path.trim().toLowerCase()] : "";
 
   return (
     <header className="w-full h-14 sticky top-0 z-50 lg:px-4 backdrop-filter backdrop-blur-xl bg-opacity-5">
@@ -75,13 +74,5 @@ export function Navbar() {
         />
       )}
     </header>
-  );
-}
-
-function Logo() {
-  return (
-    <Link href="/" className="hidden md:flex items-center gap-3">
-      <img src="/logo.png" alt="Odinaka Joy" />
-    </Link>
   );
 }
