@@ -16,25 +16,7 @@ Welcome to my personal **Portfolio Website**, where I showcase my work as a **Se
 ## 🛠️ Tech Stack
 
 - **Frontend**: Next.js, TypeScript, TailwindCSS
-- **Backend**: Express.js, Node.js
-- **Database**: MongoDB, PostgreSQL
-- **AI Tools**: OpenAI API, LangChain, TensorFlow (Upcoming integrations)
-- **Hosting**: Vercel, AWS
-
-## 📂 Project Structure
-
-```
-/ ── src/
-   ├── components/   # Reusable UI components
-   ├── app/          # Next.js app
-   ├── pages/        # Next.js pages
-   ├── public/       # Static assets (images, etc.)
-   ├── assets/       # Static assets (talk posters, etc.)
-   ├── styles/       # Global styles & Tailwind config
-   ├── utils/        # Helper functions
-   ├── data/         # JavaScript object files for blogs, talks, etc.
-   └── README.md     # Documentation
-```
+- **Hosting**: Vercel
 
 ## 📬 Connect with Me
 
