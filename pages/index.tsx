@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import {
   FaChalkboard,
   FaDirections,
-  FaMicroblog,
+  FaStickyNote,
   FaUserNinja,
 } from "react-icons/fa";
 
@@ -46,28 +46,28 @@ export default function LandingPage() {
           href="/profile"
           className="flex items-center gap-2 px-4 py-2 rounded-lg text-xl transition font-semibold text-gray-100 bg-[#0ea5e9] hover:bg-gray-600"
         >
-          <FaUserNinja />
+          <FaUserNinja className="size-3"/>
           Profile
         </Link>
         <Link
           href="/blog"
           className="flex items-center gap-2 px-4 py-2 rounded-lg text-xl transition font-semibold text-gray-100 bg-[#0ea5e9] hover:bg-gray-600"
         >
-          <FaMicroblog />
+          <FaStickyNote className="size-3"/>
           Blog
         </Link>
         <Link
           href="/guides"
           className="flex items-center gap-2 px-4 py-2 rounded-lg text-xl transition font-semibold text-gray-100 bg-[#0ea5e9] hover:bg-gray-600"
         >
-          <FaDirections />
+          <FaDirections className="size-3"/>
           Guides
         </Link>
         <Link
           href="/techtomes"
           className="flex items-center gap-2 px-4 py-2 rounded-lg text-xl transition font-semibold text-gray-100 bg-[#0ea5e9] hover:bg-gray-600"
         >
-          <FaChalkboard />
+          <FaChalkboard className="size-3"/>
           Tech Tomes
         </Link>
       </motion.div>

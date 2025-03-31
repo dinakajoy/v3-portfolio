@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Anchor from "./anchor";
@@ -6,31 +7,11 @@ import { SheetLeftbar } from "./leftbar";
 import ThemeToggle from "./ModeToggle";
 import DocsMenu from "./docs-menu";
 import NodejsMasteryDocsMenu from "@/techtomes/nodejs-docs-menu";
-
-export const NAVLINKS = [
-  {
-    title: "Profile",
-    href: "/profile",
-  },
-  {
-    title: "Blog",
-    href: "/blog",
-  },
-  {
-    title: "Guides",
-    href: "/guides",
-  },
-  {
-    title: "TechTomes",
-    href: "/techtomes",
-  },
-  // {
-  //   title: "Documentation",
-  //   href: `/docs${page_routes[0].href}`,
-  // },
-];
+import { Menu } from "lucide-react";
+import { NAVLINKS } from "@/data/nav-links";
 
 export function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const path = pathname && pathname.split("/")[1];
 
@@ -38,21 +19,17 @@ export function Navbar() {
     docs: DocsMenu,
     "nodejs-mastery": NodejsMasteryDocsMenu,
   };
+  // const component = path ? pathToComponent[path.trim().toLowerCase()] : "";
 
   return (
-    <nav className="w-full h-14 sticky top-0 z-50 lg:px-4 backdrop-filter backdrop-blur-xl bg-opacity-5">
-      <div className="sm:container h-full max-sm:px-3 flex items-center justify-between">
-        {path && (
-          <SheetLeftbar
-            menuComponent={
-              pathToComponent[path.trim().toLowerCase()] || DocsMenu
-            }
-          />
-        )}
-        <div className="w-full flex items-center justify-end md:justify-between gap-4 md:gap-9">
-          <Logo />
-          <div className="space-x-2 md:space-x-8 sm:space-x-4 flex items-center mr-4">
-            <div className="mx-6 sm:mx-auto flex flex-wrap items-center justify-between gap-x-4 gap-y-2 md:gap-x-8 sm:gap-x-6 text-sm md:text-lg font-medium text-muted-foreground">
+    <header className="w-full h-14 sticky top-0 z-50 lg:px-4 backdrop-filter backdrop-blur-xl bg-opacity-5">
+      <nav className="relative p-4 shadow-md">
+        <div className="max-w-6xl mx-auto flex justify-between items-center">
+          <Link href="/">
+            <img src="/logo.png" alt="Odinaka Joy" />
+          </Link>
+          <div className="flex space-x-4 md:space-x-8 items-center">
+            <div className="hidden md:flex space-x-4 md:space-x-8 items-center">
               {NAVLINKS.map((item) => (
                 <Anchor
                   key={item.title + item.href}
@@ -65,11 +42,39 @@ export function Navbar() {
                 </Anchor>
               ))}
             </div>
+
             <ThemeToggle />
+            <button
+              className="md:hidden flex items-center p-2 text-muted-foreground"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              <Menu size={28} />
+            </button>
+            {isOpen && (
+              <div className="absolute right-6 top-16 w-52 bg-gray-800 shadow-lg rounded-lg p-4 flex flex-col gap-y-2 md:hidden">
+                {NAVLINKS.map((item) => (
+                  <Anchor
+                    key={item.title + item.href}
+                    activeClassName="text-primary font-semibold"
+                    className="block px-4 py-2 rounded hover:bg-gray-100"
+                    href={item.href}
+                  >
+                    {item.title}
+                  </Anchor>
+                ))}
+              </div>
+            )}
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+
+      {path && (
+        <SheetLeftbar
+          menuComponent={pathToComponent[path.trim().toLowerCase()]}
+        />
+      )}
+    </header>
   );
 }
 
