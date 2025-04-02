@@ -1,82 +1,44 @@
-import path from "path";
-import { promises as fs } from "fs";
-import { compileMDX } from "next-mdx-remote/rsc";
-import remarkGfm from "remark-gfm";
-import rehypePrism from "rehype-prism-plus";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import rehypeSlug from "rehype-slug";
-import rehypeCodeTitles from "rehype-code-titles";
-
 // custom components imports
-import Note from "@/components/note";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Pre from "@/components/markdown/pre";
+import Note from "@/components/markdown/note";
+import { Stepper, StepperItem } from "@/components/markdown/stepper";
+import Image from "@/components/markdown/image";
+import Link from "@/components/markdown/link";
+import Outlet from "@/components/markdown/outlet";
+import Files from "@/components/markdown/files";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 // add custom components
-const components = {
+export const components = {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+  pre: Pre,
   Note,
+  Stepper,
+  StepperItem,
+  img: Image,
+  a: Link,
+  Outlet,
+  Files,
+  table: Table,
+  thead: TableHeader,
+  th: TableHead,
+  tr: TableRow,
+  tbody: TableBody,
+  t: TableCell,
 };
 
-// can be used for other pages like blogs, Guides etc
-async function parseMdx<Frontmatter>(rawMdx: string) {
-  return await compileMDX<Frontmatter>({
-    source: rawMdx,
-    options: {
-      parseFrontmatter: true,
-      mdxOptions: {
-        rehypePlugins: [
-          rehypeCodeTitles,
-          rehypePrism,
-          rehypeSlug,
-          rehypeAutolinkHeadings,
-        ],
-        remarkPlugins: [remarkGfm],
-      },
-    },
-    components,
-  });
-}
-
-// logic for docs
-
-type BaseMdxFrontmatter = {
-  title: string;
-  description: string;
-};
-
-export async function getDocsForSlug(dir: string, slug: string) {
-  try {
-    const contentPath = getDocsContentPath(dir, slug);
-    const rawMdx = await fs.readFile(contentPath, "utf-8");
-    return await parseMdx<BaseMdxFrontmatter>(rawMdx);
-  } catch (err) {
-    console.log(err);
-  }
-}
-
-export async function getDocsTocs(dir: string, slug: string) {
-  const contentPath = getDocsContentPath(dir, slug);
-  const rawMdx = await fs.readFile(contentPath, "utf-8");
-  // captures between ## - #### can modify accordingly
-  const headingsRegex = /^(#{2,4})\s(.+)$/gm;
-  let match;
-  const extractedHeadings = [];
-  while ((match = headingsRegex.exec(rawMdx)) !== null) {
-    const headingLevel = match[1].length;
-    const headingText = match[2].trim();
-    const slug = sluggify(headingText);
-    extractedHeadings.push({
-      level: headingLevel,
-      text: headingText,
-      href: `#${slug}`,
-    });
-  }
-  return extractedHeadings;
-}
-
-function sluggify(text: string) {
+export function sluggify(text: string) {
   const slug = text.toLowerCase().replace(/\s+/g, "-");
   return slug.replace(/[^a-z0-9-]/g, "");
-}
-
-function getDocsContentPath(dir: string, slug: string) {
-  return path.join(process.cwd(), `/contents/${dir}/`, `${slug}/index.mdx`);
 }

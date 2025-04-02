@@ -2,9 +2,9 @@ import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "@/components/layout";
-import { getAllGuides } from "@/lib/contentLoader";
+import { getAllGuides } from "@/lib/guides-loader";
 import { formatDate } from "@/lib/utils";
-import { IGuide } from "../../intefaces";
+import { IGuide } from "@/interfaces/guides.interfaces";
 
 const ITEMS_PER_PAGE = 5;
 

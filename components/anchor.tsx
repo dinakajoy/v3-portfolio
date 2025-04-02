@@ -20,9 +20,10 @@ export default function Anchor({
   ...props
 }: AnchorProps) {
   const path = usePathname();
-  let isMatch = path && absolute
-    ? props.href.toString().split("/")[1] == path.split("/")[1]
-    : path === props.href;
+  let isMatch =
+    absolute && path
+      ? props.href.toString().split("/")[1] == path.split("/")[1]
+      : path === props.href;
 
   if (props.href.toString().includes("http")) isMatch = false;
 

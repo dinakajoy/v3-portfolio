@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { motion } from "framer-motion";
 import Layout from "@/components/layout";
-import { articles } from "@/data/posts";
+import { articles } from "@/contents/posts";
 
 export default function BlogPage() {
   const [showArticles, setShowArticles] = useState(10);

@@ -2,8 +2,8 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "@/components/layout";
-import { talks } from "@/data/talks";
 import TalkCard from "@/components/talk-card";
+import { talks } from "@/contents/talks";
 
 export default function TalksPage() {
   return (

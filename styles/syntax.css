@@ -1,80 +1,72 @@
- /* nebula */
- /* Light Mode */
- .keyword {
-   color: #15803d;
-   /* Dark Green */
- }
+.keyword {
+  color: #d73a49; /* GitHub Red */
+}
 
- .function {
-   color: #0ea5e9;
-   /* Sky Blue */
- }
+.function {
+  color: #6f42c1; /* GitHub Purple */
+}
 
- .punctuation {
-   color: #64748b;
-   /* Slate Gray */
- }
+.punctuation {
+  color: #24292e; /* GitHub Black */
+}
 
- .comment {
-   color: #94a3b8;
-   /* Muted Slate Gray */
- }
+.comment {
+  color: #6a737d; /* GitHub Muted Gray */
+}
 
- .string,
- .constant,
- .annotation,
- .boolean,
- .number {
-   color: #16a34a;
-   /* Medium Green */
- }
+.string,
+.constant,
+.annotation,
+.boolean,
+.number {
+  color: #005cc5; /* GitHub Blue */
+}
 
- .tag {
-   color: #15803d;
-   /* Dark Green */
- }
+.tag {
+  color: #22863a; /* GitHub Green */
+}
 
- .attr-name {
-   color: #0d9488;
-   /* Teal */
- }
+.attr-name {
+  color: #6f42c1; /* GitHub Purple */
+}
 
- .attr-value {
-   color: #059669;
-   /* Emerald Green */
- }
+.attr-value {
+  color: #e36209; /* GitHub Orange */
+}
 
- /* Dark Mode */
- .dark .keyword {
-   color: #86efac;
-   /* Light Green */
- }
+/* Dark Mode */
+.dark .keyword {
+  color: #f97583; /* GitHub Light Red */
+}
 
- .dark .function {
-   color: #38bdf8;
-   /* Sky Blue */
- }
+.dark .function {
+  color: #d2a8ff; /* GitHub Light Purple */
+}
 
- .dark .string,
- .dark .constant,
- .dark .annotation,
- .dark .boolean,
- .dark .number {
-   color: #4ade80;
-   /* Soft Lime Green */
- }
+.dark .punctuation {
+  color: #c9d1d9; /* GitHub Light Gray */
+}
 
- .dark .tag {
-   color: #86efac;
-   /* Light Green */
- }
+.dark .comment {
+  color: #8b949e; /* GitHub Muted Gray */
+}
 
- .dark .attr-name {
-   color: #34d399;
-   /* Teal */
- }
+.dark .string,
+.dark .constant,
+.dark .annotation,
+.dark .boolean,
+.dark .number {
+  color: #79c0ff; /* GitHub Light Blue */
+}
 
- .dark .attr-value {
-   color: #6ee7b7;
-   /* Light Emerald */
- }
+.dark .tag {
+  color: #a5d6ff; /* GitHub Cyan */
+}
+
+.dark .attr-name {
+  color: #d2a8ff; /* GitHub Light Purple */
+}
+
+.dark .attr-value {
+  color: #ffa657; /* GitHub Light Orange */
+}

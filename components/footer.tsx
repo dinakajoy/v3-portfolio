@@ -28,7 +28,7 @@ export function Footer() {
     <footer
       className={`max-w-6xl mx-auto border-t border-t-cyan-600 ${
         isDarkMode ? "text-white" : "text-gray-700"
-      } pt-12 flex flex-col items-center`}
+      } pt-8 flex flex-col items-center`}
     >
       <motion.h2
         className="text-2xl font-bold mb-4"

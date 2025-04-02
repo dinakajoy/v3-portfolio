@@ -1,27 +1,27 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "@/components/theme-provider";
-import { Navbar } from "@/components/navbar2";
+import { ThemeProvider } from "@/components/contexts/theme-provider";
 import { Space_Mono, Space_Grotesk } from "next/font/google";
 import "@/styles/globals.css";
 
-const regularFont = Space_Grotesk({
+const sansFont = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-regular",
+  variable: "--font-geist-sans",
   display: "swap",
   weight: "400",
 });
 
-const codeFont = Space_Mono({
+const monoFont = Space_Mono({
   subsets: ["latin"],
-  variable: "--font-code",
+  variable: "--font-geist-mono",
   display: "swap",
   weight: "400",
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio - Odinaka Joy",
+  title: "Odinaka Joy - Tech Tomes",
+  metadataBase: new URL("https://ariadocs.vercel.app/"),
   description:
-    "Meet Odinaka Joy, a Software Engineer specializing in Web Development and AI integration. With over 5 years of experience building scalable applications, contributing to open-source projects, and mentoring developers.",
+    "This comprehensive documentation template, crafted with Next.js and available as open-source, delivers a sleek and responsive design, tailored to meet all your project documentation requirements.",
 };
 
 export default function RootLayout({
@@ -31,8 +31,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+        />
+      </head>
       <body
-        className={`${regularFont.variable} ${codeFont.variable} font-regular flex flex-col min-h-screen bg-slate-50 text-gray-700 dark:bg-gray-900 dark:text-slate-50`}
+        className={`${sansFont.variable} ${monoFont.variable} font-regular antialiased tracking-wide`}
         suppressHydrationWarning
       >
         <ThemeProvider
@@ -41,10 +48,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
-          <main className="sm:container mx-auto w-[88vw] h-auto">
-            {children}
-          </main>
+          {children}
         </ThemeProvider>
       </body>
     </html>

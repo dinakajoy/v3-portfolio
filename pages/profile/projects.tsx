@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "@/components/layout";
-import { projects } from "@/data/projects";
+import { projects } from "@/contents/projects";
 
 export default function ProjectsPage() {
   const [selectedProject, setSelectedProject] = useState(projects[0]);
