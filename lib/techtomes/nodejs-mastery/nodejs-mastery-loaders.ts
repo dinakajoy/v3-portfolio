@@ -9,13 +9,9 @@ import { visit } from "unist-util-visit";
 import matter from "gray-matter";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { getIconName, hasSupportedExtension } from "@/lib/utils";
-import { components } from "@/lib/markdown";
+import { BaseMdxFrontmatter, components } from "@/lib/markdown";
 import { page_routes, NODEJS_ROUTES } from "./nodejs-mastery-routes-config";
-
-type BaseMdxFrontmatter = {
-  title: string;
-  description: string;
-};
+import Outlet from "@/components/techtomes/nodejs-mastery/outlet";
 
 function getDocsContentPath(slug: string) {
   return path.join(
@@ -81,7 +77,7 @@ export async function parseMdx<Frontmatter>(rawMdx: string) {
         remarkPlugins: [remarkGfm],
       },
     },
-    components,
+    components: { ...components, Outlet },
   });
 }
 

@@ -5,7 +5,6 @@ import Note from "@/components/markdown/note";
 import { Stepper, StepperItem } from "@/components/markdown/stepper";
 import Image from "@/components/markdown/image";
 import Link from "@/components/markdown/link";
-import Outlet from "@/components/markdown/outlet";
 import Files from "@/components/markdown/files";
 import {
   Table,
@@ -15,6 +14,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import Outlet from "@/components/techtomes/docs/outlet";
 
 // add custom components
 export const components = {
@@ -28,7 +28,7 @@ export const components = {
   StepperItem,
   img: Image,
   a: Link,
-  Outlet,
+  // Outlet,
   Files,
   table: Table,
   thead: TableHeader,
@@ -42,3 +42,8 @@ export function sluggify(text: string) {
   const slug = text.toLowerCase().replace(/\s+/g, "-");
   return slug.replace(/[^a-z0-9-]/g, "");
 }
+
+export type BaseMdxFrontmatter = {
+  title: string;
+  description: string;
+};

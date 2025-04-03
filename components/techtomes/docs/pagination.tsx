@@ -1,7 +1,7 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import Link from "next/link";
-import { buttonVariants } from "./ui/button";
-import { getPreviousNext } from "@/lib/other-loaders";
+import { buttonVariants } from "../../ui/button";
+import { getPreviousNext } from "@/lib/techtomes/docs/other-loaders";
 
 export default function Pagination({ pathname }: { pathname: string }) {
   const res = getPreviousNext(pathname);

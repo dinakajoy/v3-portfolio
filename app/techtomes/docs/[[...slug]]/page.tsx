@@ -1,10 +1,10 @@
-import DocsBreadcrumb from "@/components/docs-breadcrumb";
-import Pagination from "@/components/pagination";
-import Toc from "@/components/toc";
-import { page_routes } from "@/lib/routes-config";
 import { notFound } from "next/navigation";
+import DocsBreadcrumb from "@/components/docs-breadcrumb";
+import Pagination from "@/components/techtomes/docs/pagination";
+import Toc from "@/components/techtomes/docs/toc";
 import { Typography } from "@/components/typography";
-import { getDocsForSlug } from "@/lib/other-loaders";
+import { page_routes } from "@/lib/techtomes/docs/routes-config";
+import { getDocsForSlug } from "@/lib/techtomes/docs/other-loaders";
 
 type PageProps = {
   params: Promise<{ slug: string[] }>;

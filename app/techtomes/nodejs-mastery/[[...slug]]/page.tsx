@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
 import DocsBreadcrumb from "@/components/docs-breadcrumb";
-import { Typography } from "@/components/typography";
 import Pagination from "@/components/techtomes/nodejs-mastery/pagination";
 import Toc from "@/components/techtomes/nodejs-mastery/toc";
+import { Typography } from "@/components/typography";
 import { page_routes } from "@/lib/techtomes/nodejs-mastery/nodejs-mastery-routes-config";
 import { getDocsForSlug } from "@/lib/techtomes/nodejs-mastery/nodejs-mastery-loaders";
 

@@ -1,6 +1,6 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { EachRoute, ROUTES } from "./routes-config";
+import { EachRoute, ROUTES } from "./techtomes/docs/routes-config";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -11,7 +11,7 @@ export function helperSearch(
   node: EachRoute,
   prefix: string,
   currenLevel: number,
-  maxLevel?: number,
+  maxLevel?: number
 ) {
   const res: EachRoute[] = [];
   let parentHas = false;
@@ -29,7 +29,7 @@ export function helperSearch(
         item,
         nextLink,
         currenLevel + 1,
-        maxLevel,
+        maxLevel
       );
       if (!!innerRes.length && !parentHas && !node.noLink) {
         res.push({ ...node, items: undefined, href: nextLink });

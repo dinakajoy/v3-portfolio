@@ -1,16 +1,15 @@
+import { AlignLeftIcon } from "lucide-react";
+import { Logo, NavMenu } from "./navbar";
 import {
   Sheet,
   SheetClose,
   SheetContent,
   SheetHeader,
   SheetTrigger,
-} from "@/components/ui/sheet";
-import { Logo, NavMenu } from "./navbar";
+} from "./ui/sheet";
+import { ScrollArea } from "./ui/scroll-area";
 import { Button } from "./ui/button";
-import { AlignLeftIcon } from "lucide-react";
 import { DialogTitle } from "./ui/dialog";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import DocsMenu from "./docs-menu";
 
 export function Leftbar({ menu }: { menu: React.ReactNode }) {
   return (
@@ -20,7 +19,7 @@ export function Leftbar({ menu }: { menu: React.ReactNode }) {
   );
 }
 
-export function SheetLeftbar() {
+export function SheetLeftbar({ menu }: { menu: React.ReactNode }) {
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -40,7 +39,8 @@ export function SheetLeftbar() {
             <NavMenu isSheet />
           </div>
           <div className="ml-2 pl-5">
-            <DocsMenu isSheet />
+            {/* <DocsMenu isSheet /> */}
+            {menu}
           </div>
         </div>
       </SheetContent>

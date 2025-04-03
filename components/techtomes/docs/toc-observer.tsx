@@ -1,6 +1,6 @@
 "use client";
 
-import { getDocsTocs } from "@/lib/other-loaders";
+import { getDocsTocs } from "@/lib/techtomes/docs/other-loaders";
 import clsx from "clsx";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";

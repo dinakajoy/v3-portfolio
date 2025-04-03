@@ -1,4 +1,5 @@
-import { BaseMdxFrontmatter, getAllChilds } from "@/lib/markdown";
+import { BaseMdxFrontmatter } from "@/lib/markdown";
+import { getAllChilds } from "@/lib/techtomes/nodejs-mastery/nodejs-mastery-loaders";
 import Link from "next/link";
 
 export default async function Outlet({ path }: { path: string }) {

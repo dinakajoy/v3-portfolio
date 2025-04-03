@@ -1,16 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { renderToStaticMarkup } from "react-dom/server";
 import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote";
-import Layout from "@/components/layout";
-import { getAllGuides, getGuide, getGuidesTocs } from "@/lib/guides-loader";
-import { buttonVariants } from "@/components/ui/button";
 import { ArrowLeftIcon } from "lucide-react";
-import { Typography } from "@/components/typography";
-import { components } from "@/lib/markdown";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import Layout from "@/components/layout";
 import TocObserver from "@/components/guide-toc-observer";
+import { buttonVariants } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Typography } from "@/components/typography";
+import { getAllGuides, getGuide, getGuidesTocs } from "@/lib/guides-loader";
+import { components } from "@/lib/markdown";
 
 interface GuidePageProps {
   data: {

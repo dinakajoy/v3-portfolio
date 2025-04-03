@@ -1,4 +1,4 @@
-import { getDocsTocs } from "@/lib/other-loaders";
+import { getDocsTocs } from "@/lib/techtomes/docs/other-loaders";
 import TocObserver from "./toc-observer";
 import { ScrollArea } from "@/components/ui/scroll-area";
 

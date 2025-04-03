@@ -1,5 +1,5 @@
-import { EachRoute } from "@/lib/routes-config";
-import Anchor from "./anchor";
+import { EachRoute } from "@/lib/techtomes/docs/routes-config";
+import Anchor from "../../anchor";
 import {
   Collapsible,
   CollapsibleContent,
@@ -24,7 +24,7 @@ export default function SubLink({
   const [isOpen, setIsOpen] = useState(level == 0);
 
   useEffect(() => {
-    if (path == href || path.includes(href)) setIsOpen(true);
+    if (path == href || path?.includes(href)) setIsOpen(true);
   }, [href, path]);
 
   const Comp = (

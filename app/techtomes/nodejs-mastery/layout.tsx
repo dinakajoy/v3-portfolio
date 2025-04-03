@@ -1,6 +1,6 @@
+import DocsMenu from "@/components/techtomes/nodejs-mastery/docs-menu";
 import { Leftbar } from "@/components/leftbar";
 import { Navbar } from "@/components/navbar";
-import DocsMenu from "@/components/techtomes/nodejs-mastery/docs-menu";
 
 export default function DocsLayout({
   children,
@@ -9,7 +9,7 @@ export default function DocsLayout({
 }>) {
   return (
     <>
-      <Navbar />
+      <Navbar menu={<DocsMenu isSheet />} />
       <main className="sm:container mx-auto w-[90vw] h-auto scroll-smooth">
         <div className="flex items-start gap-8">
           <Leftbar key="leftbar" menu={<DocsMenu />} />

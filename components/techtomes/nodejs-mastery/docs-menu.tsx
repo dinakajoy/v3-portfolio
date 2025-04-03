@@ -1,8 +1,8 @@
 "use client";
 
-import SubLink from "@/components/sublink";
-import { NODEJS_ROUTES } from "@/lib/techtomes/nodejs-mastery/nodejs-mastery-routes-config";
 import { usePathname } from "next/navigation";
+import { NODEJS_ROUTES } from "@/lib/techtomes/nodejs-mastery/nodejs-mastery-routes-config";
+import SubLink from "./sublink";
 
 export default function DocsMenu({ isSheet = false }) {
   const pathname = usePathname();

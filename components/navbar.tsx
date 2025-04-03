@@ -14,12 +14,12 @@ const algolia_props = {
   apiKey: process.env.ALGOLIA_SEARCH_API_KEY!,
 };
 
-export function Navbar() {
+export function Navbar({ menu }: { menu: React.ReactNode }) {
   return (
     <nav className="w-full border-b h-16 sticky top-0 z-50 bg-background">
       <div className="sm:container mx-auto w-[95vw] h-full flex items-center sm:justify-between md:gap-2">
         <div className="flex items-center sm:gap-5 gap-2.5">
-          <SheetLeftbar />
+          <SheetLeftbar menu={menu} />
           <div className="flex items-center gap-6">
             <div className="lg:flex hidden">
               <Logo />

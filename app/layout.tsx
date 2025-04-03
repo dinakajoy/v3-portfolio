@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "@/components/contexts/theme-provider";
 import { Space_Mono, Space_Grotesk } from "next/font/google";
+import { ThemeProvider } from "@/components/contexts/theme-provider";
 import "@/styles/globals.css";
 
 const sansFont = Space_Grotesk({

@@ -6,16 +6,12 @@ import rehypePrism from "rehype-prism-plus";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
 import rehypeCodeTitles from "rehype-code-titles";
-import { page_routes, ROUTES } from "./routes-config";
 import { visit } from "unist-util-visit";
 import matter from "gray-matter";
-import { getIconName, hasSupportedExtension } from "./utils";
-import { components, sluggify } from "./markdown";
-
-type BaseMdxFrontmatter = {
-  title: string;
-  description: string;
-};
+import Outlet from "@/components/techtomes/docs/outlet";
+import { getIconName, hasSupportedExtension } from "../../utils";
+import { BaseMdxFrontmatter, components, sluggify } from "../../markdown";
+import { page_routes, ROUTES } from "./routes-config";
 
 function getDocsContentPath(slug: string) {
   return path.join(process.cwd(), "/contents/docs/", `${slug}/index.mdx`);
@@ -77,7 +73,7 @@ export async function parseMdx<Frontmatter>(rawMdx: string) {
         remarkPlugins: [remarkGfm],
       },
     },
-    components,
+    components: { ...components, Outlet },
   });
 }
 
