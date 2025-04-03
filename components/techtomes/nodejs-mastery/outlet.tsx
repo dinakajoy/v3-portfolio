@@ -1,6 +1,6 @@
+import Link from "next/link";
 import { BaseMdxFrontmatter } from "@/lib/markdown";
 import { getAllChilds } from "@/lib/techtomes/nodejs-mastery/nodejs-mastery-loaders";
-import Link from "next/link";
 
 export default async function Outlet({ path }: { path: string }) {
   if (!path) throw new Error("path not provided");

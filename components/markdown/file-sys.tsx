@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { FileIcon, FolderIcon, FolderOpenIcon } from "lucide-react";
 import {
   FileOrFolderType,
   FileType,
@@ -8,7 +9,6 @@ import {
   isFile,
   sortFileAndFolder,
 } from "./files";
-import { FileIcon, FolderIcon, FolderOpenIcon } from "lucide-react";
 import { cn, getIconName, hasSupportedExtension } from "@/lib/utils";
 
 export default function FileSys({

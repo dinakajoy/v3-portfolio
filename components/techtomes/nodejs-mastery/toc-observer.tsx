@@ -1,9 +1,9 @@
 "use client";
 
-import { getDocsTocs } from "@/lib/techtomes/nodejs-mastery/nodejs-mastery-loaders";
-import clsx from "clsx";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
+import clsx from "clsx";
+import { getDocsTocs } from "@/lib/techtomes/nodejs-mastery/nodejs-mastery-loaders";
 
 type Props = { data: Awaited<ReturnType<typeof getDocsTocs>> };
 

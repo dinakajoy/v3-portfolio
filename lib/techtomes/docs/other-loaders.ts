@@ -6,55 +6,22 @@ import rehypePrism from "rehype-prism-plus";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
 import rehypeCodeTitles from "rehype-code-titles";
-import { visit } from "unist-util-visit";
 import matter from "gray-matter";
 import Outlet from "@/components/techtomes/docs/outlet";
-import { getIconName, hasSupportedExtension } from "../../utils";
-import { BaseMdxFrontmatter, components, sluggify } from "../../markdown";
+import {
+  BaseMdxFrontmatter,
+  components,
+  postProcess,
+  preProcess,
+  rehypeCodeTitlesWithLogo,
+  sluggify,
+} from "../../markdown";
 import { page_routes, ROUTES } from "./routes-config";
 
 function getDocsContentPath(slug: string) {
   return path.join(process.cwd(), "/contents/docs/", `${slug}/index.mdx`);
 }
 
-function rehypeCodeTitlesWithLogo() {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  return (tree: any) => {
-    visit(tree, "element", (node) => {
-      if (
-        node?.tagName === "div" &&
-        node?.properties?.className?.includes("rehype-code-title")
-      ) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const titleTextNode = node.children.find(
-          (child: any) => child.type === "text"
-        );
-        if (!titleTextNode) return;
-
-        // Extract filename and language
-        const titleText = titleTextNode.value;
-        const match = hasSupportedExtension(titleText);
-        if (!match) return;
-
-        const splittedNames = titleText.split(".");
-        const ext = splittedNames[splittedNames.length - 1];
-        const iconClass = `devicon-${getIconName(ext)}-plain text-[17px]`;
-
-        // Insert icon before title text
-        if (iconClass) {
-          node.children.unshift({
-            type: "element",
-            tagName: "i",
-            properties: { className: [iconClass, "code-icon"] },
-            children: [],
-          });
-        }
-      }
-    });
-  };
-}
-
-// can be used for other pages like blogs, Guides etc
 export async function parseMdx<Frontmatter>(rawMdx: string) {
   return await compileMDX<Frontmatter>({
     source: rawMdx,
@@ -151,24 +118,3 @@ export async function getAllChilds(pathString: string) {
     })
   );
 }
-
-// for copying the code in pre
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const preProcess = () => (tree: any) => {
-  visit(tree, (node) => {
-    if (node?.type === "element" && node?.tagName === "pre") {
-      const [codeEl] = node.children;
-      if (codeEl.tagName !== "code") return;
-      node.raw = codeEl.children?.[0].value;
-    }
-  });
-};
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const postProcess = () => (tree: any) => {
-  visit(tree, "element", (node) => {
-    if (node?.type === "element" && node?.tagName === "pre") {
-      node.properties["raw"] = node.raw;
-    }
-  });
-};

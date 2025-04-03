@@ -1,6 +1,8 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { EachRoute, ROUTES } from "./techtomes/docs/routes-config";
+import { ROUTES } from "./techtomes/docs/routes-config";
+import { NODEJS_ROUTES } from "./techtomes/nodejs-mastery/nodejs-mastery-routes-config";
+import { EachRoute } from "@/interfaces/routes.interface";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -42,9 +44,11 @@ export function helperSearch(
 }
 
 export function advanceSearch(query: string) {
-  return ROUTES.map((node) =>
-    helperSearch(query, node, "", 1, query.length == 0 ? 2 : undefined)
-  ).flat();
+  return [...ROUTES, ...NODEJS_ROUTES]
+    .map((node) =>
+      helperSearch(query, node, "", 1, query.length == 0 ? 2 : undefined)
+    )
+    .flat();
 }
 
 // Thursday, May 23, 2024

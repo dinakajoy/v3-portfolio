@@ -1,8 +1,8 @@
 "use client";
 
-import { ROUTES } from "@/lib/techtomes/docs/routes-config";
-import SubLink from "./sublink";
 import { usePathname } from "next/navigation";
+import SubLink from "./sublink";
+import { ROUTES } from "@/lib/techtomes/docs/routes-config";
 
 export default function DocsMenu({ isSheet = false }) {
   const pathname = usePathname();

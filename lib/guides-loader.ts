@@ -4,7 +4,10 @@ import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 import remarkGfm from "remark-gfm";
 import rehypePrism from "rehype-prism-plus";
-import { sluggify } from "./markdown";
+import rehypeSlug from "rehype-slug";
+import rehypeCodeTitles from "rehype-code-titles";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import { postProcess, preProcess, rehypeCodeTitlesWithLogo, sluggify } from "./markdown";
 
 const guidesDirectory = path.join(process.cwd(), "contents/guides");
 
@@ -49,10 +52,18 @@ export async function getGuide(slug: string) {
 
   const mdxSource = await serialize(content, {
     mdxOptions: {
+      rehypePlugins: [
+        preProcess,
+        rehypeCodeTitles,
+        rehypeCodeTitlesWithLogo,
+        rehypePrism,
+        rehypeSlug,
+        rehypeAutolinkHeadings,
+        postProcess,
+      ],
       remarkPlugins: [remarkGfm],
-      rehypePlugins: [rehypePrism],
     },
-    parseFrontmatter: false,
+    parseFrontmatter: true,
   });
 
   return { content: mdxSource, metadata: data };

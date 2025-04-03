@@ -1,5 +1,5 @@
-import { getDocsTocs } from "@/lib/techtomes/docs/other-loaders";
 import TocObserver from "./toc-observer";
+import { getDocsTocs } from "@/lib/techtomes/docs/other-loaders";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 export default async function Toc({ path }: { path: string }) {

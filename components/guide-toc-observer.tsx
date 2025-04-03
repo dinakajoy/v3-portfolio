@@ -1,9 +1,9 @@
 "use client";
 
-import { getGuidesTocs } from "@/lib/guides-loader";
-import clsx from "clsx";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
+import clsx from "clsx";
+import { getGuidesTocs } from "@/lib/guides-loader";
 
 type Props = { data: Awaited<ReturnType<typeof getGuidesTocs>> };
 

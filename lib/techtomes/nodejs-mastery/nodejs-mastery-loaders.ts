@@ -5,13 +5,13 @@ import rehypePrism from "rehype-prism-plus";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
 import rehypeCodeTitles from "rehype-code-titles";
-import { visit } from "unist-util-visit";
 import matter from "gray-matter";
+import { visit } from "unist-util-visit";
 import { compileMDX } from "next-mdx-remote/rsc";
-import { getIconName, hasSupportedExtension } from "@/lib/utils";
-import { BaseMdxFrontmatter, components } from "@/lib/markdown";
 import { page_routes, NODEJS_ROUTES } from "./nodejs-mastery-routes-config";
 import Outlet from "@/components/techtomes/nodejs-mastery/outlet";
+import { getIconName, hasSupportedExtension } from "@/lib/utils";
+import { BaseMdxFrontmatter, components } from "@/lib/markdown";
 
 function getDocsContentPath(slug: string) {
   return path.join(

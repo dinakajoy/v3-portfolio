@@ -1,13 +1,13 @@
-import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import Link from "next/link";
-import { buttonVariants } from "../../ui/button";
+import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import { getPreviousNext } from "@/lib/techtomes/docs/other-loaders";
+import { buttonVariants } from "@/components/ui/button";
 
 export default function Pagination({ pathname }: { pathname: string }) {
   const res = getPreviousNext(pathname);
 
   return (
-    <div className="grid grid-cols-2 flex-grow sm:py-10 sm:py-7 py-4 pt-5 gap-5">
+    <div className="grid grid-cols-2 flex-grow sm:py-7 py-4 pt-5 gap-5">
       <div>
         {res.prev && (
           <Link

@@ -1,15 +1,15 @@
-import { EachRoute } from "@/lib/techtomes/docs/routes-config";
-import Anchor from "../../anchor";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { ChevronDown, ChevronRight } from "lucide-react";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import { cn } from "@/lib/utils";
 import { SheetClose } from "@/components/ui/sheet";
-import { ChevronDown, ChevronRight } from "lucide-react";
-import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import Anchor from "@/components/anchor";
+import { cn } from "@/lib/utils";
+import { EachRoute } from "@/interfaces/routes.interface";
 
 export default function SubLink({
   title,

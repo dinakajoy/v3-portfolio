@@ -1,12 +1,13 @@
-import { ModeToggle } from "@/components/theme-toggle";
-import { GithubIcon, TwitterIcon } from "lucide-react";
 import Link from "next/link";
-import { buttonVariants } from "./ui/button";
+import { GithubIcon, Linkedin, Mail, TwitterIcon } from "lucide-react";
 import Anchor from "./anchor";
 import { SheetLeftbar } from "./leftbar";
-import { SheetClose } from "@/components/ui/sheet";
 import AlgoliaSearch from "./algolia-search";
+import { buttonVariants } from "@/components/ui/button";
+import { SheetClose } from "@/components/ui/sheet";
+import { ModeToggle } from "@/components/theme-toggle";
 import { NAVLINKS } from "@/contents/nav-links";
+import { socials } from "./footer";
 
 const algolia_props = {
   appId: process.env.ALGOLIA_APP_ID!,
@@ -34,24 +35,20 @@ export function Navbar({ menu }: { menu: React.ReactNode }) {
           {/* <AlgoliaSearch {...algolia_props} /> */}
           <div className="flex items-center justify-between sm:gap-2">
             <div className="flex ml-4 sm:ml-0">
-              <Link
-                href="https://github.com/dinakajoy"
-                className={buttonVariants({
-                  variant: "ghost",
-                  size: "icon",
-                })}
-              >
-                <GithubIcon className="h-[1.1rem] w-[1.1rem]" />
-              </Link>
-              <Link
-                href="https://twitter.com/dinakajoy"
-                className={buttonVariants({
-                  variant: "ghost",
-                  size: "icon",
-                })}
-              >
-                <TwitterIcon className="h-[1.1rem] w-[1.1rem]" />
-              </Link>
+              {socials.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={buttonVariants({
+                    variant: "ghost",
+                    size: "icon",
+                  })}
+                >
+                  {social.icon}
+                </a>
+              ))}
               <ModeToggle />
             </div>
           </div>

@@ -1,9 +1,9 @@
 "use client";
 
-import { getDocsTocs } from "@/lib/techtomes/docs/other-loaders";
-import clsx from "clsx";
-import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
+import clsx from "clsx";
+import { getDocsTocs } from "@/lib/techtomes/docs/other-loaders";
 
 type Props = { data: Awaited<ReturnType<typeof getDocsTocs>> };
 

@@ -1,6 +1,6 @@
-import { ITalk } from "@/interfaces/types";
 import Image from "next/image";
 import { useState } from "react";
+import { ITalk } from "@/interfaces/types";
 
 const TalkCard = ({ talk }: { talk: ITalk }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);

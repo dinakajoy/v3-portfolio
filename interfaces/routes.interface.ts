@@ -3,6 +3,7 @@ export type EachRoute = {
   href: string;
   noLink?: true;
   items?: EachRoute[];
+  tag?: string;
 };
 
 export type Page = { title: string; href: string };

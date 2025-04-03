@@ -1,8 +1,8 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
-import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
+import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 
-const socials = [
+export const socials = [
   {
     name: "GitHub",
     icon: <FaGithub />,
