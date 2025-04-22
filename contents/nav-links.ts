@@ -15,8 +15,4 @@ export const NAVLINKS = [
     title: "TechTomes",
     href: "/techtomes",
   },
-  // {
-  //   title: "Documentation",
-  //   href: `/docs${page_routes[0].href}`,
-  // },
 ];

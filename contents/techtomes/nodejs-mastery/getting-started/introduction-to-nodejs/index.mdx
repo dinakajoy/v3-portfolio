@@ -34,21 +34,77 @@ Node.js offers several advantages that make it a preferred choice for backend de
 - **Microservices** – Lightweight and modular architecture for scalable applications.
 - **Command-Line Tools** – Build automation scripts and CLI utilities.
 
-## 1.4 Understanding the Node.js Ecosystem
-The Node.js ecosystem is vast and includes tools and libraries that enhance development efficiency. Key components include:
+## 1.4 Installation and REPL
 
-### npm (Node Package Manager)
-- A repository of JavaScript packages.
-- Used to install and manage dependencies in Node.js applications.
+### Installing Node.js
+To start building with Node.js, the first step is installing it on your machine.
 
-### The V8 JavaScript Engine
-- Developed by Google for Chrome.
-- Compiles JavaScript directly into machine code for fast execution.
+#### Installation Methods
 
-### CommonJS vs ECMAScript Modules
-- **CommonJS (`require`)** – The traditional module system used in Node.js.
-- **ES Modules (`import/export`)** – The modern, standardized JavaScript module system.
+##### 1. Official Installer (Recommended for Beginners)
+- Visit [https://nodejs.org](https://nodejs.org)
+- Download the **LTS version** (recommended for most users)
+- Follow the installation steps according to your OS (Windows, macOS, or Linux)
 
-## Summary
+##### 2. Using Node Version Manager (NVM)
+Great for developers who need to switch between Node versions.
+
+**macOS/Linux:**
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+source ~/.bashrc  # or ~/.zshrc depending on your shell
+nvm install --lts
+nvm use --lts
+```
+
+**Windows:** Use nvm-windows
+Windows: Use [nvm-windows](https://github.com/coreybutler/nvm-windows)
+
+#### Verifying Installation
+After installation, confirm it's working:
+
+```bash
+node -v    # Displays Node.js version
+npm -v     # Displays npm version
+```
+
+### Understanding the REPL
+REPL stands for Read-Eval-Print Loop, and it's an interactive shell for running Node.js code snippets.
+
+#### How to Start the REPL
+Open your terminal and type:
+
+```bash
+node
+```
+
+You will enter the interactive environment where you can execute JavaScript/Node.js code line by line.
+
+#### REPL Workflow
+- Read: Takes your input.
+- Eval: Evaluates the input.
+- Print: Outputs the result.
+- Loop: Waits for the next input.
+
+#### Sample REPL Session
+```bash
+> 2 + 3
+5
+> const name = "Odinaka"
+undefined
+> name.toUpperCase()
+'ODINAKA'
+```
+
+#### Useful REPL Commands
+- .help – Displays REPL commands.
+- .exit – Exits the REPL.
+- _ – Refers to the last evaluated result.
+
+REPL is a great tool for experimenting with Node.js features and testing logic without creating files. It's especially handy for quick debugging and learning the language interactively.
+
+## 1.5 Writing and Running Your First Node.js Script
+
+## Overview
 Node.js has revolutionized backend development by providing a fast, scalable, and efficient environment for running JavaScript outside the browser. Its event-driven, non-blocking architecture makes it an excellent choice for modern applications. With a strong ecosystem and a unified JavaScript stack, Node.js continues to be a dominant force in web development.
 

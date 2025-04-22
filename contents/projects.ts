@@ -1,62 +1,28 @@
 export const projects = [
-   // {
-  //   title: "Team Collab GraphQL API",
-  //   description:
-  //     "An AI-integrated ERP system designed to automate inventory and employee management.",
-  //   challenges: [
-  //     "Implementing a role-based access control (RBAC) system",
-  //     "Optimizing real-time inventory tracking",
-  //     "Integrating AI-driven insights into ERP workflows",
-  //   ],
-  //   solutions: [
-  //     "Developed a granular RBAC using JWT and middleware",
-  //     "Used WebSockets for real-time inventory updates",
-  //     "Trained a basic ML model to predict restocking needs",
-  //   ],
-  //   techStack: ["React.js", "Express.js", "MongoDB", "Socket.io", "Python ML"],
-  //   link: "#",
-  // },
-  // {
-  //   title: "Smart ERP System",
-  //   description:
-  //     "An AI-integrated ERP system designed to automate inventory and employee management.",
-  //   challenges: [
-  //     "Implementing a role-based access control (RBAC) system",
-  //     "Optimizing real-time inventory tracking",
-  //     "Integrating AI-driven insights into ERP workflows",
-  //   ],
-  //   solutions: [
-  //     "Developed a granular RBAC using JWT and middleware",
-  //     "Used WebSockets for real-time inventory updates",
-  //     "Trained a basic ML model to predict restocking needs",
-  //   ],
-  //   techStack: ["React.js", "Express.js", "MongoDB", "Socket.io", "Python ML"],
-  //   link: "#",
-  // },
-  // {
-  //   title: "TheraBot",
-  //   description:
-  //     "An AI-integrated ERP system designed to automate inventory and employee management.",
-  //   challenges: [
-  //     "Implementing a role-based access control (RBAC) system",
-  //     "Optimizing real-time inventory tracking",
-  //     "Integrating AI-driven insights into ERP workflows",
-  //   ],
-  //   solutions: [
-  //     "Developed a granular RBAC using JWT and middleware",
-  //     "Used WebSockets for real-time inventory updates",
-  //     "Trained a basic ML model to predict restocking needs",
-  //   ],
-  //   techStack: ["React.js", "Express.js", "MongoDB", "Socket.io", "Python ML"],
-  //   link: "#",
-  // },
+  {
+    title: "Team Collab GraphQL API",
+    description:
+      "TeamCollab is a collaborative project and task management GraphQL API. It supports scalable team structures, project tracking, and efficient task management using modern best practices.",
+    challenges: [
+      "Implementing a role-based access control (RBAC) system",
+      "Implementing security with GraphQL Shield",
+      "Implementing errors",
+    ],
+    solutions: [
+      "Developed a granular RBAC using JWT and middleware",
+      "Teams, Members, Project & Task Management with GraphQL Shield",
+      "Implemented error handling with Apollo Server",
+      "Implemented a custom error handler for GraphQL errors",
+      "Used DataLoader for efficient data fetching and caching",
+    ],
+    techStack: ["Node.js", "Express.js", "MongoDB", "Apollo Server", "DataLoader"],
+    link: "https://github.com/dinakajoy/teamcollab-graphQL-API",
+  },
   {
     title: "AI-Powered Job Application Assistant",
     description:
       "A web application that helps users optimize their job applications with AI-generated insights.",
-    challenges: [
-      "Integrating AI-powered resume analysis (WIP)",
-    ],
+    challenges: ["Integrating AI-powered resume analysis (WIP)"],
     solutions: [
       "Used OpenAI API for intelligent job recommendations",
       "Designed a clean and structured database for job applications",

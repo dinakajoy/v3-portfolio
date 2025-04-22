@@ -1,10 +1,10 @@
 # Odinaka Joy's Portfolio
 
-## 🚀 Overview
+## Overview
 
 Welcome to my personal **Portfolio Website**, where I showcase my work as a **Senior Software Engineer** specializing in **Web Development & AI Integration**. This site highlights my projects, blogs, technical guides, and speaking engagements.
 
-## 🌟 Features
+## Features
 
 - **About Me** – Experience, skills, and background.
 - **Projects** – Showcasing my work in AI, web development, and open-source contributions.
@@ -13,21 +13,17 @@ Welcome to my personal **Portfolio Website**, where I showcase my work as a **Se
 - **TechTomes** – A knowledge hub for deep technical documentation.
 - **Talks** – List of my past speaking engagements with slides, recordings, and posters.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend**: Next.js, TypeScript, TailwindCSS
 - **Hosting**: Vercel
 
-## 📬 Connect with Me
+## Connect with Me
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin)](https://linkedin.com/in/dinakajoy)
 [![Twitter](https://img.shields.io/badge/Twitter-black?style=flat&logo=twitter)](https://twitter.com/dinakajoy)
 [![GitHub](https://img.shields.io/badge/GitHub-gray?style=flat&logo=github)](https://github.com/dinakajoy)
 
-## 📜 License
-
-This project is open-source and available under the [MIT License](LICENSE).
-
 ---
 
-Made with ❤️ by **Odinaka Joy**
+Made with ❤️ by **Odinaka Joy** using [Aria Docs template](https://github.com/nisabmohd/Aria-Docs)
