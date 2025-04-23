@@ -9,7 +9,7 @@ export const NODEJS_ROUTES: EachRoute[] = [
     noLink: true,
     items: [
       { title: "Introduction to Node.js", href: "/introduction-to-nodejs" },
-      { title: "More on Node.js Ecosystem", href: "/nodejs-ecosystem" },
+      { title: "Understanding the Node.js Ecosystem", href: "/nodejs-ecosystem" },
     ],
   },
   {
