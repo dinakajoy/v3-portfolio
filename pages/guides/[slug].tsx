@@ -41,7 +41,7 @@ export default function GuidePage({ data, tocs }: GuidePageProps) {
         <div className="flex items-start gap-10">
           {/* Main Content */}
           <div className="w-3/4">
-            <div className="prose dark:prose-invert">
+            <div className="prose dark:prose-invert guide">
               <h1 className="text-3xl font-bold mb-6">{metadata.title}</h1>
               <Typography>
                 <MDXRemote {...content} components={components} />

@@ -80,6 +80,10 @@
   margin: 0 !important;
 }
 
+.guide .prose p {
+  font-size: 1.1rem;
+}
+
 pre {
   padding: 2px 0 !important;
   width: inherit !important;
