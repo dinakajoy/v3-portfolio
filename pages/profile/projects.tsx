@@ -97,14 +97,26 @@ export default function ProjectsPage() {
               ))}
             </div>
 
-            <a
-              href={selectedProject.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-6 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700"
-            >
-              View Project
-            </a>
+            <div className="flex flex-wrap justify-between gap-2 mt-2">
+              <a
+                href={selectedProject.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-6 bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-700"
+              >
+                View Code
+              </a>
+              {selectedProject.liveLink && (
+                <a
+                  href={selectedProject.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-6 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700"
+                >
+                  View Project
+                </a>
+              )}
+            </div>
           </div>
         </div>
       </div>

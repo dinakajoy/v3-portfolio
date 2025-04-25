@@ -1,58 +1,5 @@
 export const projects = [
   {
-    title: "Team Collab GraphQL API",
-    description:
-      "TeamCollab is a collaborative project and task management GraphQL API. It supports scalable team structures, project tracking, and efficient task management using modern best practices.",
-    challenges: [
-      "Implementing a role-based access control (RBAC) system",
-      "Implementing security with GraphQL Shield",
-      "Implementing errors",
-    ],
-    solutions: [
-      "Developed a granular RBAC using JWT and middleware",
-      "Teams, Members, Project & Task Management with GraphQL Shield",
-      "Implemented error handling with Apollo Server",
-      "Implemented a custom error handler for GraphQL errors",
-      "Used DataLoader for efficient data fetching and caching",
-    ],
-    techStack: ["Node.js", "Express.js", "MongoDB", "Apollo Server", "DataLoader"],
-    link: "https://github.com/dinakajoy/teamcollab-graphQL-API",
-  },
-  // {
-  //   title: "Smart ERP System",
-  //   description:
-  //     "An AI-integrated ERP system designed to automate inventory and employee management.",
-  //   challenges: [
-  //     "Implementing a role-based access control (RBAC) system",
-  //     "Optimizing real-time inventory tracking",
-  //     "Integrating AI-driven insights into ERP workflows",
-  //   ],
-  //   solutions: [
-  //     "Developed a granular RBAC using JWT and middleware",
-  //     "Used WebSockets for real-time inventory updates",
-  //     "Trained a basic ML model to predict restocking needs",
-  //   ],
-  //   techStack: ["React.js", "Express.js", "MongoDB", "Socket.io", "Python ML"],
-  //   link: "#",
-  // },
-  // {
-  //   title: "TheraBot",
-  //   description:
-  //     "An AI-integrated ERP system designed to automate inventory and employee management.",
-  //   challenges: [
-  //     "Implementing a role-based access control (RBAC) system",
-  //     "Optimizing real-time inventory tracking",
-  //     "Integrating AI-driven insights into ERP workflows",
-  //   ],
-  //   solutions: [
-  //     "Developed a granular RBAC using JWT and middleware",
-  //     "Used WebSockets for real-time inventory updates",
-  //     "Trained a basic ML model to predict restocking needs",
-  //   ],
-  //   techStack: ["React.js", "Express.js", "MongoDB", "Socket.io", "Python ML"],
-  //   link: "#",
-  // },
-  {
     title: "AI-Powered Job Application Assistant",
     description:
       "A web application that helps users optimize their job applications with AI-generated insights.",
@@ -69,65 +16,26 @@ export const projects = [
       "MongoDB",
     ],
     link: "https://github.com/dinakajoy/job-application-assistant",
+    liveLink: "https://job-application-assistant.vercel.app",
   },
   {
-    title: "SmartTicTac - AI-Enhanced Tic-Tac-Toe",
+    title: "Team Collab GraphQL API",
     description:
-      "A web-based Tic-Tac-Toe game that incorporates AI to provide a challenging gameplay experience.",
+      "TeamCollab is a collaborative project and task management GraphQL API. It supports scalable team structures, project tracking, and efficient task management using modern best practices.",
     challenges: [
-      "Implementing an intelligent AI opponent",
-      "Ensuring smooth and responsive UI interactions",
-      "Managing game state effectively across different players",
+      "Implementing a role-based access control (RBAC) system",
+      "Implementing security with GraphQL Shield",
+      "Implementing errors",
     ],
     solutions: [
-      "Utilized Minimax algorithm for AI decision-making",
-      "Built an interactive UI with React for a seamless gaming experience",
-      "Managed game state efficiently using React hooks",
+      "Developed a granular RBAC using JWT and middleware",
+      "Teams, Members, Project & Task Management with GraphQL Shield",
+      "Implemented error handling with Apollo Server",
+      "Implemented a custom error handler for GraphQL errors",
+      "Used DataLoader for efficient data fetching and caching",
     ],
-    techStack: ["Next.js", "TypeScript", "TailwindCSS", "Minimax Algorithm"],
-    link: "https://github.com/dinakajoy/SmartTicTac",
-  },
-  {
-    title: "Kepler Planet Explorer",
-    description:
-      "A web application that visualizes exoplanet data from the Kepler space mission, helping users explore discovered planets in an interactive way.",
-    challenges: [
-      "Fetching and processing large datasets of exoplanets",
-      "Creating an intuitive and visually engaging UI",
-      "Optimizing performance for data visualization",
-    ],
-    solutions: [
-      "Used NASA's Exoplanet API to fetch planetary data",
-      "Designed a clean and interactive UI with React and TailwindCSS with paginated and lazyloaded view options",
-      "Implemented efficient state management for smooth user experience",
-    ],
-    techStack: ["Next.js", "TypeScript", "TailwindCSS", "NASA Exoplanet API"],
-    link: "https://github.com/dinakajoy/Kepler-planet-explorer",
-  },
-  {
-    title: "AuthXpress",
-    description:
-      "A secure authentication system built with Express.js, providing user registration, login, and role-based access control (RBAC).",
-    challenges: [
-      "Implementing a robust authentication and authorization system",
-      "Ensuring secure password storage and user data protection",
-      "Managing user roles and access levels efficiently",
-    ],
-    solutions: [
-      "Used bcrypt for password hashing and JWT for authentication",
-      "Implemented role-based access control (RBAC) for secure authorization",
-      "Designed a RESTful API with Express.js for seamless authentication",
-    ],
-    techStack: [
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "JWT Authentication",
-      "bcrypt",
-      "React.js",
-      "TailwindCSS",
-    ],
-    link: "https://github.com/dinakajoy/authXpress",
+    techStack: ["Node.js", "Express.js", "MongoDB", "Apollo Server"],
+    link: "https://github.com/dinakajoy/teamcollab-graphQL-API",
   },
   {
     title: "JSON Engine",
@@ -147,6 +55,60 @@ export const projects = [
     link: "https://github.com/dinakajoy/JSON_Engine",
   },
   {
+    title: "SmartTicTac: AI-Enhanced Tic-Tac-Toe",
+    description:
+      "A web-based Tic-Tac-Toe game that incorporates AI to provide a challenging gameplay experience.",
+    challenges: [
+      "Implementing an intelligent AI opponent",
+      "Ensuring smooth and responsive UI interactions",
+      "Managing game state effectively across different players",
+    ],
+    solutions: [
+      "Utilized Minimax algorithm for AI decision-making",
+      "Built an interactive UI with React for a seamless gaming experience",
+      "Managed game state efficiently using React hooks",
+    ],
+    techStack: ["Next.js", "TypeScript", "TailwindCSS", "Minimax Algorithm"],
+    link: "https://github.com/dinakajoy/SmartTicTac",
+    liveLink: "https://smart-tic-tac.vercel.app",
+  },
+  {
+    title: "Kepler Planet Explorer",
+    description:
+      "A web application that visualizes exoplanet data from the Kepler space mission, helping users explore discovered planets in an interactive way.",
+    challenges: [
+      "Fetching and processing large datasets of exoplanets",
+      "Creating an intuitive and visually engaging UI",
+      "Optimizing performance for data visualization",
+    ],
+    solutions: [
+      "Used NASA's Exoplanet API to fetch planetary data",
+      "Designed a clean and interactive UI with React and TailwindCSS with paginated and lazyloaded view options",
+      "Implemented efficient state management for smooth user experience",
+    ],
+    techStack: ["Next.js", "TypeScript", "TailwindCSS", "NASA Exoplanet API"],
+    link: "https://github.com/dinakajoy/Kepler-planet-explorer",
+    liveLink: "https://kepler-planet-explorer.vercel.app",
+  },
+  {
+    title: "AuthXpress",
+    description:
+      "A secure authentication system built with Express.js, providing user registration, login, and role-based access control (RBAC).",
+    challenges: [
+      "Implementing a robust authentication and authorization system",
+      "Ensuring secure password storage and user data protection",
+      "Managing user roles and access levels efficiently",
+    ],
+    solutions: [
+      "Used bcrypt for password hashing and JWT for authentication",
+      "Implemented role-based access control (RBAC) for secure authorization",
+      "Designed a RESTful API with Express.js for seamless authentication",
+    ],
+    techStack: ["Node.js", "Express.js", "MongoDB", "React.js", "TailwindCSS"],
+    link: "https://github.com/dinakajoy/authXpress",
+    liveLink: "https://authxpress.vercel.app",
+  },
+  {
     title: "GitHub Snoop",
     description:
       "A web application that provides insights into GitHub profiles, repositories, and contributions.",
@@ -163,6 +125,7 @@ export const projects = [
     ],
     techStack: ["Next.js", "TypeScript", "TailwindCSS", "GitHub API"],
     link: "https://github.com/dinakajoy/github-snoop",
+    liveLink: "https://github-snoop.vercel.app",
   },
   {
     title: "Quiz App",
@@ -174,29 +137,31 @@ export const projects = [
       "Fetching and displaying quiz data efficiently",
     ],
     solutions: [
-      "Designed an interactive and responsive UI with React and TailwindCSS",
-      "Implemented real-time quiz state management using React hooks",
+      "Designed an interactive and responsive UI with React and CSS",
+      "Implemented quiz state management",
       "Integrated a GraphQL API for fetching quiz questions",
     ],
-    techStack: ["Next.js", "TypeScript", "TailwindCSS", "SWR", "GraphQL API"],
+    techStack: ["Next.js", "TypeScript", "CSS", "SWR", "GraphQL API"],
     link: "https://github.com/dinakajoy/quiz_app_graphql_api",
+    liveLink: "https://quiz-app-graphql-api.vercel.app",
   },
   {
     title: "Mini Netflix Movie App",
     description:
-      "A movie streaming web application that allows users to browse, search, and discover movies with a Netflix-like interface.",
+      "A movie catalogue web application that allows users to browse, search, save and remove favourite moves, and discover movies with a Netflix-like interface.",
     challenges: [
-      "Fetching and displaying real-time movie data",
+      "Fetching and displaying movie data",
       "Implementing a smooth and responsive UI for a Netflix-like experience",
       "Optimizing API calls for better performance",
     ],
     solutions: [
       "Integrated The Movie Database (json file) API for fetching movie details",
-      "Designed an intuitive and visually appealing UI using React and TailwindCSS",
-      "Implemented lazy loading and pagination for efficient data fetching",
+      "Designed an intuitive and visually appealing UI using React and CSS",
+      "Implemented pagination for efficient data fetching",
     ],
     techStack: ["React", "TypeScript", "CSS"],
     link: "https://github.com/dinakajoy/mini-netflix-movie-app",
+    liveLink: "https://mini-netflix-movie-app.vercel.app",
   },
   {
     title: "Save the Princess Game",
@@ -210,8 +175,9 @@ export const projects = [
     solutions: [
       "Implemented dynamic game logic to create an immersive experience",
     ],
-    techStack: ["React", "CSS Animations"],
+    techStack: ["React", "CSS"],
     link: "https://github.com/dinakajoy/save-the-princess-game",
+    liveLink: "https://save-the-princess.netlify.app",
   },
   {
     title: "Mini Marvel",
@@ -224,10 +190,11 @@ export const projects = [
     ],
     solutions: [
       "Integrated the Marvel API to retrieve real-time character and comic data",
-      "Designed a visually appealing and responsive UI with React and TailwindCSS",
-      "Implemented efficient caching and lazy loading for better performance",
+      "Designed a visually appealing and responsive UI with React and CSS",
+      "Implemented lazy loading for better performance",
     ],
     techStack: ["React", "CSS", "Marvel API"],
     link: "https://github.com/dinakajoy/mini-marvel",
+    liveLink: "https://mini-marvel.netlify.app",
   },
 ];
