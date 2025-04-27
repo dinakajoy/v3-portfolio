@@ -131,20 +131,20 @@ export default function ProjectDetailPage({ project }: ProjectPageProps) {
 
 // Fetch all possible paths
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = Object.keys(solutions).map((id) => ({
-    params: { id },
+  const paths = solutions.map((solution) => ({
+    params: { id: solution.id.toString() },
   }));
 
   return {
     paths,
-    fallback: true, // fallback true for incremental builds
+    fallback: true, // or false if you want strict paths only
   };
 };
 
 // Fetch data for a single project
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const id = params?.id as string;
-  const project = solutions[id as keyof typeof solutions];
+  const id = params?.id;
+  const project = solutions.find((solution) => solution.id.toString() === id);
 
   if (!project) {
     return { notFound: true };
