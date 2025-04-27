@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 import Layout from "@/components/layout";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { useRouter } from "next/router";
 import Link from "next/link";
 import { ISolution } from "@/interfaces/types";
 import { solutions } from "@/contents/solutions";
@@ -11,6 +11,11 @@ interface ProjectPageProps {
 }
 
 export default function ProjectDetailPage({ project }: ProjectPageProps) {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
   return (
     <Layout>
       <div className="text-gray-700 dark:text-white p-6 flex flex-col items-center">
@@ -147,6 +152,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: { project },
-    revalidate: 60, // ISR every 60 seconds
+    revalidate: 60,
   };
 };

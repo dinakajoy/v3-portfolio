@@ -1,6 +1,5 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { ROUTES } from "./techtomes/docs/routes-config";
 import { NODEJS_ROUTES } from "./techtomes/nodejs-mastery/nodejs-mastery-routes-config";
 import { EachRoute } from "@/interfaces/routes.interface";
 
@@ -44,7 +43,7 @@ export function helperSearch(
 }
 
 export function advanceSearch(query: string) {
-  return [...ROUTES, ...NODEJS_ROUTES]
+  return [...NODEJS_ROUTES]
     .map((node) =>
       helperSearch(query, node, "", 1, query.length == 0 ? 2 : undefined)
     )
