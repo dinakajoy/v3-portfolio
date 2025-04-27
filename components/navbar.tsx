@@ -1,94 +1,58 @@
+import { useState } from "react";
 import Link from "next/link";
-import { GithubIcon, Linkedin, Mail, TwitterIcon } from "lucide-react";
-import Anchor from "./anchor";
-import { SheetLeftbar } from "./leftbar";
-import AlgoliaSearch from "./algolia-search";
-import { buttonVariants } from "@/components/ui/button";
-import { SheetClose } from "@/components/ui/sheet";
-import { ModeToggle } from "@/components/theme-toggle";
+import { Menu } from "lucide-react";
 import { NAVLINKS } from "@/contents/nav-links";
-import { socials } from "./footer";
+import Anchor from "./anchor";
+import { ModeToggle } from "./theme-toggle";
 
-const algolia_props = {
-  appId: process.env.ALGOLIA_APP_ID!,
-  indexName: process.env.ALGOLIA_INDEX!,
-  apiKey: process.env.ALGOLIA_SEARCH_API_KEY!,
-};
+export function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
 
-export function Navbar({ menu }: { menu: React.ReactNode }) {
   return (
-    <nav className="w-full border-b h-16 sticky top-0 z-50 bg-background">
-      <div className="sm:container mx-auto w-[95vw] h-full flex items-center sm:justify-between md:gap-2">
-        <div className="flex items-center sm:gap-5 gap-2.5">
-          <SheetLeftbar menu={menu} />
-          <div className="flex items-center gap-6">
-            <div className="lg:flex hidden">
-              <Logo />
-            </div>
-            <div className="md:flex hidden items-center gap-4 text-sm font-medium text-muted-foreground">
-              <NavMenu />
-            </div>
+    <nav className="relative p-4 shadow-md">
+      <div className="max-w-6xl mx-auto flex justify-between items-center">
+        <Link href="/">
+          <img src="/logo.png" alt="Odinaka Joy" />
+        </Link>
+        <div className="flex space-x-4 md:space-x-8 items-center">
+          <div className="hidden md:flex space-x-4 md:space-x-8 items-center">
+            {NAVLINKS.map((item) => (
+              <Anchor
+                key={item.title + item.href}
+                activeClassName="text-primary font-semibold"
+                absolute
+                className="flex items-center gap-1"
+                href={item.href}
+              >
+                {item.title}
+              </Anchor>
+            ))}
           </div>
-        </div>
 
-        <div className="flex items-center sm:justify-normal justify-between sm:gap-3 ml-1 sm:w-fit w-[90%]">
-          {/* <AlgoliaSearch {...algolia_props} /> */}
-          <div className="flex items-center justify-between sm:gap-2">
-            <div className="flex ml-4 sm:ml-0">
-              {socials.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={buttonVariants({
-                    variant: "ghost",
-                    size: "icon",
-                  })}
+          <ModeToggle />
+          <button
+            className="md:hidden flex items-center p-2 text-muted-foreground"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            <Menu size={28} />
+          </button>
+          {isOpen && (
+            <div className="absolute right-6 top-16 w-52 bg-gray-200 dark:bg-gray-800 shadow-lg rounded-lg p-4 flex flex-col gap-y-2 md:hidden z-10">
+              {NAVLINKS.map((item) => (
+                <Anchor
+                  key={item.title + item.href}
+                  activeClassName="text-primary font-semibold"
+                  className="block px-4 py-2 rounded hover:bg-gray-100 hover:dark:bg-gray-400"
+                  href={item.href}
                 >
-                  {social.icon}
-                </a>
+                  {item.title}
+                </Anchor>
               ))}
-              <ModeToggle />
             </div>
-          </div>
+          )}
         </div>
       </div>
     </nav>
-  );
-}
-
-export function Logo() {
-  return (
-    <Link href="/" className="flex items-center gap-2.5">
-      <img src="/logo.png" alt="Odinaka Joy" />
-    </Link>
-  );
-}
-
-export function NavMenu({ isSheet = false }) {
-  return (
-    <>
-      {NAVLINKS.map((item) => {
-        const Comp = (
-          <Anchor
-            key={item.title + item.href}
-            activeClassName="!text-primary dark:font-medium font-semibold"
-            absolute
-            className="flex items-center gap-1 sm:text-sm text-[14.5px] dark:text-stone-300/85 text-stone-800"
-            href={item.href}
-          >
-            {item.title}
-          </Anchor>
-        );
-        return isSheet ? (
-          <SheetClose key={item.title + item.href} asChild>
-            {Comp}
-          </SheetClose>
-        ) : (
-          Comp
-        );
-      })}
-    </>
   );
 }

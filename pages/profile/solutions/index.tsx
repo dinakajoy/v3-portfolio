@@ -1,11 +1,10 @@
-import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "@/components/layout";
-import TalkCard from "@/components/talk-card";
-import { talks } from "@/contents/talks";
+import SolutionCard from "@/components/solution-card";
+import { solutions } from "@/contents/solutions";
 
-export default function TalksPage() {
+export default function SolutionsPage() {
   return (
     <Layout>
       <div className="text-gray-700 dark:text-white p-6 flex flex-col items-center">
@@ -15,10 +14,12 @@ export default function TalksPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Talks & Presentations
+          Solutions
         </motion.h1>
         <p className="text-lg text-gray-500 dark:text-gray-300 mb-6 text-center max-w-3xl">
-          Recordings, slides, and keynotes from past presentations.
+          Browse a selection of projects that solve real-world challenges using
+          modern technologies. Each solution is designed to address specific
+          problems with practical, scalable approaches.
         </p>
 
         <div className="text-white my-12 flex space-x-4">
@@ -41,16 +42,19 @@ export default function TalksPage() {
             Projects
           </Link>
           <Link
-            href="/profile/solutions"
-            className="px-4 py-2 bg-pink-600 hover:bg-pink-500 rounded-lg text-lg font-semibold"
+            href="/profile/talks"
+            className="px-4 py-2 bg-purple-600 hover:bg-purple-500 rounded-lg text-lg font-semibold"
           >
-            Solutions
+            Talks
           </Link>
         </div>
 
-        <div className="w-full space-y-6">
-          {talks.map((talk, index) => (
-            <TalkCard talk={talk} key={index} />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {solutions.map((solution) => (
+            <SolutionCard
+              key={solution.id}
+              project={solution}
+            />
           ))}
         </div>
       </div>

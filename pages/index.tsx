@@ -24,7 +24,7 @@ export default function LandingPage() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        Software Engineer | AI & Backend Developer
+        Software Engineer | Backend Developer | AI-Powered Solutions
       </motion.h2>
       <motion.p
         className="text-lg text-gray-900 dark:text-gray-400 text-center mb-6"
@@ -32,8 +32,7 @@ export default function LandingPage() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        Building intelligent web experiences with AI & scalable software
-        solutions.
+        I build intelligent web experiences with Artificial Intelligence (AI) and scalable software solutions.
       </motion.p>
 
       <motion.div

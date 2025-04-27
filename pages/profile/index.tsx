@@ -23,14 +23,14 @@ export default function ProfilePage() {
           I&apos;m Odinaka Joy, a Software Engineer specializing in Web
           Development and AI integration. With over 5 years of experience
           building scalable applications, contributing to open-source projects,
-          and mentoring developers. My expertise includes TypeScript, React,
-          Express.js, AI-powered systems, and system design.
+          and mentoring developers. My expertise includes TypeScript, React.js,
+          Express.js, and AI-powered systems.
         </motion.p>
 
         <div className="text-white my-12 flex space-x-4">
           <Link
             href="/"
-            className="px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg text-lg font-semibold"
+            className="px-4 py-2 bg-slate-600 hover:bg-slate-500 rounded-lg text-lg font-semibold"
           >
             Home
           </Link>
@@ -39,6 +39,12 @@ export default function ProfilePage() {
             className="px-4 py-2 bg-green-600 hover:bg-green-500 rounded-lg text-lg font-semibold"
           >
             Projects
+          </Link>
+          <Link
+            href="/profile/solutions"
+            className="px-4 py-2 bg-pink-600 hover:bg-pink-500 rounded-lg text-lg font-semibold"
+          >
+            Solutions
           </Link>
           <Link
             href="/profile/talks"
@@ -58,13 +64,16 @@ export default function ProfilePage() {
             <h2 className="text-xl font-semibold mb-2">Skills</h2>
             <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 text-md">
               <li>
-                JavaScript (TypeScript, React, Next.js, Node.js, Express.js)
+                JavaScript (TypeScript, React.js, Next.js, Node.js, Express.js)
               </li>
               <li>OCaml (Js_of_OCaml, Brr, Elm, Dream)</li>
               <li>Database Management (MongoDB, PostgreSQL, Firebase)</li>
-              <li>AI & LLM Integration</li>
               <li>Docker, Cloud Services (AWS, GCP)</li>
               <li>System Design, Performance Optimization</li>
+              <li>
+                AI & LLM Integration - NLP focused (Pandas, NumPy, Matplotlib,
+                Scikit-learn, PyTorch)
+              </li>
             </ul>
           </motion.div>
 
@@ -80,7 +89,8 @@ export default function ProfilePage() {
               <li>Software Engineer – Tarides (2022)</li>
               <li>Outreachy Intern – OCaml (2021)</li>
               <li>Software Engineer – Loctech Nigeria Limited (2020)</li>
-              <li>Web Engineer II – Codelab Projects (2019)</li>
+              <li>Web Engineer II – Codelab Projects (2019 - 2020)</li>
+              <li>Freelance Developer – XircomICT (2018 - 2020)</li>
             </ul>
           </motion.div>
         </div>
@@ -96,10 +106,12 @@ export default function ProfilePage() {
               Open Source Contributions
             </h2>
             <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 text-md">
-              <li>Contributor & Mentor – Outreachy (2022, 2024)</li>
-              <li>GraphQL API Development – OCaml (opam packages)</li>
+              <li>OCaml.org Website – OCaml</li>
               <li>Irmin in the browser – OCaml</li>
-              <li>Developer Tools & AI Projects</li>
+              <li>Contributor & Mentor – Outreachy (2022, 2024)</li>
+              <li>GraphQL API Development (opam packages) – OCaml </li>
+              <li>Contributor – Outreachy (2021)</li>
+              {/* <li>Developer Tools & AI Projects</li> */}
             </ul>
           </motion.div>
 

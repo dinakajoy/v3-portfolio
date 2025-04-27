@@ -1,6 +1,6 @@
 import DocsMenu from "@/components/techtomes/docs/docs-menu";
 import { Leftbar } from "@/components/leftbar";
-import { Navbar } from "@/components/navbar";
+import { Navbar } from "@/components/docs-navbar";
 
 export default function DocsLayout({
   children,

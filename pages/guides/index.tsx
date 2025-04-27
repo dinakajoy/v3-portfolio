@@ -6,7 +6,7 @@ import { getAllGuides } from "@/lib/guides-loader";
 import { formatDate } from "@/lib/utils";
 import { IGuide } from "@/interfaces/guides.interfaces";
 
-const ITEMS_PER_PAGE = 5;
+const ITEMS_PER_PAGE = 10;
 
 export default function GuidesPage({ guides }: { guides: IGuide[] }) {
   const [currentPage, setCurrentPage] = useState(1);

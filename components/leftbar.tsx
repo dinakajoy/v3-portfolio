@@ -1,5 +1,5 @@
 import { AlignLeftIcon } from "lucide-react";
-import { Logo, NavMenu } from "./navbar";
+import { Logo, NavMenu } from "./docs-navbar";
 import {
   Sheet,
   SheetClose,
