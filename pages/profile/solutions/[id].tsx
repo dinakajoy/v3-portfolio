@@ -48,7 +48,7 @@ export default function ProjectDetailPage({ project }: ProjectPageProps) {
           </motion.h2>
 
           <section className="mb-4">
-            <p className="text-lg text-gray-500 dark:text-gray-300 mb-4">
+            <p className="text-lg text-gray-500 dark:text-gray-400 mb-4">
               {project.description}
             </p>
           </section>
@@ -69,7 +69,7 @@ export default function ProjectDetailPage({ project }: ProjectPageProps) {
 
           <section className="mb-4">
             <h2 className="text-2xl font-bold mb-2">Key Features</h2>
-            <ul className="list-disc list-inside text-gray-500">
+            <ul className="list-disc list-inside text-gray-500 dark:text-gray-400">
               {project.features.map((item, idx) => (
                 <li key={idx}>{item}</li>
               ))}
@@ -80,7 +80,7 @@ export default function ProjectDetailPage({ project }: ProjectPageProps) {
             <h2 className="text-2xl font-bold mb-2">
               Why {project.shortTitle}
             </h2>
-            <ul className="list-disc list-inside text-gray-700">
+            <ul className="list-disc list-inside text-gray-700 dark:text-gray-400">
               {project.reasons.map((reason, idx) => (
                 <li key={idx}>{reason}</li>
               ))}
@@ -91,7 +91,7 @@ export default function ProjectDetailPage({ project }: ProjectPageProps) {
             <h2 className="text-2xl font-bold mb-2">
               How It Solves Real Problems
             </h2>
-            <ul className="list-disc list-inside text-gray-700">
+            <ul className="list-disc list-inside text-gray-700 dark:text-gray-400">
               {project.solution.map((solution, idx) => (
                 <li key={idx}>{solution}</li>
               ))}
