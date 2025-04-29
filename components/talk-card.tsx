@@ -9,7 +9,9 @@ const TalkCard = ({ talk }: { talk: ITalk }) => {
     <>
       <div className="bg-white dark:bg-gray-800 p-6 rounded-lg flex flex-col md:flex-row gap-6">
         <div className="flex-1">
-          <h2 className="text-2xl font-bold mb-1 text-[#0ea5e9]">{talk.title}</h2>
+          <h2 className="text-2xl font-bold mb-1 text-[#0ea5e9]">
+            {talk.title}
+          </h2>
           <p className="text-gray-400 text-sm">
             {talk.event} - {talk.date}
           </p>
@@ -71,17 +73,19 @@ const TalkCard = ({ talk }: { talk: ITalk }) => {
         >
           <div className="relative p-4">
             <button
-              className="absolute top-2 right-2 bg-gray-800 text-white rounded-full p-2"
+              className="absolute top-0 right-0 bg-red-900 text-white rounded-full px-2  py-1 z-50"
               onClick={() => setIsModalOpen(false)}
             >
               ✕
             </button>
-            <img
-              src={talk.poster}
-              alt="Talk Poster"
-              className="max-w-full max-h-[80vh] rounded-lg"
-              onClick={(e) => e.stopPropagation()}
-            />
+            <div className="relative w-full h-full">
+              <Image
+                src={talk.poster}
+                alt="Talk Poster"
+                className="w-full h-full object-contain rounded-lg"
+                onClick={(e) => e.stopPropagation()}
+              />
+            </div>
           </div>
         </div>
       )}

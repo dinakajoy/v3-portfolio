@@ -131,6 +131,30 @@ export const projects: IProject[] = [
     link: "https://github.com/dinakajoy/JSON_Engine",
   },
   {
+    title: "Real-time Chat App",
+    description:
+      "A real-time chat application that allows users to authenticate, add friends, and exchange messages with attachments. The aim of this project is to learn how to build projects on Firebase.",
+    features: [
+      "User Authentication: Login, Signup, Forgot Password, and Reset Password functionality",
+      "Real-Time Messaging: Send and receive messages instantly and attach and share files or images in conversations",
+      "Friends Management: Add and manage friends to build your personal chat network",
+      "Responsive Design: Fully responsive UI built with SCSS and TailwindCSS for an optimized user experience on all devices",
+    ],
+    reasons: [
+      "Firebase Mastery: Practice integrating Firebase Authentication, Firestore, and Cloud Storage for a full-stack real-time app.",
+      "Real-Time Communication: Learn to implement WebSocket-like behavior using Firebase’s real-time database or Firestore listeners.",
+      "Authentication Flow: Understand and implement secure user flows like signup, login, password reset, and email verification.",
+      "File Upload & Management: Build a system for uploading, storing, and retrieving images or files in chat using Firebase Storage.",
+      "State Management: Handle chat rooms, message threads, and user interactions using React state and hooks effectively.",
+      "Accessibility & UX: Focus on accessible design and responsive layout that ensures a pleasant experience across devices.",
+      "Deployment Workflow: Practice deploying a modern React + Firebase application using platforms like Vercel.",
+      "Security Best Practices: Apply Firebase Rules to restrict access and protect user data."
+    ],
+    techStack: ["React.js", "TypeScript", "SCSS", "TailwindCSS", "Firebase"],
+    link: "https://github.com/dinakajoy/real_time_chat_app",
+    liveLink: "https://real-time-chat-app-by-joy.vercel.app",
+  },
+  {
     title: "SmartTicTac: AI-Enhanced Tic-Tac-Toe",
     description:
       "A web-based Tic-Tac-Toe game that incorporates AI to provide a challenging gameplay experience.",

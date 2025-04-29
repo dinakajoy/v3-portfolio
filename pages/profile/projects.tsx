@@ -21,10 +21,15 @@ export default function ProjectsPage() {
         >
           Projects
         </motion.h1>
-        <p className="text-lg text-gray-500 dark:text-gray-300 mb-6 text-center max-w-3xl">
+        <motion.p
+          className="text-lg text-gray-500 dark:text-gray-300 max-w-3xl text-center mb-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
           Detailed case studies of projects showcasing challenges, solutions,
           and tech stacks.
-        </p>
+        </motion.p>
 
         <div className="text-white my-12 flex space-x-4">
           <Link
@@ -55,7 +60,12 @@ export default function ProjectsPage() {
 
         <div className="w-full block md:flex gap-6">
           {/* Project List */}
-          <div className="w-full mb-8 md:mb-0 md:w-1/3 bg-white dark:bg-gray-800 p-4 rounded-lg overflow-y-auto">
+          <motion.div
+            className="w-full mb-8 md:mb-0 md:w-1/3 bg-white dark:bg-gray-800 p-4 rounded-lg overflow-y-auto"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.7 }}
+          >
             <h2 className="text-xl font-semibold mb-3">Project List</h2>
             <ul>
               {projects.map((project, index) => (
@@ -77,11 +87,16 @@ export default function ProjectsPage() {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Project Details */}
           {isModalOpen && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+            <motion.div
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.7 }}
+            >
               <div className="bg-white dark:bg-gray-800 p-3 rounded-lg max-w-md w-full max-h-full overflow-y-auto relative">
                 <button
                   className="absolute top-2 right-2 font-bold text-gray-500 dark:text-gray-200"
@@ -97,11 +112,16 @@ export default function ProjectsPage() {
                   Cancel
                 </button>
               </div>
-            </div>
+            </motion.div>
           )}
-          <div className="hidden md:block w-full md:w-2/3 bg-white dark:bg-gray-800 p-6 rounded-lg">
+          <motion.div
+            className="hidden md:block w-full md:w-2/3 bg-white dark:bg-gray-800 p-6 rounded-lg"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.7 }}
+          >
             <ProjectCard selectedProject={selectedProject} />
-          </div>
+          </motion.div>
         </div>
       </div>
     </Layout>

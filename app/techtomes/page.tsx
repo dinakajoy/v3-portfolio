@@ -19,26 +19,35 @@ export default function TechTomesLanding() {
         >
           TechTomes
         </motion.h1>
-        <p className="text-lg text-gray-500 dark:text-gray-300 mb-6 text-center max-w-3xl">
+        <motion.p
+          className="text-lg text-gray-500 dark:text-gray-300 max-w-3xl text-center mb-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
           Your ultimate resource for mastering technology. Explore our curated
           knowledge bases on web development, AI, and more.
-        </p>
+        </motion.p>
         <div className="w-full grid md:grid-cols-3 gap-6 my-8">
-          {techTomes.map((tome) => (
-            <Card
+          {techTomes.map((tome, index) => (
+            <motion.div
               key={tome.title}
-              className="bg-white dark:bg-gray-800 rounded-2xl shadow-md"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: index * 0.3 }}
             >
-              <CardContent className="h-full flex flex-col justify-between">
-                <h2 className="text-xl font-semibold mb-2">{tome.title}</h2>
-                <p className="text-gray-400 mb-4">{tome.description}</p>
-                <Link href={tome.link}>
-                  <Button className="bg-[#0ea5e9] hover:bg-[#0ea4e9bd]">
-                    Read More
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
+              <Card className="bg-white dark:bg-gray-800 rounded-2xl shadow-md">
+                <CardContent className="h-full flex flex-col justify-between">
+                  <h2 className="text-xl font-semibold mb-2">{tome.title}</h2>
+                  <p className="text-gray-400 mb-4">{tome.description}</p>
+                  <Link href={tome.link}>
+                    <Button className="bg-[#0ea5e9] hover:bg-[#0ea4e9bd]">
+                      Read More
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>

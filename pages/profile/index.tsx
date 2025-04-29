@@ -75,6 +75,14 @@ export default function ProfilePage() {
                 Scikit-learn, PyTorch)
               </li>
             </ul>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/dinakajoy?tab=repositories"
+              className="text-[#0ea5e9] hover:underline"
+            >
+              View my GitHub
+            </a>
           </motion.div>
 
           <motion.div
@@ -92,6 +100,13 @@ export default function ProfilePage() {
               <li>Web Engineer II – Codelab Projects (2019 - 2020)</li>
               <li>Freelance Developer – XircomICT (2018 - 2020)</li>
             </ul>
+            <Link
+              href="/dinakajoy-cv.pdf"
+              target="_BLANK"
+              className="text-[#0ea5e9] hover:underline"
+            >
+              View my resume
+            </Link>
           </motion.div>
         </div>
 

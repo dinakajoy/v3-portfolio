@@ -68,10 +68,15 @@ export default function BlogPage() {
         >
           Blog
         </motion.h1>
-        <p className="text-lg text-gray-500 dark:text-gray-400 mb-6 text-center max-w-3xl">
+        <motion.p
+          className="text-lg text-gray-500 dark:text-gray-300 max-w-3xl text-center mb-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
           Articles on web development, AI, and system design. Posts are linked
           to Dev.to for a wider audience.
-        </p>
+        </motion.p>
 
         <div className="w-full block md:flex gap-6">
           {/* Tags List */}

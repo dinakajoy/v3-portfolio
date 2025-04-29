@@ -17,9 +17,15 @@ export default function TalksPage() {
         >
           Talks & Presentations
         </motion.h1>
-        <p className="text-lg text-gray-500 dark:text-gray-300 mb-6 text-center max-w-3xl">
+
+        <motion.p
+          className="text-lg text-gray-500 dark:text-gray-300 max-w-3xl text-center mb-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
           Recordings, slides, and keynotes from past presentations.
-        </p>
+        </motion.p>
 
         <div className="text-white my-12 flex space-x-4">
           <Link
@@ -50,7 +56,13 @@ export default function TalksPage() {
 
         <div className="w-full space-y-6">
           {talks.map((talk, index) => (
-            <TalkCard talk={talk} key={index} />
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.4 + index }}
+            >
+              <TalkCard talk={talk} key={index} />
+            </motion.div>
           ))}
         </div>
       </div>
