@@ -7,6 +7,7 @@ export default function BlogPage() {
   const [showArticles, setShowArticles] = useState(10);
   const [selectedTag, setSelectedTag] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
+  const [showTagsMobile, setShowTagsMobile] = useState(false);
   const loadMoreRef = useRef<HTMLDivElement | null>(null);
 
   const uniqueTags = useMemo(() => {
@@ -79,8 +80,39 @@ export default function BlogPage() {
         </motion.p>
 
         <div className="w-full block md:flex gap-6">
-          {/* Tags List */}
-          <div className="w-full md:w-1/3 bg-white dark:bg-gray-800 p-4 rounded-lg h-full mb-8 md:mb-0">
+          {/* Mobile Tags Toggle Button */}
+          <div className="md:hidden mb-4">
+            <button
+              className="bg-[#0ea4e9c0] text-white p-2 rounded-md"
+              onClick={() => setShowTagsMobile(!showTagsMobile)}
+            >
+              {showTagsMobile ? "Hide Tags" : "Show Tags"}
+            </button>
+
+            {showTagsMobile && (
+              <div className="mt-2 bg-white dark:bg-gray-800 p-4 rounded-lg">
+                <h2 className="text-xl font-semibold mb-3">Tags</h2>
+                <ul>
+                  {uniqueTags.map((tag, index) => (
+                    <li
+                      key={index}
+                      className={`cursor-pointer p-2 rounded ${
+                        selectedTag === tag
+                          ? "bg-[#0ea5e9] text-white"
+                          : "text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                      }`}
+                      onClick={() => setSelectedTag(tag)}
+                    >
+                      {tag}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+
+          {/* Desktop Tags Sidebar */}
+          <div className="hidden md:block w-full md:w-1/3 bg-white dark:bg-gray-800 p-4 rounded-lg h-full mb-8 md:mb-0">
             <h2 className="text-xl font-semibold mb-3">Tags</h2>
             <ul>
               {uniqueTags.map((tag, index) => (
@@ -135,7 +167,7 @@ export default function BlogPage() {
                       <a
                         key={index}
                         className="mr-3 mt-1 text-sm font-semibold uppercase text-[#0ea5e9] hover:text-zinc-900 hover:underline underline-offset-4 hover:decoration-wavy dark:hover:text-gray-400"
-                        href="/tags/svelte"
+                        href={`/tags/${tag.toLowerCase()}`}
                       >
                         {tag}
                       </a>

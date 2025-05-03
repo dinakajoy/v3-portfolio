@@ -43,28 +43,28 @@ export default function LandingPage() {
       >
         <Link
           href="/profile"
-          className="flex items-center gap-2 px-4 py-2 rounded-lg text-xl transition font-semibold text-gray-100 bg-[#0ea5e9] hover:bg-gray-600"
+          className="flex items-center gap-2 px-2 py-1 md:px-4 md:py-2 rounded-lg md:text-xl transition font-semibold text-gray-100 bg-[#0ea5e9] hover:bg-gray-600"
         >
           <FaUserNinja className="size-3"/>
           Profile
         </Link>
         <Link
           href="/blog"
-          className="flex items-center gap-2 px-4 py-2 rounded-lg text-xl transition font-semibold text-gray-100 bg-[#0ea5e9] hover:bg-gray-600"
+          className="flex items-center gap-2 px-2 py-1 md:px-4 md:py-2 rounded-lg md:text-xl transition font-semibold text-gray-100 bg-[#0ea5e9] hover:bg-gray-600"
         >
           <FaStickyNote className="size-3"/>
           Blog
         </Link>
         <Link
           href="/guides"
-          className="flex items-center gap-2 px-4 py-2 rounded-lg text-xl transition font-semibold text-gray-100 bg-[#0ea5e9] hover:bg-gray-600"
+          className="flex items-center gap-2 px-2 py-1 md:px-4 md:py-2 rounded-lg md:text-xl transition font-semibold text-gray-100 bg-[#0ea5e9] hover:bg-gray-600"
         >
           <FaDirections className="size-3"/>
           Guides
         </Link>
         <Link
           href="/techtomes"
-          className="flex items-center gap-2 px-4 py-2 rounded-lg text-xl transition font-semibold text-gray-100 bg-[#0ea5e9] hover:bg-gray-600"
+          className="flex items-center gap-2 px-2 py-1 md:px-4 md:py-2 rounded-lg md:text-xl transition font-semibold text-gray-100 bg-[#0ea5e9] hover:bg-gray-600"
         >
           <FaChalkboard className="size-3"/>
           Tech Tomes

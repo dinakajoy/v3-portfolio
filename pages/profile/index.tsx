@@ -27,28 +27,28 @@ export default function ProfilePage() {
           Express.js, and AI-powered systems.
         </motion.p>
 
-        <div className="text-white my-12 flex space-x-4">
+        <div className="w-[90%] md:w-full text-white my-12 flex justify-center items-center space-x-1 md:space-x-4">
           <Link
             href="/"
-            className="px-4 py-2 bg-slate-600 hover:bg-slate-500 rounded-lg text-lg font-semibold"
+            className="px-2 py-1 md:px-4 md:py-2 bg-slate-600 hover:bg-slate-500 rounded-lg md:text-lg md:font-semibold"
           >
             Home
           </Link>
           <Link
             href="/profile/projects"
-            className="px-4 py-2 bg-green-600 hover:bg-green-500 rounded-lg text-lg font-semibold"
+            className="px-2 py-1 md:px-4 md:py-2 bg-green-600 hover:bg-green-500 rounded-lg md:text-lg md:font-semibold"
           >
             Projects
           </Link>
           <Link
             href="/profile/solutions"
-            className="px-4 py-2 bg-pink-600 hover:bg-pink-500 rounded-lg text-lg font-semibold"
+            className="px-2 py-1 md:px-4 md:py-2 bg-pink-600 hover:bg-pink-500 rounded-lg md:text-lg md:font-semibold"
           >
             Solutions
           </Link>
           <Link
             href="/profile/talks"
-            className="px-4 py-2 bg-purple-600 hover:bg-purple-500 rounded-lg text-lg font-semibold"
+            className="px-2 py-1 md:px-4 md:py-2 bg-purple-600 hover:bg-purple-500 rounded-lg md:text-lg md:font-semibold"
           >
             Talks
           </Link>

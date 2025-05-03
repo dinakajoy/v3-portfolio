@@ -1,5 +1,15 @@
 export const articles = [
   {
+    id: 9,
+    title: "Not Starting Over – My Tech Journey",
+    readTime: "~3mins",
+    tags: ["webdev", "pubsub", "programming"],
+    link: "https://dev.to/dinakajoy/not-starting-over-my-tech-journey-3e6p",
+    excerpt:
+      "Sometimes it feels like I should already be a “Senior” but what I have gained over the years ranging from WordPress to Laravel, from IoT to Android, from PHP to JavaScript, and now to AI...",
+    date: "May 3, 2025",
+  },
+  {
     id: 8,
     title: "Message Brokers Explained: When and Why For Your System",
     readTime: "~3mins",
@@ -81,7 +91,7 @@ export const articles = [
     tags: ["webdev", "codeNewBie", "productivity"],
     link: "https://dev.to/dev-odinakajoy/web-development-roadmap-beginner-to-intermediate-1k6b",
     excerpt:
-      "Are you a newbie developer confused on where to begin your learning journey? This is a guide through your learning journey to landing your first job as a developer",
+      "Are you a newbie developer confused on where to begin your learning journey? This is a guide through your learning journey to landing your first job as a developer...",
     date: "February 1, 2025",
   },
 ];
