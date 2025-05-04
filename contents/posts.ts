@@ -1,9 +1,19 @@
 export const articles = [
   {
+    id: 10,
+    title: "My Journey into AI: Understanding the Building Blocks of Artificial Intelligence",
+    readTime: "~5mins",
+    tags: ["webdev", "machinelearning", "ai"],
+    link: "https://dev.to/dinakajoy/not-starting-over-my-tech-journey-3e6p",
+    excerpt:
+      "After a career break, while playing around with ideas to rebrand and upskill, the concept of building smart solutions with AI really stood out. I want to go from using AI tools to building with them...",
+    date: "May 4, 2025",
+  },
+  {
     id: 9,
     title: "Not Starting Over – My Tech Journey",
     readTime: "~3mins",
-    tags: ["webdev", "pubsub", "programming"],
+    tags: ["webdev", "gratitude", "growth", "womenintech"],
     link: "https://dev.to/dinakajoy/not-starting-over-my-tech-journey-3e6p",
     excerpt:
       "Sometimes it feels like I should already be a “Senior” but what I have gained over the years ranging from WordPress to Laravel, from IoT to Android, from PHP to JavaScript, and now to AI...",
@@ -12,7 +22,7 @@ export const articles = [
   {
     id: 8,
     title: "Message Brokers Explained: When and Why For Your System",
-    readTime: "~3mins",
+    readTime: "~4mins",
     tags: ["webdev", "pubsub", "programming"],
     link: "https://dev.to/dinakajoy/message-brokers-explained-when-and-why-for-your-system-5b82",
     excerpt:
