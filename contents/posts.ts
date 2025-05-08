@@ -1,9 +1,10 @@
 export const articles = [
   {
     id: 10,
-    title: "My Journey into AI: Understanding the Building Blocks of Artificial Intelligence",
+    title:
+      "My Journey into AI: Understanding the Building Blocks of Artificial Intelligence",
     readTime: "~5mins",
-    tags: ["webdev", "machinelearning", "ai"],
+    tags: ["webdev", "machine-learning", "artificial-intelligence"],
     link: "https://dev.to/dinakajoy/not-starting-over-my-tech-journey-3e6p",
     excerpt:
       "After a career break, while playing around with ideas to rebrand and upskill, the concept of building smart solutions with AI really stood out. I want to go from using AI tools to building with them...",
@@ -13,7 +14,7 @@ export const articles = [
     id: 9,
     title: "Not Starting Over – My Tech Journey",
     readTime: "~3mins",
-    tags: ["webdev", "gratitude", "growth", "womenintech"],
+    tags: ["webdev", "gratitude", "growth", "women-in-tech"],
     link: "https://dev.to/dinakajoy/not-starting-over-my-tech-journey-3e6p",
     excerpt:
       "Sometimes it feels like I should already be a “Senior” but what I have gained over the years ranging from WordPress to Laravel, from IoT to Android, from PHP to JavaScript, and now to AI...",
@@ -56,7 +57,7 @@ export const articles = [
     title:
       "Session vs Token-Based Authentication: Which One Should You Choose?",
     readTime: "~4mins",
-    tags: ["authentication", "programming", "discuss", "learning"],
+    tags: ["authentication", "programming", "learning"],
     link: "https://dev.to/dev-odinakajoy/session-vs-token-based-authentication-which-one-should-you-choose-hcj",
     excerpt:
       "Authentication is a cornerstone of secure web applications, which has two popular approaches: session-based authentication and token-based authentication...",
@@ -66,7 +67,7 @@ export const articles = [
     id: 4,
     title: "Inside the Engine: How JavaScript Really Works",
     readTime: "~3mins",
-    tags: ["webdev", "javascript", "knowyourtools"],
+    tags: ["webdev", "javascript", "know-your-tools"],
     link: "https://dev.to/dev-odinakajoy/inside-the-engine-how-javascript-really-works-2006",
     excerpt:
       "Have you ever wondered how JavaScript actually runs? Let’s explore the fascinating world of JavaScript engines and uncover the way they bring your code to life...",
@@ -98,7 +99,7 @@ export const articles = [
     id: 1,
     title: "Web Development Roadmap - Beginner to Intermediate",
     readTime: "~3mins",
-    tags: ["webdev", "codeNewBie", "productivity"],
+    tags: ["webdev", "code-newbie", "productivity"],
     link: "https://dev.to/dev-odinakajoy/web-development-roadmap-beginner-to-intermediate-1k6b",
     excerpt:
       "Are you a newbie developer confused on where to begin your learning journey? This is a guide through your learning journey to landing your first job as a developer...",

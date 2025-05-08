@@ -24,7 +24,7 @@ export default function LandingPage() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        Software Engineer | Backend Developer | AI-Powered Solutions
+        Software Engineer | Backend Developer - AI-Powered Solutions
       </motion.h2>
       <motion.p
         className="text-lg text-gray-900 dark:text-gray-400 text-center mb-6"

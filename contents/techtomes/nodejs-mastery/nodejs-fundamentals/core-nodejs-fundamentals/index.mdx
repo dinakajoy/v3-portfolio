@@ -1,0 +1,107 @@
+# Core Node.js Fundamentals
+
+## 5.1 The Event Loop: How Node.js Works
+
+Node.js is single-threaded, but it can handle thousands of tasks at the same time thanks to its event loop.
+
+Why Is This Special?
+
+Node.js doesn’t block other tasks while waiting for things like file reads, database queries, or API calls to finish.
+
+Instead, it uses a non-blocking approach with the event loop, allowing it to be highly scalable and efficient.
+
+Real-World Analogy
+
+> Imagine you are a chef in a one-man kitchen. When customers place orders:
+>
+> - You hand tasks to your assistants (like boiling water or chopping veggies).
+> - You don’t wait, you move on to the next order.
+> - When an assistant finishes, they notify you (callback), and you serve the food.
+
+That’s how Node.js handles I/O tasks, by delegating and moving on to other tasks.
+
+### How Node.js Event Loop Works
+
+1. **Receives a Task**  
+   For example: reading a file, making an HTTP request.
+
+2. **Delegates the Task**  
+   Node sends it to the Operating System or libuv thread pool to handle it.
+
+3. **Registers a Callback**  
+   This is a function to be run when the task is done.
+
+4. **Continues Executing**  
+   The main thread does not wait, it continues with the next task.
+
+5. **Handles Completion**  
+   When the task completes, its callback is added to a callback queue.
+
+6. **Event Loop Picks It Up**  
+   If the call stack is clear, the event loop executes the callback.
+
+This entire mechanism is what makes Node.js **non-blocking**.
+
+---
+
+## 5.2 Node.js Architecture Explained
+
+Node.js is built on top of several key layers:
+
+### 1. V8 Engine
+
+[V8 engine](/techtomes/nodejs-mastery/getting-started/nodejs-ecosystem#22-the-v8-javascript-engine) is developed by Google and its used in Google Chrome. It converts JavaScript into fast machine code
+
+### 2. Libuv
+
+[Libuv](https://libuv.org) is a C library that provides:
+  - **Event loop:**
+  - **Thread pool**
+  - **Async I/O**
+
+### 3. Event Loop
+
+Event Loop manages the execution of callbacks. It is the core of Node.js's **non-blocking model**.
+
+### 4. C++ Bindings
+
+C++ Bindings connects Node.js code to system-level operations (files, network, etc.)
+
+### 5. Node.js APIs
+
+Node.js APIs are built-in modules like:
+  - `fs` (File System)
+  - `http` (Server)
+  - `path` (Utilities)
+
+These APIs allow JavaScript to do things it **can’t do in the browser**, like read/write files or listen on a server port.
+
+PS: I will make a video on this topic in the future because text can't do justice to its explanation
+
+---
+
+## 5.3 Modules in Node.js
+
+Modules are building blocks in Node.js. Instead of writing one long file, you break your code into smaller, reusable files.
+
+### Types of Modules
+
+- **Core Modules** – Built into Node.js (e.g., `fs`, `http`, `path`)
+- **Local Modules** – [Files](/techtomes/nodejs-mastery/getting-started/nodejs-ecosystem#23-commonjs-vs-ecmascript-modules-esm) you create yourself
+- **Third-party Modules** – Installed via npm (e.g., `express`, `lodash`)
+
+### Using a Module
+
+```js
+// math.js
+function add(a, b) {
+  return a + b;
+}
+module.exports = add;
+
+// app.js
+const add = require("./math");
+console.log(add(2, 3)); // 5
+```
+
+Modules help organize and scale your application more effectively.

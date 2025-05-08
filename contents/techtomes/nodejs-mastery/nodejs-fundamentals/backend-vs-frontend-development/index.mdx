@@ -1,1 +1,54 @@
-# What is Backend Development?
+# Understanding Backend vs Frontend Development
+
+In web development, the process is mainly divided into two main parts: **frontend** and **backend**. Each plays a very important role in creating a functional and user-friendly web application.
+
+## 4.1 What is Backend Development?
+
+**Backend development** refers to the server-side part of an application, that is, the behind-the-scenes logic and infrastructure that users don't see but which powers everything they do.
+
+### Key Responsibilities
+
+- Handling requests from the frontend
+- Connecting to databases
+- Managing user authentication and authorization
+- Business logic (e.g., calculating prices, validating forms, processing payments)
+- Exposing Application Programming Interfaces (APIs) to allow frontend and third-party systems to communicate with the backend
+
+### Common Technologies
+
+- Languages: JavaScript (Node.js), Python, Ruby, PHP, Java, Go
+- Databases: MongoDB, PostgreSQL, MySQL
+- Frameworks: Express.js, Django, Laravel, Spring Boot
+
+Using the simplest explanation you can find on the web: The backend is like a kitchen in a restaurant, the customer (user) doesn't see what happens there, but it is essential for the final meal (web experience) to be served.
+
+---
+
+## 4.2 How Node.js Fits into Backend Development
+
+**Node.js** is a popular backend runtime environment (or simply put, backend language) that lets developers write server-side code using JavaScript.
+
+### Why Node.js?
+
+- It's [**non-blocking**](/techtomes/nodejs-mastery/nodejs-fundamentals/core-nodejs-fundamentals#how-nodejs-event-loop-works) and **event-driven**, making it fast for handling many requests at once.
+- You can use JavaScript for both the frontend and backend (full-stack development).
+- It has a huge ecosystem (NPM) with thousands of packages to speed up development.
+
+## 4.3 Frontend vs Backend Responsibilities
+
+| Feature/Action           | Frontend                         | Backend                           |
+| ------------------------ | -------------------------------- | --------------------------------- |
+| Visual Layout            | HTML, CSS, JavaScript            | N/A                               |
+| User Interactions        | Buttons, Forms, Click Events     | Handles form submission logic     |
+| Business Logic           | Some (e.g., form validation)     | Main logic and data operations    |
+| Database Interaction     | No                               | Yes                               |
+| Security                 | Basic (e.g., input sanitization) | Advanced (e.g., auth, encryption) |
+| Performance Optimization | Rendering speed, asset loading   | Query optimization, caching       |
+| Tools                    | React, Vue, Angular              | Node.js, Express, Django          |
+
+In essence:
+
+- The **frontend** is what users see and interact with.
+- The **backend** is what makes the app run, store data, and enforce rules.
+
+Together, they both produce a full web experience - one visible, the other powerful but behind the scenes.

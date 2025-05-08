@@ -9,7 +9,10 @@ export const NODEJS_ROUTES: EachRoute[] = [
     noLink: true,
     items: [
       { title: "Introduction to Node.js", href: "/introduction-to-nodejs" },
-      { title: "Understanding the Node.js Ecosystem", href: "/nodejs-ecosystem" },
+      {
+        title: "Understanding the Node.js Ecosystem",
+        href: "/nodejs-ecosystem",
+      },
     ],
   },
   {
@@ -18,7 +21,11 @@ export const NODEJS_ROUTES: EachRoute[] = [
     noLink: true,
     items: [
       { title: "JavaScript vs Node.js", href: "/javascript-vs-nodejs" },
-      { title: "Backend versus Frontend Development", href: "/backend-vs-frontend-development" },
+      {
+        title: "Backend versus Frontend Development",
+        href: "/backend-vs-frontend-development",
+      },
+      { title: "Core Node.js Fundamentals", href: "/core-nodejs-fundamentals" },
     ],
   },
 ];
