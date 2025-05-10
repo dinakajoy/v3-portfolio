@@ -1,11 +1,21 @@
 export const articles = [
   {
+    id: 11,
+    title: "A Beginner’s Note on Machine Learning: Lessons from My Journey",
+    readTime: "~7mins",
+    tags: ["machine-learning", "artificial-intelligence"],
+    link: "https://dev.to/dinakajoy/a-beginners-note-on-machine-learning-lessons-from-my-journey-51ke",
+    excerpt:
+      "Machine Learning (ML) is a sub-field of Artificial Intelligence (AI) that focuses on creating models which help build systems that can learn from data and make predictions or decisions...",
+    date: "May 10, 2025",
+  },
+  {
     id: 10,
     title:
       "My Journey into AI: Understanding the Building Blocks of Artificial Intelligence",
     readTime: "~5mins",
     tags: ["webdev", "machine-learning", "artificial-intelligence"],
-    link: "https://dev.to/dinakajoy/not-starting-over-my-tech-journey-3e6p",
+    link: "https://dev.to/dinakajoy/my-journey-into-ai-understanding-the-building-blocks-of-artificial-intelligence-321a",
     excerpt:
       "After a career break, while playing around with ideas to rebrand and upskill, the concept of building smart solutions with AI really stood out. I want to go from using AI tools to building with them...",
     date: "May 4, 2025",

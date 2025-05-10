@@ -1,14 +1,153 @@
 ---
 title: "GraphQL API with Apollo Server, Express.js, and Database Integration"
-description: "A step-by-step guide to building a GraphQL API with Apollo Server, Express.js, MongoDB, RBAC, Authorization, and Data Loader"
+description: "A step-by-step guide to building a scalable GraphQL API using Apollo Server, Express.js, MongoDB, Authentication, RBAC, and DataLoader."
 ---
 
-GraphQL is a powerful query language for APIs that allows clients to request exactly the data they need. When combined with Apollo Server, Express.js, and MongoDB, you can build a flexible, performant, and secure backend for modern applications. Integrating Role-Based Access Control (RBAC) and Authorization ensures fine-grained access control, while DataLoader helps avoid the N+1 query problem common in GraphQL.
+GraphQL is a modern and powerful query language for APIs that allows clients to request exactly the data they need. When combined with Apollo Server, Express.js, and MongoDB, you build a flexible, performant, and secure backend for modern applications. Integrating Authentication and Role-Based Access Control (RBAC) ensures fine-grained access control, while DataLoader helps avoid the N+1 query problem common in GraphQL.
 
 This guide walks you through setting up a robust GraphQL API using:
 
-- Apollo Server for building the GraphQL layer
-- Express.js for middleware and server handling
-- MongoDB for data persistence
-- RBAC and Authorization for secure access control, together with GraphQL Shield
-- DataLoader for batching and caching database queries efficiently
+- Apollo Server for building the GraphQL server, defining GraphQL schemas and resolvers
+- Express.js as the HTTP server for middleware and server handling
+- MongoDB for data persistence accessed via Mongoose
+- GraphQL Shield and JWT for secure access control: RBAC
+- DataLoader and Redis for batching and caching database queries efficiently
+- Prometheus and Grafana for API performance monitoring and observability
+- GraphiQL for API development, introspection, and documentation
+
+## Project Setup
+
+1. Initialize the Project
+
+```bash
+mkdir graphql-api
+cd graphql-api
+npm init -y
+```
+
+2. Install Required Dependencies
+
+- Main dependencies:
+
+```bash
+npm install @apollo/server graphql express cors graphql-tag
+```
+
+- Development dependencies:
+
+```bash
+npm install -D typescript @types/node @types/express @types/cors
+```
+
+3. Create `tsconfig.json`
+
+```bash
+npx tsc --init
+```
+
+Then update the tsconfig.json (minimal config):
+
+```json
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "rootDir": "src",
+    "outDir": "dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  }
+}
+```
+
+4. Project Structure
+
+```
+graphql-api/
+├── src/
+│ ├── index.ts
+│ ├── schema.ts
+│ ├── typeDefs.ts
+│ └── resolvers.ts
+├── tsconfig.json
+└── package.json
+```
+
+5. Setup GraphQL Schema and Resolvers
+
+- `src/typeDefs.ts`
+
+```ts
+import { gql } from "graphql-tag";
+
+export const typeDefs = gql`
+  type Query {
+    hello: String
+  }
+`;
+```
+
+- `src/resolvers.ts`
+
+```ts
+export const resolvers = {
+  Query: {
+    hello: () => "Hello, GraphQL with TypeScript!",
+  },
+};
+```
+
+6. Set Up Apollo Server with Express
+
+- `src/index.ts`
+
+```ts
+import express from "express";
+import { ApolloServer } from "apollo-server-express";
+import { typeDefs } from "./schema";
+import { resolvers } from "./resolvers";
+
+async function startServer() {
+  const app = express();
+
+  const server = new ApolloServer({
+    typeDefs,
+    resolvers,
+  });
+
+  await server.start();
+  server.applyMiddleware({ app });
+
+  const PORT = 4000;
+  app.listen(PORT, () => {
+    console.log(`🚀 Server ready at http://localhost:${PORT}`);
+  });
+}
+
+startServer();
+```
+
+7. Add `scripts` to `package.json`
+
+```json
+"scripts": {
+  "start": "node dist/index.js",
+  "dev": "nodemon src/index.ts",
+  "build": "tsc"
+}
+```
+
+8. Run Your Project
+
+```bash
+npm run dev
+```
+
+9. Open [http://localhost:4000/graphql](http://localhost:4000/graphql) and try:
+
+```graphql
+query {
+  hello
+}
+```
