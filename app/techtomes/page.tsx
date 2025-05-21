@@ -41,7 +41,7 @@ export default function TechTomesLanding() {
                   <h2 className="text-xl font-semibold mb-2">{tome.title}</h2>
                   <p className="text-gray-400 mb-4">{tome.description}</p>
                   <Link href={tome.link}>
-                    <Button className="bg-[#0ea5e9] hover:bg-[#0ea4e9bd]">
+                    <Button className="bg-[#0ea5e9] hover:bg-[#0ea4e9bd] text-white">
                       Read More
                     </Button>
                   </Link>

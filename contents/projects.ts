@@ -51,7 +51,7 @@ export const projects: IProject[] = [
   {
     title: "Team Collab GraphQL API",
     description:
-      "TeamCollab is a collaborative project and task management GraphQL API designed to support scalable team structures, project tracking, and efficient task management using modern best practices.",
+      "TeamCollab is a production-ready GraphQL API for team collaboration and task management, built with a scalable architecture and modern backend best practices",
     features: [
       "Authentication & Authorization: Secure login and role-based access using GraphQL Shield",
       "Project Management: Create, update, assign, and track projects within teams",
