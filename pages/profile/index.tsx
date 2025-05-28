@@ -50,13 +50,64 @@ export default function LandingPage() {
             className="text-xl text-gray-500 dark:text-gray-300 text-justify"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.2 }}
           >
-            Odinaka Joy is a Software Engineer specializing in Web Development
-            and AI integration. Her work revolves around building intelligent
-            web experiences with Artificial Intelligence (AI) and scalable
-            software solutions, contributing to open-source projects, and
-            mentoring junior developers.
+            Odinaka Joy is a passionate Web Developer with over 5 years of
+            experience building intuitive, scalable, and user-focused
+            applications. She specializes in JavaScript, working primarily with
+            React.js and Node.js, and is currently exploring how to combine
+            web development with Artificial Intelligence to build smarter
+            solutions.
+          </motion.p>
+          <motion.p
+            className="text-xl text-gray-500 dark:text-gray-300 text-justify"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+          >
+            She is driven by a strong passion for using technology to improve
+            lives, especially in health and education. Whether she’s building
+            learning platforms, contributing to developer tools, or creating
+            AI-powered assistants that support mental well-being, Odinaka
+            believes tech should empower people, not just solve problems. One of
+            her key goals is to use AI to build applications that make access to
+            helpful resources more inclusive and humane.
+          </motion.p>
+          <motion.p
+            className="text-xl text-gray-500 dark:text-gray-300 text-justify"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
+          >
+            Over the years, Odinaka has worked with startups, open-source
+            organizations, and international teams — building platforms that
+            range from ERP systems to developer tools. She is more than just a
+            builder: she is also a mentor, speaker, and advocate for inclusive
+            tech communities. She has mentored through Google Developers' Group, Outreachy and She Code Africa, and has contributed talks and insights at several events.
+          </motion.p>
+          <motion.p
+            className="text-xl text-gray-500 dark:text-gray-300 text-justify"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+          >
+            Currently, she is diving deep into AI, exploring how web interfaces
+            and intelligent assistants can work together to create smarter, more
+            helpful applications. Whether it’s an AI-powered chatbot, a job
+            application assistant, or an educational tool, Odinaka enjoys
+            turning complex ideas into simple, impactful solutions.
+          </motion.p>
+          <motion.p
+            className="text-xl text-gray-500 dark:text-gray-300 text-justify"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.9 }}
+          >
+            When she’s not coding, Odinaka is likely writing, parenting her
+            energetic daughter, or thinking of new ways to help others grow in
+            tech. She is always open to collaborations, mentorship
+            opportunities, speaking engagements, or meaningful conversations
+            about how technology can change lives for the better.
           </motion.p>
         </div>
       </div>
