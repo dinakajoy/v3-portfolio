@@ -1,5 +1,15 @@
 export const articles = [
   {
+    id: 12,
+    title: "A Beginner’s Note on Deep Learning: Lessons from My Journey",
+    readTime: "~6mins",
+    tags: ["webdev", "artificial-intelligence", "deep-learning"],
+    link: "https://dev.to/dinakajoy/a-beginners-note-on-deep-learning-lessons-from-my-journey-1lk",
+    excerpt:
+      "Deep Learning is a subset of Machine Learning that uses artificial Neural Networks - especially deep (multi-layered) ones - to learn complex patterns in large amounts of data in order to model and solve complex problems...",
+    date: "May 31, 2025",
+  },
+  {
     id: 11,
     title: "A Beginner’s Note on Machine Learning: Lessons from My Journey",
     readTime: "~7mins",
