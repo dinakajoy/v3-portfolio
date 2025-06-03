@@ -5,7 +5,7 @@ export const articles = [
     readTime: "~7mins",
     tags: ["datascience", "artificial-intelligence", "programming"],
     link: "https://dev.to/dinakajoy/a-beginners-guide-to-the-data-science-workflow-4772",
-    excerpt: "",
+    excerpt: "Data Science overlaps Artificial Intelligence, Machine Learning and Deep Learning. This field simply means analyzing data and then doing something with it. The goal is to turn raw data into actionable information...",
     date: "June 3, 2025",
   },
   {
