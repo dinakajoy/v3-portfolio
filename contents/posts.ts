@@ -1,5 +1,14 @@
 export const articles = [
   {
+    id: 13,
+    title: "A Beginner’s Guide to the Data Science Workflow",
+    readTime: "~7mins",
+    tags: ["datascience", "artificial-intelligence", "programming"],
+    link: "https://dev.to/dinakajoy/a-beginners-guide-to-the-data-science-workflow-4772",
+    excerpt: "",
+    date: "June 3, 2025",
+  },
+  {
     id: 12,
     title: "A Beginner’s Note on Deep Learning: Lessons from My Journey",
     readTime: "~6mins",
