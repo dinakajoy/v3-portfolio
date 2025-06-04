@@ -21,12 +21,19 @@ export const projects: IProject[] = [
       "State Management: Manage user inputs, API responses, and UI updates effectively",
       "User Experience: Design intuitive interfaces that provide clear visual feedback to users",
     ],
-    techStack: ["TypeScript", "TailwindCSS", "React.js", "Express.js", "MogoDB", "Clarifai API"],
+    techStack: [
+      "TypeScript",
+      "TailwindCSS",
+      "React.js",
+      "Express.js",
+      "MogoDB",
+      "Clarifai API",
+    ],
     link: "https://github.com/dinakajoy/face-detection-app",
     liveLink: "https://face-detection-app-by-joy.vercel.app",
   },
   {
-    title: "AI-Powered Job Application Assistant",
+    title: "Job Application Assistant",
     description:
       "A web application that helps users optimize their job applications with AI-generated insights.",
     features: [
@@ -44,9 +51,39 @@ export const projects: IProject[] = [
       "Full-Stack Development: Combine frontend UX design with backend AI integration and database management",
       "Portfolio Value: Create a high-impact project that demonstrates both technical skill and user centered design thinking",
     ],
-    techStack: ["Next.js", "TypeScript", "TailwindCSS", "Express.js", "OpenAI API"],
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Express.js",
+      "OpenAI API",
+    ],
     link: "https://github.com/dinakajoy/job-application-assistant",
     liveLink: "https://job-application-assistant.vercel.app",
+  },
+  {
+    title: "TheraBot - An AI Therapist Chatbot",
+    description:
+      "An AI-powered web application designed to provide emotional support and mental health guidance using OpenAI API.",
+    features: [
+      "Conversational AI: Powered by GPT-4-turbo (OpenAI)",
+      "Sentiment Analysis: Detects user emotions and tailors responses accordingly",
+      "Anonymous user interactions: Ensures privacy and confidentiality",
+      "Uses history for context: Maintains conversation context for more relevant responses",
+      "User-Friendly Interface: Clean and intuitive design for easy interaction",
+    ],
+    reasons: [
+      "Mental Health Support: There is a growing need for accessible mental health resources, and this project addresses that",
+      "AI-Powered Conversations: Use OpenAI to deliver context-aware and emotionally sensitive replies",
+      "Sentiment Awareness: Analyze user messages to better understand their emotional state",
+      "Anonymous and Safe: Let users chat without needing to sign up or share personal data",
+      "Real-World Impact: Offer comfort to users who may feel isolated, stressed, or overwhelmed",
+      "Tech Learning: Practice using Moderation API, sentiment analysis, and conversation history handling",
+      "Portfolio Value: Showcase a responsible AI project focused on empathy and user well-being",
+    ],
+    techStack: ["Next.js", "TypeScript", "TailwindCSS", "OpenAI API"],
+    link: "https://github.com/dinakajoy/TheraBot",
+    liveLink: "https://thera-bot-gilt.vercel.app",
   },
   {
     title: "Team Collab GraphQL API",
@@ -148,7 +185,7 @@ export const projects: IProject[] = [
       "State Management: Handle chat rooms, message threads, and user interactions using React state and hooks effectively.",
       "Accessibility & UX: Focus on accessible design and responsive layout that ensures a pleasant experience across devices.",
       "Deployment Workflow: Practice deploying a modern React + Firebase application using platforms like Vercel.",
-      "Security Best Practices: Apply Firebase Rules to restrict access and protect user data."
+      "Security Best Practices: Apply Firebase Rules to restrict access and protect user data.",
     ],
     techStack: ["React.js", "TypeScript", "SCSS", "TailwindCSS", "Firebase"],
     link: "https://github.com/dinakajoy/real_time_chat_app",
