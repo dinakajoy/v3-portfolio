@@ -7,6 +7,8 @@ export const talks = [
     description:
       'In this event, we discussed the growing influence of AI in tech and whether "pivoting into it is the right move for everyone". We talked about growth, AI, and making the right career choices.',
     poster: require("../assets/talks/techies-corner.jpg"),
+    slides:
+      "https://docs.google.com/presentation/d/14JfM63hPL1-TV8nN-e9JOFcV5SKVAo-jWzimnA7uE3w/edit?usp=sharing",
   },
   {
     id: 6,
