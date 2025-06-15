@@ -1,11 +1,23 @@
 export const articles = [
   {
+    id: 14,
+    title:
+      "Data Science Workflow: My First ML Project on Mental Health Treatment",
+    readTime: "~9mins",
+    tags: ["datascience", "artificial-intelligence", "mental-health"],
+    link: "https://dev.to/dinakajoy/data-science-workflow-my-first-ml-project-on-mental-health-treatment-11gn",
+    excerpt:
+      "In this post, I am bringing the data science workflow to life through a real-world project: using machine learning to predict whether someone is likely to seek mental health treatment based on survey data....",
+    date: "June 8, 2025",
+  },
+  {
     id: 13,
     title: "A Beginner’s Guide to the Data Science Workflow",
     readTime: "~7mins",
     tags: ["datascience", "artificial-intelligence", "programming"],
     link: "https://dev.to/dinakajoy/a-beginners-guide-to-the-data-science-workflow-4772",
-    excerpt: "Data Science overlaps Artificial Intelligence, Machine Learning and Deep Learning. This field simply means analyzing data and then doing something with it. The goal is to turn raw data into actionable information...",
+    excerpt:
+      "Data Science overlaps Artificial Intelligence, Machine Learning and Deep Learning. This field simply means analyzing data and then doing something with it. The goal is to turn raw data into actionable information...",
     date: "June 3, 2025",
   },
   {

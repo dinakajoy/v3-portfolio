@@ -1,8 +1,17 @@
 export const talks = [
   {
+    id: 7,
+    title: "AI Everywhere: Should You Pivot Into AI or Stay In Your Lane?",
+    event: "Techies Corner - May Edition By Techrity",
+    date: "May 31, 2025",
+    description:
+      'In this event, we discussed the growing influence of AI in tech and whether "pivoting into it is the right move for everyone". We talked about growth, AI, and making the right career choices.',
+    poster: require("../assets/talks/techies-corner.jpg"),
+  },
+  {
     id: 6,
     title: "Advancing Your Business & Career Using ICT",
-    event: "YCSCD for South-East States in Nigeria - Students",
+    event: "YCSCD for South-East States in Nigeria (Students and Traders)",
     date: "January 31, 2022",
     description:
       "In this event, I spoke on how to leverage social media platforms such as tiktok, twitter, facebook, whatsapp, etc to reach out to and engage with more customers. Also, on how students can build their skills by learning from free platforms such as Youtube.",
@@ -13,7 +22,7 @@ export const talks = [
   {
     id: 5,
     title: "Boosting Your Business Using Social Media & ICT In Nigeria",
-    event: "YCSCD for South-South States in Nigeria - Traders",
+    event: "YCSCD for South-South States in Nigeria (Traders)",
     date: "January 20, 2022",
     description:
       "In this event, I spoke on how to leverage social media platforms such as tiktok, twitter, facebook, whatsapp, etc to reach out to and engage with more customers.",

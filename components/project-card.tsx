@@ -7,8 +7,28 @@ interface ProjectCardProps {
 export default function ProjectCard({ selectedProject }: ProjectCardProps) {
   return (
     <>
-      <h2 className="text-2xl font-bold mb-2">{selectedProject.title}</h2>
-      <p className="text-gray-500 dark:text-gray-400 mb-4">
+      <h2 className="text-2xl font-bold mb-3">{selectedProject.title}</h2>
+      <div className="flex flex-wrap justify-between gap-2">
+        <a
+          href={selectedProject.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-gray-500 text-white px-4 py-1 rounded-lg hover:bg-gray-700"
+        >
+          Code
+        </a>
+        {selectedProject.liveLink && (
+          <a
+            href={selectedProject.liveLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-green-600 text-white px-4 py-1 rounded-lg hover:bg-gray-700"
+          >
+            Live
+          </a>
+        )}
+      </div>
+      <p className="text-gray-500 dark:text-gray-400 mt-3 mb-4">
         {selectedProject.description}
       </p>
 
@@ -38,27 +58,6 @@ export default function ProjectCard({ selectedProject }: ProjectCardProps) {
             {tech}
           </span>
         ))}
-      </div>
-
-      <div className="flex flex-wrap justify-between gap-2 mt-2">
-        <a
-          href={selectedProject.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-6 bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-700"
-        >
-          View Code
-        </a>
-        {selectedProject.liveLink && (
-          <a
-            href={selectedProject.liveLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-6 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700"
-          >
-            View Project
-          </a>
-        )}
       </div>
     </>
   );

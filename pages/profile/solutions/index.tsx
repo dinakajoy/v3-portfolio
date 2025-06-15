@@ -18,14 +18,13 @@ export default function SolutionsPage() {
         </motion.h1>
 
         <motion.p
-          className="text-lg text-gray-500 dark:text-gray-300 max-w-3xl text-center mb-6"
+          className="text-lg text-gray-500 dark:text-gray-300 max-w-2xl text-center mb-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          Browse a selection of projects that solve real-world challenges using
-          modern technologies. Each solution is designed to address specific
-          problems with practical, scalable approaches.
+          Browse a selection of solutions designed to address specific problems that solve real-world challenges using
+          modern technologies.
         </motion.p>
 
         <div className="w-[90%] md:w-full text-white my-12 flex justify-center items-center space-x-1 md:space-x-4">
@@ -49,12 +48,13 @@ export default function SolutionsPage() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           {solutions.map((solution, index) => (
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 + index }}
+              className="flex flex-col items-stretch"
             >
               <SolutionCard key={solution.id} project={solution} />
             </motion.div>

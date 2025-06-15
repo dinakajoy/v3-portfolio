@@ -22,13 +22,12 @@ export default function ProjectsPage() {
           Projects
         </motion.h1>
         <motion.p
-          className="text-lg text-gray-500 dark:text-gray-300 max-w-3xl text-center mb-6"
+          className="text-lg text-gray-500 dark:text-gray-300 max-w-2xl text-center mb-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          Detailed case studies of projects showcasing challenges, solutions,
-          and tech stacks.
+          Detailed case studies of projects explaining features, reason for building the project, and tech stacks.
         </motion.p>
 
         <div className="w-[90%] md:w-full text-white my-12 flex justify-center items-center space-x-1 md:space-x-4">
@@ -109,7 +108,7 @@ export default function ProjectsPage() {
             </motion.div>
           )}
           <motion.div
-            className="hidden md:block w-full md:w-2/3 bg-white dark:bg-gray-800 p-6 rounded-lg"
+            className="hidden md:block w-full md:w-2/3 bg-white dark:bg-gray-900 p-6 rounded-lg"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.7 }}

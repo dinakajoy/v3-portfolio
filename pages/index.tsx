@@ -21,7 +21,7 @@ export default function LandingPage() {
       >
         Software Engineer | Backend Developer (AI-Powered Solutions)
       </motion.h2>
-      <div className="text-gray-700 dark:text-white p-6 flex flex-col  items-center text-justify mt-8">
+      <div className="text-gray-700 dark:text-white p-6 flex flex-col items-center text-justify mt-8">
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
           <motion.div
             className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 p-8 rounded-lg"
