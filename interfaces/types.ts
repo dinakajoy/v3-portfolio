@@ -31,4 +31,6 @@ export interface ISolution {
   techStack: string[];
   link: string;
   liveLink: string;
+  dashboard: string;
+  gif?: string;
 }

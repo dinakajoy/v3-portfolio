@@ -73,7 +73,7 @@ export const talks = [
     event: "A 1-Day Intensive Training Workshop by Her Tech Trail",
     date: "February 29, 2020",
     description:
-      "n this event, I spoke on understanding the web, web architecture and programming. Below are links to the slides.",
+      "In this event, I spoke on understanding the web, web architecture and programming. Below are links to the slides.",
     poster: require("../assets/talks/talk_one.webp"),
     slides: "https://t.co/pNvJ84l8iI?amp=1",
   },

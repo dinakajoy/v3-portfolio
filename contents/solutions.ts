@@ -29,6 +29,7 @@ export const solutions: ISolution[] = [
     techStack: ["Node.js", "Express.js", "MongoDB", "React.js", "TailwindCSS"],
     link: "https://github.com/dinakajoy/authXpress",
     liveLink: "https://authxpress.vercel.app",
+    dashboard: "authxpress-dashboard",
   },
   {
     id: 2,
@@ -49,7 +50,7 @@ export const solutions: ISolution[] = [
       "User-Centric Design: Focus on user experience with a clean and intuitive interface",
       "Real-World User Problems: Solve a genuine need for better job application support and preparation",
       "File Handling Skills: Work with uploading, parsing, and analyzing user files securely",
-      "Full-Stack Development: Combine frontend UX design with backend AI integration and database management",
+      "Full-Stack Development: Combine frontend UX design with backend AI integration",
       "Portfolio Value: Create a high-impact project that demonstrates both technical skill and user-centered design thinking",
     ],
     solution: [
@@ -66,6 +67,7 @@ export const solutions: ISolution[] = [
     ],
     link: "https://github.com/dinakajoy/job-application-assistant",
     liveLink: "https://job-application-assistant.vercel.app",
+    dashboard: "job-application-assistant-dashboard",
   },
   {
     id: 3,
@@ -105,6 +107,7 @@ export const solutions: ISolution[] = [
       "OpenAI API",
     ],
     link: "https://github.com/dinakajoy/soul-sync",
-    liveLink: "https://soul-sync.vercel.app",
+    liveLink: "https://soul-sync-platform.vercel.app",
+    dashboard: "soul-sync-dashboard",
   },
 ];

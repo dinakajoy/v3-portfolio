@@ -100,7 +100,12 @@ export default function ProjectDetailPage({ project }: ProjectPageProps) {
 
           <section className="mb-4">
             <h2 className="text-2xl font-bold mb-2">Screenshots</h2>
-            ...
+            <img
+              src={`/${project.dashboard}.png`}
+              alt={`${project.title} screenshot`}
+              className="w-[50%] h-auto rounded-lg shadow-md"
+              loading="lazy"
+            />
           </section>
 
           <section className="flex flex-wrap gap-4 mt-2">

@@ -15,7 +15,7 @@ export default function SolutionCard({ project }: SolutionardProps) {
         <h2 className="text-2xl font-semibold mb-2 group-hover:text-blue-600">
           {project.title}
         </h2>
-        <p className="text-gray-600 mb-4 flex-grow">{project.description}</p>
+        <p className="text-gray-600 dark:text-gray-400 mb-4 flex-grow">{project.description}</p>
         <div className="flex flex-wrap gap-2 mt-auto">
           {project.techStack.map((tech) => (
             <span

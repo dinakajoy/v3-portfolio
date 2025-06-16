@@ -59,7 +59,7 @@ export const projects: IProject[] = [
     description:
       "A production-ready GraphQL API built for team collaboration and task management, designed with scalability, performance, and security in mind. TeamCollab demonstrates modern backend engineering best practices using GraphQL, role-based access control, observability, and data optimization techniques.",
     features: [
-      "Authentication & Authorization: Secure login and fine-grained role-based access via GraphQL Shield",
+      "Authentication & Authorization: Secure login and role-based access via GraphQL Shield",
       "Project Management: Create, update, assign, and monitor project progress within teams",
       "Task Management: Manage task lifecycles, assignees, deadlines, and status updates",
       "Team Structures: Organize users into teams with scalable relationships and responsibilities",
@@ -89,7 +89,7 @@ export const projects: IProject[] = [
   {
     title: "Team Work REST API",
     description:
-      "TeamWork is a full-featured RESTful API for an internal social network designed to foster collaboration, communication, and community within an organization. It supports article posting, GIF sharing, content moderation, role-based access control, and admin functionalities — built with a focus on modular design, testability, and deployment readiness.",
+      "TeamWork is a full-featured RESTful API for an internal social network designed to foster collaboration, communication, and community within an organization. It supports article posting, GIF sharing, content moderation, role-based access control, and admin functionalities - built with a focus on modular design, testability, and deployment readiness.",
     features: [
       "User Authentication: Secure account creation, login, and profile management",
       "Admin Authorization: Manage users, categories, and moderate flagged content with elevated access",
@@ -101,7 +101,6 @@ export const projects: IProject[] = [
       "Swagger Documentation: Clear, auto-generated API docs for easy integration and collaboration",
       "Unit & Integration Testing: Tested thoroughly using Mocha, Chai, and coverage tracked with Coveralls",
       "CI/CD Pipeline: Automated testing and deployment via Travis CI",
-      "Code Quality Monitoring: Maintain high standards with Code Climate and consistent error handling",
     ],
     reasons: [
       "RESTful Design Mastery: Architect a well-structured, scalable, and modular API",
@@ -111,7 +110,6 @@ export const projects: IProject[] = [
       "API Documentation: Deliver a professional API experience with Swagger UI",
       "Cloud Media Integration: Manage user-uploaded media with a third-party storage service",
       "Code Quality Discipline: Maintain clean, maintainable, production-ready codebases",
-      "Scalability Focus: Design a foundation for scalable employee engagement platforms",
     ],
     techStack: ["Node.js", "Express.js", "PostgreSQL", "Swagger API"],
     link: "https://github.com/dinakajoy/teamwork-REST-API",
@@ -119,7 +117,7 @@ export const projects: IProject[] = [
   {
     title: "JSON Engine",
     description:
-      "A powerful utility for parsing, transforming, searching, and exporting JSON data. Built for developers working with large datasets or APIs, it supports streaming, background processing, and full-text queries — all while maintaining responsive UI and high performance.",
+      "A powerful utility for parsing, transforming, searching, and exporting JSON data. Built for developers working with large datasets or APIs, it supports streaming, background processing, and full-text queries - all while maintaining responsive UI and high performance.",
     features: [
       "JSON Parsing: Read and interpret JSON files into JavaScript objects seamlessly",
       "CSV Conversion: Transform JSON into CSV for analysis, reporting, or spreadsheet usage",
@@ -127,7 +125,6 @@ export const projects: IProject[] = [
       "Efficient Streaming: Handle large files with minimal memory footprint using streams",
       "Query Engine: Support operations like =, contains, startsWith, and endsWith",
       "Worker Thread Processing: Use multi-threading to offload expensive tasks",
-      "Responsive UI: Background processing ensures smooth user interaction during heavy queries",
     ],
     reasons: [
       "Structured Data Handling: Practice transforming JSON data and exporting it to usable formats",
@@ -162,7 +159,6 @@ export const projects: IProject[] = [
       "Real-Time Communication: Learn to implement WebSocket-like behavior using Firestore listeners",
       "Authentication Flow: Understand and implement secure user flows including signup, login, password reset, and email verification",
       "File Upload & Management: Build a system to handle file uploads, previews, and retrieval using Firebase Storage",
-      "State Management: Manage chat rooms, messages, and user interactions using React hooks and state patterns",
       "Accessibility & UX: Build for accessibility and design a user-friendly, responsive interface",
       "Deployment Workflow: Gain hands-on experience deploying a React + Firebase app using Vercel",
       "Security Best Practices: Apply and test Firebase Rules to protect user data and enforce role-based access",
@@ -176,7 +172,7 @@ export const projects: IProject[] = [
     description:
       "A web-based Tic-Tac-Toe game enhanced with AI to offer an engaging and challenging experience across multiple difficulty levels.",
     features: [
-      "AI Opponent: Built-in AI that adjusts difficulty based on user performance",
+      "AI Opponent: Built-in AI that adjusts difficulty based on level chosen by user",
       "User Interface: Simple and intuitive Tic-Tac-Toe grid with clickable cells",
       "Game Modes: Play against the computer or a second player",
       "Real-Time Feedback: Immediate results after each move with win/loss notification",
@@ -186,7 +182,7 @@ export const projects: IProject[] = [
       "Reset Functionality: Option to reset the game and start fresh",
     ],
     reasons: [
-      "AI Implementation: Practice building AI decision-making with Minimax or heuristic strategies",
+      "AI Implementation: Practice building AI decision-making with Minimax strategies",
       "Game Logic: Manage turn-based gameplay, win/loss conditions, and draw detection",
       "State Management: Handle dynamic game states, including historical states for time travel using React hooks",
       "User Interaction: Build a smooth, interactive interface that supports real-time move history navigation",
@@ -261,17 +257,17 @@ export const projects: IProject[] = [
   {
     title: "Quiz App",
     description:
-      "A web-based quiz application that allows users to test their knowledge across various topics with real-time scoring and performance feedback.",
+      "A web-based quiz application that allows users to test their knowledge across various topics with efficient scoring and performance feedback.",
     features: [
       "Dynamic Questions: Questions are fetched from a MongoDB database",
-      "Real-Time Scoring: Instant feedback and score updates after each submission",
-      "Timer Functionality: Countdown timer per question to create time-based challenges",
+      "Scoring: Score updates at the endor after timeout",
+      "Timer Functionality: Countdown timer per quiz session to create time-based challenges",
       "Result Summary: Final score and breakdown of correct vs incorrect answers",
       "Responsive Design: Optimized for desktop, tablet, and mobile devices",
       "Error Handling: Gracefully handles loading issues and API errors",
     ],
     reasons: [
-      "State Management: Practice managing complex quiz states like current question, selected answer, and score updates",
+      "Data Management: Practice managing complex quiz states like current question, selected answer, and score updates",
       "User Interaction: Create a smooth and engaging quiz flow with interactive elements",
       "Data Handling: Efficiently structure and fetch quiz data from MongoDB",
       "UI/UX Skills: Focus on clear, minimalistic interface design and responsive layout",
@@ -320,9 +316,9 @@ export const projects: IProject[] = [
     reasons: [
       "Core Game Development Skills: Practice implementing game loops, collision detection, levels, and state management",
       "Interactive & Engaging: Build something fun and visually engaging for users and recruiters alike",
-      "Problem-Solving Practice: Improved logic-building by designing levels, obstacles, and win conditions",
+      "Problem-Solving Practice: Improved logic-building by designing environment, obstacles, and win conditions",
       "Event Handling: Handle real-time user input through keyboard events and render updates",
-      "Portfolio Creativity: Add a visually unique and playful project that stands out among typical apps",
+      "Portfolio Creativity: Add a visually unique and playful project that stands out",
     ],
     techStack: ["React", "CSS"],
     link: "https://github.com/dinakajoy/save-the-princess-game",
