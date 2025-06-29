@@ -34,21 +34,21 @@ export const projects: IProject[] = [
   {
     title: "TheraBot - An AI Therapist Chatbot",
     description:
-      "A web-based AI companion designed to offer emotional support and mental wellness guidance through natural, empathetic conversations powered by OpenAI’s GPT-4-turbo. TheraBot emphasizes privacy, emotional intelligence, and accessibility in mental health tech.",
+      "A web-based AI companion designed to offer emotional support and mental wellness guidance through natural, empathetic conversations powered by OpenAI’s GPT-4-turbo. TheraBot emphasizes privacy, emotional intelligence, and accessibility in mental health tech. It showcases the practical use of instruction-tuned LLMs through carefully crafted prompts that guide tone, empathy, and safety in every response.",
     features: [
-      "Conversational AI: Delivers empathetic, human-like responses using OpenAI's GPT-4-turbo",
-      "Sentiment Analysis: Detects user emotions and adapts responses accordingly",
+      "Conversational AI: Delivers empathetic, human-like responses using OpenAI's GPT-4-turbo, enhanced by structured, instruction-driven prompts",
+      "Sentiment Analysis: Detects user emotions and adapts responses accordingly to match the emotional tone",
       "Anonymous Interactions: No account required, prioritizes user privacy and confidentiality",
-      "Context Retention: Maintains conversation history to provide meaningful, relevant replies per chat session",
+      "Context Retention: Maintains conversation history to provide meaningful, relevant replies per chat session using session-based memory",
       "User-Friendly Interface: Clean, intuitive UI for a seamless chatting experience",
     ],
     reasons: [
       "Mental Health Accessibility: Address the growing need for low-barrier emotional support tools",
-      "AI-Powered Empathy: Explore how AI can be used responsibly to support mental wellness",
+      "AI-Powered Empathy: Explore how instruction-tuned LLMs can be guided through prompting to respond with emotional sensitivity and care",
       "Sentiment-Aware Responses: Practice emotion detection and context-based conversational flow",
       "Privacy First: Ensure users feel safe by enabling anonymous, no-login sessions",
       "Real-World Impact: Build a project that provides comfort to users dealing with stress, anxiety, or isolation",
-      "Skill Expansion: Work with OpenAI’s GPT models, sentiment analysis tools, and ethical AI practices",
+     "Skill Expansion: Apply best practices in prompting, memory management, and ethical AI use with OpenAI’s GPT models and sentiment analysis tools",
     ],
     techStack: ["TypeScript", "Next.js", "TailwindCSS", "OpenAI API"],
     link: "https://github.com/dinakajoy/TheraBot",

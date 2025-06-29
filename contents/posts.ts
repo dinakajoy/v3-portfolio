@@ -1,9 +1,31 @@
 export const articles = [
   {
+    id: 16,
+    title:
+      "A Beginner’s Guide to LLMs: How to Use Language Models to Build Smart Apps",
+    readTime: "~4mins",
+    tags: ["llms", "artificial-intelligence", "beginners"],
+    link: "https://dev.to/dinakajoy/a-beginners-guide-to-llms-how-to-use-language-models-to-build-smart-apps-2mkk",
+    excerpt:
+      "A powerful way to explore AI innovations today is through Large Language Models (LLMs), which is the brains behind tools that can chat, write, generate code, and answer questions....",
+    date: "June 25, 2025",
+  },
+  {
+    id: 15,
+    title:
+      "A Beginner’s Note on Natural Language Processing:Lessons from My Journey",
+    readTime: "~5mins",
+    tags: ["nlp", "artificial-intelligence", "beginners", "webdev"],
+    link: "https://dev.to/dinakajoy/a-beginners-note-on-natural-language-processing-key-takeaways-46ap",
+    excerpt:
+      "NLP sits at the intersection of computer science, linguistics, and deep learning. It’s the reason why AI can translate languages, summarize articles, answer questions, and even chat with you....",
+    date: "June 22, 2025",
+  },
+  {
     id: 14,
     title:
-      "Data Science Workflow: My First ML Project on Mental Health Treatment",
-    readTime: "~9mins",
+      "Can Machine Learning Predict Who Needs Mental Health Support? A Beginner-Friendly Walkthrough",
+    readTime: "~4mins",
     tags: ["datascience", "artificial-intelligence", "mental-health"],
     link: "https://dev.to/dinakajoy/data-science-workflow-my-first-ml-project-on-mental-health-treatment-11gn",
     excerpt:

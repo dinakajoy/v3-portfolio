@@ -37,7 +37,7 @@ export const solutions: ISolution[] = [
     title:
       "Job Application Assistant - Optimize your job applications with AI-generated insights",
     description:
-      "A web application that helps users optimize their job applications with AI-generated insights, including job descriptiopn analysis, resume analysis and matching, cover letter creation, improvement suggestions and job-skill alignment.",
+      "A web application that helps users optimize their job applications with AI-generated insights, including job description analysis, resume analysis and matching, cover letter creation, improvement suggestions and job-skill alignment.",
     features: [
       "Resume Analysis: Upload documents and get AI feedback on strengths and areas for improvement",
       "Cover Letter Generation: Create tailored cover letters based on job descriptions",
