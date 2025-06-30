@@ -43,10 +43,9 @@ export default function LandingPage() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            I'm Odinaka Joy, a Software Engineer specializing in web
-            development and AI-powered web solutions. I love
-            building intelligent, scalable systems that solve real-world
-            problems and enhance user experiences.
+            Hi! I’m Odinaka Joy, a Software Engineer focused on building{" "}
+            <b>AI-powered web applications</b> that are smart, scalable, and
+            user-centered.
           </motion.p>
           <motion.p
             className="text-xl text-gray-500 dark:text-gray-300 text-justify"
@@ -54,7 +53,11 @@ export default function LandingPage() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            I have worked on a range of meaningful projects - from building an ERP system for a local tech company to contributing to the OCaml ecosystem through Outreachy and Tarides. Most recently, I worked as a software engineer at AcceleratorApp, a startup incubation platform. What drives me is finding ways to blend modern web development with AI, creating tools like Soul Sync, an emotional AI companion, and a Job Application Assistant that uses LLMs to help people submit stronger applications.
+            I have worked on meaningful projects across industries: from
+            building ERP systems for local businesses to contributing to the
+            OCaml ecosystem through Outreachy and Tarides. Most recently, I was
+            a Software Engineer at AcceleratorApp, a startup incubation
+            platform.
           </motion.p>
           <motion.p
             className="text-xl text-gray-500 dark:text-gray-300 text-justify"
@@ -62,12 +65,13 @@ export default function LandingPage() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            I primarily work with JavaScript/TypeScript, leveraging frameworks
-            like Node.js, Express.js, React.js, and Next.js to build robust web
-            applications. Recently, I am expanding into Python for AI
-            integration. I also explore OCaml for functional web development,
-            which provides a unique perspective on building reliable and
-            maintainable systems.
+            I work mostly with{" "}
+            <b>
+              JavaScript/TypeScript using Node.js, Express, React, and Next.js
+            </b>
+            , and I am currently expanding into Python to deepen my AI
+            integration work. I am also exploring OCaml for functional web
+            development.
           </motion.p>
           <motion.p
             className="text-xl text-gray-500 dark:text-gray-300 text-justify"
@@ -75,12 +79,25 @@ export default function LandingPage() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
           >
-            Beyond code, I enjoy mentoring upcoming developers through programs
-            like Outreachy, She Code Africa, and Google Africa Developers
-            Scholarship and contributing to open-source. I have spoken at
-            multiple events on the future of web (and AI recently), and I
-            continuously learn to stay at the forefront of web and AI
-            innovation.
+            Beyond coding, I love mentoring developers, speaking at tech events,
+            and contributing to open-source communities.
+          </motion.p>
+          <motion.p
+            className="text-2xl text-justify"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1 }}
+          >
+            👉{" "}
+            <a
+              href="https://dev.to/dinakajoy/not-starting-over-my-tech-journey-3e6p"
+              className="text-md text-gray-500 dark:text-gray-400 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              Read more about my journey
+            </a>
           </motion.p>
         </div>
 

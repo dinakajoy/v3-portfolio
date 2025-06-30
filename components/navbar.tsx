@@ -9,7 +9,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="relative p-4 shadow-md">
+    <nav className="relative p-4 shadow-md bg-background dark:bg-gray-900 border-b-gray-200 dark:border-b-gray-800">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         <Link href="/">
           <img src="/logo.png" alt="Odinaka Joy" />

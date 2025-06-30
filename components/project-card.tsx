@@ -39,14 +39,14 @@ export default function ProjectCard({ selectedProject }: ProjectCardProps) {
         ))}
       </ul>
 
-      <h3 className="text-lg font-semibold mt-4">
+      {/* <h3 className="text-lg font-semibold mt-4">
         Why Build {selectedProject.title}
       </h3>
       <ul className="list-disc list-inside text-gray-500 dark:text-gray-400">
         {selectedProject.reasons.map((reason, index) => (
           <li key={index}>{reason}</li>
         ))}
-      </ul>
+      </ul> */}
 
       <h3 className="text-lg font-semibold mt-4">Tech Stack</h3>
       <div className="flex flex-wrap gap-2 mt-2">

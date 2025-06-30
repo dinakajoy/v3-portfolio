@@ -16,7 +16,7 @@ const algolia_props = {
 
 export function Navbar({ menu }: { menu?: React.ReactNode }) {
   return (
-    <nav className="w-full border-b h-16 sticky top-0 z-50 bg-background">
+    <nav className="w-full border-b h-16 sticky top-0 z-50 bg-background dark:bg-gray-900 border-b-gray-200 dark:border-b-gray-800">
       <div className="sm:container mx-auto w-[95vw] h-full flex items-center sm:justify-between md:gap-2">
         <div className="flex items-center sm:gap-5 gap-2.5">
           <SheetLeftbar menu={menu} />
