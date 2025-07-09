@@ -43,9 +43,16 @@ export default function LandingPage() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            Hi! I’m Odinaka Joy, a Software Engineer focused on building{" "}
-            <b>AI-powered web applications</b> that are smart, scalable, and
-            user-centered.
+            Hello!{" "}
+            <span className="font-bold text-2xl mb-[-10px] ml-1">👋</span>
+          </motion.p>
+          <motion.p
+            className="text-xl text-gray-500 dark:text-gray-300 text-justify"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+          >
+            I’m <b>Odinaka Joy</b>, a Software Engineer passionate about building <b>AI-powered web applications</b> that are smart, scalable, and user-centered. From my early days of self-teaching to leading projects and mentoring others, my journey has been rooted in curiosity, purpose, empathy, and impact.
           </motion.p>
           <motion.p
             className="text-xl text-gray-500 dark:text-gray-300 text-justify"
@@ -53,25 +60,10 @@ export default function LandingPage() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            I have worked on meaningful projects across industries: from
-            building ERP systems for local businesses to contributing to the
-            OCaml ecosystem through Outreachy and Tarides. Most recently, I was
-            a Software Engineer at AcceleratorApp, a startup incubation
-            platform.
-          </motion.p>
-          <motion.p
-            className="text-xl text-gray-500 dark:text-gray-300 text-justify"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-          >
-            I work mostly with{" "}
-            <b>
-              JavaScript/TypeScript using Node.js, Express, React, and Next.js
-            </b>
-            , and I am currently expanding into Python to deepen my AI
-            integration work. I am also exploring OCaml for functional web
-            development.
+            I specialize in <b>JavaScript/TypeScript - Node.js, Express, React, and Next.js</b>, currently expanding into <b>Python</b> to deepen my AI
+            integration work and exploring <b>OCaml</b> for functional web development. I have worked on meaningful projects across industries: from
+            building ERP systems and LMS for local businesses to contributing to the
+            OCaml ecosystem through Outreachy and Tarides and most recently, AcceleratorApp - to build a startup incubation platform.
           </motion.p>
           <motion.p
             className="text-xl text-gray-500 dark:text-gray-300 text-justify"
@@ -79,8 +71,15 @@ export default function LandingPage() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
           >
-            Beyond coding, I love mentoring developers, speaking at tech events,
-            and contributing to open-source communities.
+            Beyond engineering, I’m active in open-source communities and love mentoring through <b>Outreachy</b>, <b>She Code Africa</b>, and speaking at tech events. I’m known for delivering thoughtful, empathy-based solutions, uplifting others, and always learning out loud.
+          </motion.p>
+          <motion.p
+            className="text-xl text-gray-500 dark:text-gray-300 text-justify"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+          >
+            Next, I’m deepening my skills in <b>NLP</b> and <b>LLMs</b> to become the kind of developer who not only understands AI fundamentals but can <b>bridge the gap between AI and modern web development</b>. I’m building smart assistants, emotional AI tools, intelligent web features like recommendation systems and semantic search - solutions make tech more responsive, helpful, and human. My long-term goal is to grow into an <b>Engineering Manager</b>, driving meaningful innovation at the intersection of <b>AI, web, and global impact</b>.
           </motion.p>
           <motion.p
             className="text-2xl text-justify"

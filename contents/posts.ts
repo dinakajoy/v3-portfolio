@@ -13,7 +13,7 @@ export const articles = [
   {
     id: 15,
     title:
-      "A Beginner’s Note on Natural Language Processing:Lessons from My Journey",
+      "A Beginner’s Note on Natural Language Processing",
     readTime: "~5mins",
     tags: ["nlp", "artificial-intelligence", "beginners", "webdev"],
     link: "https://dev.to/dinakajoy/a-beginners-note-on-natural-language-processing-key-takeaways-46ap",
@@ -24,7 +24,7 @@ export const articles = [
   {
     id: 14,
     title:
-      "Can Machine Learning Predict Who Needs Mental Health Support? A Beginner-Friendly Walkthrough",
+      "First ML Model: Can ML Predict Who Needs Mental Health Support?",
     readTime: "~4mins",
     tags: ["datascience", "artificial-intelligence", "mental-health"],
     link: "https://dev.to/dinakajoy/data-science-workflow-my-first-ml-project-on-mental-health-treatment-11gn",
@@ -44,7 +44,7 @@ export const articles = [
   },
   {
     id: 12,
-    title: "A Beginner’s Note on Deep Learning: Lessons from My Journey",
+    title: "A Beginner’s Note on Deep Learning",
     readTime: "~6mins",
     tags: ["webdev", "artificial-intelligence", "deep-learning"],
     link: "https://dev.to/dinakajoy/a-beginners-note-on-deep-learning-lessons-from-my-journey-1lk",
@@ -54,7 +54,7 @@ export const articles = [
   },
   {
     id: 11,
-    title: "A Beginner’s Note on Machine Learning: Lessons from My Journey",
+    title: "A Beginner’s Note on Machine Learning",
     readTime: "~7mins",
     tags: ["machine-learning", "artificial-intelligence"],
     link: "https://dev.to/dinakajoy/a-beginners-note-on-machine-learning-lessons-from-my-journey-51ke",
@@ -85,7 +85,7 @@ export const articles = [
   },
   {
     id: 8,
-    title: "Message Brokers Explained: When and Why For Your System",
+    title: "Messaging Systems: Why Message Brokers",
     readTime: "~4mins",
     tags: ["webdev", "pubsub", "programming"],
     link: "https://dev.to/dinakajoy/message-brokers-explained-when-and-why-for-your-system-5b82",
@@ -104,17 +104,17 @@ export const articles = [
       "The choice between Microservices, Monolithic, and Modular Architecture can significantly impact development speed, scalability, and maintainability...",
     date: "February 24, 2025",
   },
-  {
-    id: 6,
-    title:
-      "Mastering Programming: The Essential Guide to Coding, Problem-Solving, and Writing Clean Code",
-    readTime: "~3mins",
-    tags: ["webdev", "programming", "learning"],
-    link: "https://dev.to/dev-odinakajoy/mastering-programming-the-essential-guide-to-coding-problem-solving-and-writing-clean-code-5bk7",
-    excerpt:
-      "Mastering Programming - Programming is more than just writing code, it is about problem-solving, logic, and structuring your thoughts efficiently...",
-    date: "February 15, 2025",
-  },
+  // {
+  //   id: 6,
+  //   title:
+  //     "Mastering Programming: The Essential Guide to Coding, Problem-Solving, and Writing Clean Code",
+  //   readTime: "~3mins",
+  //   tags: ["webdev", "programming", "learning"],
+  //   link: "https://dev.to/dev-odinakajoy/mastering-programming-the-essential-guide-to-coding-problem-solving-and-writing-clean-code-5bk7",
+  //   excerpt:
+  //     "Mastering Programming - Programming is more than just writing code, it is about problem-solving, logic, and structuring your thoughts efficiently...",
+  //   date: "February 15, 2025",
+  // },
   {
     id: 5,
     title:

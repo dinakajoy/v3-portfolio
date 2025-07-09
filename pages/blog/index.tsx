@@ -112,7 +112,7 @@ export default function BlogPage() {
           </div>
 
           {/* Desktop Tags Sidebar */}
-          <div className="hidden md:block w-full md:w-1/3 bg-white dark:bg-gray-800 p-4 rounded-lg h-full mb-8 md:mb-0">
+          <div className="hidden md:block w-full md:w-1/3 bg-white dark:bg-gray-800 p-4 rounded-lg mb-8 md:mb-0 sticky top-4 self-start">
             <h2 className="text-xl font-semibold mb-3">Tags</h2>
             <ul>
               {uniqueTags.map((tag, index) => (
