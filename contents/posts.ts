@@ -1,5 +1,16 @@
 export const articles = [
   {
+    id: 17,
+    title:
+      "Build AI That Does More: Using Function Calling with OpenAI",
+    readTime: "~4mins",
+    tags: ["llms", "artificial-intelligence", "openai"],
+    link: "https://dev.to/dinakajoy/build-ai-that-does-more-using-function-calling-with-openai-i0g",
+    excerpt:
+      "We know that Large Language Models (LLMs) can generate human-like text. But what if we want our LLM-powered app to do more than chat? Like extract structured data, trigger logic, or interact with APIs? ...",
+    date: "June 25, 2025",
+  },
+  {
     id: 16,
     title:
       "A Beginner’s Guide to LLMs: How to Use Language Models to Build Smart Apps",
@@ -13,7 +24,7 @@ export const articles = [
   {
     id: 15,
     title:
-      "A Beginner’s Note on Natural Language Processing",
+      "Understanding the Building Blocks of Natural Language Processing (NLP)",
     readTime: "~5mins",
     tags: ["nlp", "artificial-intelligence", "beginners", "webdev"],
     link: "https://dev.to/dinakajoy/a-beginners-note-on-natural-language-processing-key-takeaways-46ap",
@@ -24,7 +35,7 @@ export const articles = [
   {
     id: 14,
     title:
-      "First ML Model: Can ML Predict Who Needs Mental Health Support?",
+      "Implementing the Data Science Workflow: Predicting Mental Health Treatment",
     readTime: "~4mins",
     tags: ["datascience", "artificial-intelligence", "mental-health"],
     link: "https://dev.to/dinakajoy/data-science-workflow-my-first-ml-project-on-mental-health-treatment-11gn",
@@ -44,7 +55,7 @@ export const articles = [
   },
   {
     id: 12,
-    title: "A Beginner’s Note on Deep Learning",
+    title: "Understanding the Building Blocks of Deep Learning",
     readTime: "~6mins",
     tags: ["webdev", "artificial-intelligence", "deep-learning"],
     link: "https://dev.to/dinakajoy/a-beginners-note-on-deep-learning-lessons-from-my-journey-1lk",
@@ -54,7 +65,7 @@ export const articles = [
   },
   {
     id: 11,
-    title: "A Beginner’s Note on Machine Learning",
+    title: "Understanding the Building Blocks of Machine Learning",
     readTime: "~7mins",
     tags: ["machine-learning", "artificial-intelligence"],
     link: "https://dev.to/dinakajoy/a-beginners-note-on-machine-learning-lessons-from-my-journey-51ke",
@@ -70,7 +81,7 @@ export const articles = [
     tags: ["webdev", "machine-learning", "artificial-intelligence"],
     link: "https://dev.to/dinakajoy/my-journey-into-ai-understanding-the-building-blocks-of-artificial-intelligence-321a",
     excerpt:
-      "After a career break, while playing around with ideas to rebrand and upskill, the concept of building smart solutions with AI really stood out. I want to go from using AI tools to building with them...",
+      "During a career break, while playing around with ideas to rebrand and upskill, the concept of building smart solutions with AI really stood out. I want to go from using AI tools to building with them...",
     date: "May 4, 2025",
   },
   {
@@ -96,7 +107,7 @@ export const articles = [
   {
     id: 7,
     title:
-      "Microservices vs Monolithic vs Modular Architecture: Choosing the Right Approach",
+      "Monolithic vs Microservices vs Modular Architecture: Choosing the Right Approach",
     readTime: "~3mins",
     tags: ["webdev", "architecture", "learning"],
     link: "https://dev.to/dev-odinakajoy/microservices-vs-monolithic-vs-modular-architecture-choosing-the-right-approach-1jn7",
@@ -118,7 +129,7 @@ export const articles = [
   {
     id: 5,
     title:
-      "Session vs Token-Based Authentication: Which One Should You Choose?",
+      "Session-Based vs Token-Based Authentication: Which One Should You Choose?",
     readTime: "~4mins",
     tags: ["authentication", "programming", "learning"],
     link: "https://dev.to/dev-odinakajoy/session-vs-token-based-authentication-which-one-should-you-choose-hcj",

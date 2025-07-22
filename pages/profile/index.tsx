@@ -60,10 +60,8 @@ export default function LandingPage() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            I specialize in <b>JavaScript/TypeScript - Node.js, Express, React, and Next.js</b>, currently expanding into <b>Python</b> to deepen my AI
-            integration work and exploring <b>OCaml</b> for functional web development. I have worked on meaningful projects across industries: from
-            building ERP systems and LMS for local businesses to contributing to the
-            OCaml ecosystem through Outreachy and Tarides and most recently, AcceleratorApp - to build a startup incubation platform.
+            I specialize in <b>JavaScript/TypeScript - Node.js, Express, React, and Next.js</b>, expanding into <b>Python</b> for AI
+            integration and exploring <b>OCaml</b> for functional web development. I have worked on meaningful projects across industries - ERP and LMS for local businesses, developer tools for the OCaml ecosystem via Outreachy and Tarides, and a B2B SaaS platform for startup incubation at AcceleratorApp.
           </motion.p>
           <motion.p
             className="text-xl text-gray-500 dark:text-gray-300 text-justify"
@@ -79,7 +77,7 @@ export default function LandingPage() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
           >
-            Next, I’m deepening my skills in <b>NLP</b> and <b>LLMs</b> to become the kind of developer who not only understands AI fundamentals but can <b>bridge the gap between AI and modern web development</b>. I’m building smart assistants, emotional AI tools, intelligent web features like recommendation systems and semantic search - solutions make tech more responsive, helpful, and human. My long-term goal is to grow into an <b>Engineering Manager</b>, driving meaningful innovation at the intersection of <b>AI, web, and global impact</b>.
+            Next, I’m deepening my skills in <b>NLP</b> and <b>LLMs</b> to integrate smart AI features into modern web applications. I’m building smart assistants, emotional AI tools, intelligent web features like recommendation systems and semantic search - solutions that make tech more responsive, helpful, and human. My long-term goal is to grow into an <b>Engineering Manager</b>, driving global impact and meaningful innovation at the intersection of <b>AI and web development</b>.
           </motion.p>
           <motion.p
             className="text-2xl text-justify"
@@ -114,7 +112,7 @@ export default function LandingPage() {
                   JavaScript (TypeScript, React.js, Next.js, Node.js,
                   Express.js)
                 </li>
-                <li>OCaml - Web (Js-of-OCaml, Brr, Dream)</li>
+                <li>OCaml - Web (JS-of-OCaml, Brr, Dream)</li>
                 <li>Databases (MongoDB, PostgreSQL, Firebase)</li>
                 <li>System Design, Performance Optimization</li>
                 <li>AI - NLP focused, LLM Integration</li>
@@ -137,9 +135,10 @@ export default function LandingPage() {
             >
               <h2 className="text-xl font-semibold mb-2">Work History</h2>
               <ul className="list-disc list-inside text-gray-600 dark:text-gray-400  text-md">
-                <li>Web Developer – AcceleratorApp (2022 - 2024)</li>
+                <li>Career Break – Professional Development (Jan - July)</li>
+                <li>Software Engineer – AcceleratorApp (2022 - 2024)</li>
                 <li>Software Engineer Intern – Tarides (2022)</li>
-                <li>Outreachy Intern – OCaml (2021)</li>
+                <li>Outreachy Intern – OCaml Labs(2021)</li>
                 <li>Web Developer – Loctech Nigeria Limited (2020)</li>
                 <li>Web Engineer II – Codelab Projects (2019 - 2020)</li>
               </ul>

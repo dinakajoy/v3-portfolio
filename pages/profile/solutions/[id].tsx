@@ -47,10 +47,31 @@ export default function ProjectDetailPage({ project }: ProjectPageProps) {
             {project.title}
           </motion.h2>
 
-          <section className="mb-4">
-            <p className="text-lg text-gray-500 dark:text-gray-400 mb-4">
+          <section className="mb-1">
+            <p className="text-lg text-gray-500 dark:text-gray-400">
               {project.description}
             </p>
+          </section>
+
+          <section className="flex flex-wrap gap-4 mb-4">
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-6 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-gray-700"
+            >
+              View Code
+            </a>
+            {project.liveLink && (
+              <a
+                href={project.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-6 bg-gray-400 text-white px-4 py-2 rounded-lg hover:bg-gray-700"
+              >
+                View Project
+              </a>
+            )}
           </section>
 
           <section className="mb-4">
@@ -106,27 +127,6 @@ export default function ProjectDetailPage({ project }: ProjectPageProps) {
               className="w-[50%] h-auto rounded-lg shadow-md"
               loading="lazy"
             />
-          </section>
-
-          <section className="flex flex-wrap gap-4 mt-2">
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-6 bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-700"
-            >
-              View Code
-            </a>
-            {project.liveLink && (
-              <a
-                href={project.liveLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-6 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700"
-              >
-                View Project
-              </a>
-            )}
           </section>
         </div>
       </div>
