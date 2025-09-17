@@ -27,7 +27,7 @@ export function Footer() {
   return (
     <footer
       className={`max-w-6xl mx-auto border-t border-t-cyan-600 ${
-        isDarkMode ? "text-white" : "text-gray-700"
+        isDarkMode ? "text-white" : "text-gray-600"
       } pt-8 flex flex-col items-center`}
     >
       <motion.h2

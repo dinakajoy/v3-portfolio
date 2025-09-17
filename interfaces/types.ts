@@ -34,3 +34,12 @@ export interface ISolution {
   dashboard: string;
   gif?: string;
 }
+
+export interface IProjectDetails {
+  title: string;
+  description: string;
+  tech: string[];
+  link: string;
+  liveLink: string;
+  demo: string;
+}

@@ -1,17 +1,72 @@
 export const articles = [
   {
-    id: 17,
+    id: 23,
     title:
-      "Build AI That Does More: Using Function Calling with OpenAI",
+      "Running Machine Learning Models in the Browser Using onnxruntime-web",
+    readTime: "~4mins",
+    tags: ["deploy-model", "artificial-intelligence", "webdev"],
+    link: "https://dev.to/dinakajoy/running-machine-learning-models-in-the-browser-using-onnxruntime-web-3klc",
+    excerpt:
+      "Most machine learning models live on the backend, meaning every prediction requires a server call. But I wanted to run my model directly in the browser, because it will be faster, private, and without extra infrastructure....",
+    date: "September 5, 2025",
+  },
+  {
+    id: 22,
+    title:
+      "How To Use LLMs: Advanced Prompting Techniques + Framework for Reliable LLM Outputs",
+    readTime: "~4mins",
+    tags: ["llms", "artificial-intelligence", "prompt-engineering"],
+    link: "https://dev.to/dinakajoy/how-to-use-llms-advanced-prompting-techniques-framework-for-reliable-llm-outputs-57ed",
+    excerpt:
+      "Most Prompt Engineering tutorials stop at zero-shot vs few-shot. But when you are building real systems, you need prompts that are reliable, reusable, and testable....",
+    date: "September 4, 2025",
+  },
+  {
+    id: 21,
+    title:
+      "How To Use LLMs: Retrieval-Augmented Generation (RAG Systems)",
+    readTime: "~4mins",
+    tags: ["llms", "artificial-intelligence", "RAG"],
+    link: "https://dev.to/dinakajoy/how-to-use-llms-retrieval-augmented-generation-rag-systems-2dmm",
+    excerpt:
+      "RAG (Retrieval-Augmented Generation) is one of the most practical ways developers are applying LLMs today. It’s a way of improving Large Language Models (LLMs) by combining Retrieval and Generation....",
+    date: "August 29, 2025",
+  },
+  {
+    id: 20,
+    title:
+      "How To Use LLMs: Fine-Tuning GPT-4",
+    readTime: "~4mins",
+    tags: ["llms", "artificial-intelligence", "fine-tuning"],
+    link: "https://dev.to/dinakajoy/fine-tuning-gpt-4-customizing-llms-to-fit-our-unique-need-145h",
+    excerpt:
+      "With fine-tuning, you teach LLMs to speak your language, follow your rules, and deliver answers that are custom-built for your needs. You get to tailor LLM responses to your tone, jargon, or exact way of doing things....",
+    date: "August 12, 2025",
+  },
+  {
+    id: 19,
+    title:
+      "How To Use LLMs: Prompt Engineering - A Practical Guide for Beginners",
+    readTime: "~4mins",
+    tags: ["llms", "artificial-intelligence", "prompt-engineering"],
+    link: "https://dev.to/dinakajoy/prompt-engineering-how-to-talk-to-llms-so-they-work-better-16d4",
+    excerpt:
+      "LLMs are very powerful assistants but need smart instructions to produce quality results and the quality of what we get depends on how we ask....",
+    date: "July 24, 2025",
+  },
+  {
+    id: 18,
+    title:
+      "How To Use LLMs: Tool Use/Function Call with OpenAI",
     readTime: "~4mins",
     tags: ["llms", "artificial-intelligence", "openai"],
     link: "https://dev.to/dinakajoy/build-ai-that-does-more-using-function-calling-with-openai-i0g",
     excerpt:
-      "We know that Large Language Models (LLMs) can generate human-like text. But what if we want our LLM-powered app to do more than chat? Like extract structured data, trigger logic, or interact with APIs? ...",
-    date: "June 25, 2025",
+      "We know that Large Language Models (LLMs) can generate human-like text. But what if we want our LLM-powered app to do more than chat? Like extract structured data, trigger logic, or interact with APIs?....",
+    date: "July 22, 2025",
   },
   {
-    id: 16,
+    id: 17,
     title:
       "A Beginner’s Guide to LLMs: How to Use Language Models to Build Smart Apps",
     readTime: "~4mins",
@@ -22,9 +77,9 @@ export const articles = [
     date: "June 25, 2025",
   },
   {
-    id: 15,
+    id: 16,
     title:
-      "Understanding the Building Blocks of Natural Language Processing (NLP)",
+      "My Journey into AI: Natural Language Processing (NLP)",
     readTime: "~5mins",
     tags: ["nlp", "artificial-intelligence", "beginners", "webdev"],
     link: "https://dev.to/dinakajoy/a-beginners-note-on-natural-language-processing-key-takeaways-46ap",
@@ -33,7 +88,7 @@ export const articles = [
     date: "June 22, 2025",
   },
   {
-    id: 14,
+    id: 15,
     title:
       "Implementing the Data Science Workflow: Predicting Mental Health Treatment",
     readTime: "~4mins",
@@ -44,7 +99,7 @@ export const articles = [
     date: "June 8, 2025",
   },
   {
-    id: 13,
+    id: 14,
     title: "A Beginner’s Guide to the Data Science Workflow",
     readTime: "~7mins",
     tags: ["datascience", "artificial-intelligence", "programming"],
@@ -54,8 +109,8 @@ export const articles = [
     date: "June 3, 2025",
   },
   {
-    id: 12,
-    title: "Understanding the Building Blocks of Deep Learning",
+    id: 13,
+    title: "My Journey into AI: Understanding the Building Blocks of Deep Learning (NLP Focused)",
     readTime: "~6mins",
     tags: ["webdev", "artificial-intelligence", "deep-learning"],
     link: "https://dev.to/dinakajoy/a-beginners-note-on-deep-learning-lessons-from-my-journey-1lk",
@@ -64,8 +119,8 @@ export const articles = [
     date: "May 31, 2025",
   },
   {
-    id: 11,
-    title: "Understanding the Building Blocks of Machine Learning",
+    id: 12,
+    title: "My Journey into AI: Understanding the Building Blocks of Machine Learning",
     readTime: "~7mins",
     tags: ["machine-learning", "artificial-intelligence"],
     link: "https://dev.to/dinakajoy/a-beginners-note-on-machine-learning-lessons-from-my-journey-51ke",
@@ -74,7 +129,7 @@ export const articles = [
     date: "May 10, 2025",
   },
   {
-    id: 10,
+    id: 11,
     title:
       "My Journey into AI: Understanding the Building Blocks of Artificial Intelligence",
     readTime: "~5mins",
@@ -85,8 +140,8 @@ export const articles = [
     date: "May 4, 2025",
   },
   {
-    id: 9,
-    title: "Not Starting Over – My Tech Journey",
+    id: 10,
+    title: "My Tech Journey So Far",
     readTime: "~3mins",
     tags: ["webdev", "gratitude", "growth", "women-in-tech"],
     link: "https://dev.to/dinakajoy/not-starting-over-my-tech-journey-3e6p",
@@ -95,8 +150,18 @@ export const articles = [
     date: "May 3, 2025",
   },
   {
+    id: 9,
+    title: "The Beginner’s Guide to Software Engineering",
+    readTime: "~5mins",
+    tags: ["webdev", "gratitude", "growth", "women-in-tech"],
+    link: "https://dev.to/dinakajoy/the-beginners-guide-to-software-engineering-j0h",
+    excerpt:
+      "Software Engineering is more than code. It’s about solving real-world problems with well-structured, scalable, and maintainable solutions....",
+    date: "May 3, 2025",
+  },
+  {
     id: 8,
-    title: "Messaging Systems: Why Message Brokers",
+    title: "Decouple Your Backend: A Beginner’s Guide to Message Brokers",
     readTime: "~4mins",
     tags: ["webdev", "pubsub", "programming"],
     link: "https://dev.to/dinakajoy/message-brokers-explained-when-and-why-for-your-system-5b82",
@@ -107,7 +172,7 @@ export const articles = [
   {
     id: 7,
     title:
-      "Monolithic vs Microservices vs Modular Architecture: Choosing the Right Approach",
+      "Monolithic vs Modular vs Microservices Architecture: Choosing the Right Approach",
     readTime: "~3mins",
     tags: ["webdev", "architecture", "learning"],
     link: "https://dev.to/dev-odinakajoy/microservices-vs-monolithic-vs-modular-architecture-choosing-the-right-approach-1jn7",
@@ -115,21 +180,21 @@ export const articles = [
       "The choice between Microservices, Monolithic, and Modular Architecture can significantly impact development speed, scalability, and maintainability...",
     date: "February 24, 2025",
   },
-  // {
-  //   id: 6,
-  //   title:
-  //     "Mastering Programming: The Essential Guide to Coding, Problem-Solving, and Writing Clean Code",
-  //   readTime: "~3mins",
-  //   tags: ["webdev", "programming", "learning"],
-  //   link: "https://dev.to/dev-odinakajoy/mastering-programming-the-essential-guide-to-coding-problem-solving-and-writing-clean-code-5bk7",
-  //   excerpt:
-  //     "Mastering Programming - Programming is more than just writing code, it is about problem-solving, logic, and structuring your thoughts efficiently...",
-  //   date: "February 15, 2025",
-  // },
+  {
+    id: 6,
+    title:
+      "Mastering Programming: The Essential Guide to Coding and Problem-Solving",
+    readTime: "~3mins",
+    tags: ["webdev", "programming", "learning"],
+    link: "https://dev.to/dev-odinakajoy/mastering-programming-the-essential-guide-to-coding-problem-solving-and-writing-clean-code-5bk7",
+    excerpt:
+      "Mastering Programming - Programming is more than just writing code, it is about problem-solving, logic, and structuring your thoughts efficiently...",
+    date: "February 15, 2025",
+  },
   {
     id: 5,
     title:
-      "Session-Based vs Token-Based Authentication: Which One Should You Choose?",
+      "Session vs Token-Based Auth: A Developer’s Guide to Choosing Wisely",
     readTime: "~4mins",
     tags: ["authentication", "programming", "learning"],
     link: "https://dev.to/dev-odinakajoy/session-vs-token-based-authentication-which-one-should-you-choose-hcj",

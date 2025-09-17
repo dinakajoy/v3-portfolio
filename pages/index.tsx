@@ -1,76 +1,96 @@
-import Link from "next/link";
+import Layout from "@/components/layout";
 import { motion } from "framer-motion";
-import {
-  FaChalkboard,
-  FaDirections,
-  FaStickyNote,
-  FaUserNinja,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
-export default function LandingPage() {
+export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 text-gray-700 dark:bg-gray-900 dark:text-slate-50">
-      <motion.h1
-        className="text-5xl font-bold text-center mb-4 text-gray-700 dark:text-gray-200"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        Odinaka Joy
-      </motion.h1>
-      <motion.h2
-        className="text-2xl text-gray-900 dark:text-gray-400 text-center"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-      >
-        Software Engineer | Backend Developer (AI-Powered Solutions)
-      </motion.h2>
-      <motion.p
-        className="text-lg text-gray-900 dark:text-gray-400 text-center mb-6"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-      >
-        I build intelligent web experiences with AI & scalable software
-        solutions.
-      </motion.p>
+    <Layout>
+      <section className="flex flex-col items-center justify-center px-6 py-12">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center max-w-3xl"
+        >
+          {/* Greeting and Name */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4"
+          >
+            Hi, I’m{" "}
+            <span className="text-yellow-600 dark:text-yellow-400">
+              Odinaka Joy
+            </span>
+          </motion.h1>
 
-      <motion.div
-        className="flex space-x-4 row-start-3 gap-6 flex-wrap items-center justify-center"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.8 }}
-      >
-        <Link
-          href="/profile"
-          className="flex items-center gap-2 px-4 py-2 rounded-lg text-xl transition font-semibold text-gray-100 bg-[#0ea5e9] hover:bg-gray-600"
-        >
-          <FaUserNinja className="size-3"/>
-          Profile
-        </Link>
-        <Link
-          href="/blog"
-          className="flex items-center gap-2 px-4 py-2 rounded-lg text-xl transition font-semibold text-gray-100 bg-[#0ea5e9] hover:bg-gray-600"
-        >
-          <FaStickyNote className="size-3"/>
-          Blog
-        </Link>
-        <Link
-          href="/guides"
-          className="flex items-center gap-2 px-4 py-2 rounded-lg text-xl transition font-semibold text-gray-100 bg-[#0ea5e9] hover:bg-gray-600"
-        >
-          <FaDirections className="size-3"/>
-          Guides
-        </Link>
-        <Link
-          href="/techtomes"
-          className="flex items-center gap-2 px-4 py-2 rounded-lg text-xl transition font-semibold text-gray-100 bg-[#0ea5e9] hover:bg-gray-600"
-        >
-          <FaChalkboard className="size-3"/>
-          Tech Tomes
-        </Link>
-      </motion.div>
-    </div>
+          {/* Short Bio */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-6"
+          >
+            Backend developer passionate about{" "}
+            <span className="font-semibold">AI</span>,{" "}
+            <span className="font-semibold">developer tools</span>, and{" "}
+            <span className="font-semibold">open source</span>. Experienced with{" "}
+            <span className="font-semibold">Node.js</span>,{" "}
+            <span className="font-semibold">OCaml</span>, and{" "}
+            <span className="font-semibold">AI-powered web applications</span>.
+          </motion.p>
+
+          {/* Socials */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+            className="flex items-center justify-center gap-6 mb-8"
+          >
+            <a
+              href="https://github.com/dinakajoy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-700 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-400 text-2xl"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="https://linkedin.com/in/dinakajoy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-700 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-400 text-2xl"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://twitter.com/dinakajoy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-700 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-400 text-2xl"
+            >
+              <FaTwitter />
+            </a>
+          </motion.div>
+
+          {/* Intro Video */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
+            className="aspect-video max-w-2xl mx-auto shadow-lg rounded-xl overflow-hidden"
+          >
+            <iframe
+              src="https://www.youtube.com/embed/your-video-id"
+              title="Intro video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            />
+          </motion.div>
+        </motion.div>
+      </section>
+    </Layout>
   );
 }

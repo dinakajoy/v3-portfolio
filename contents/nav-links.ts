@@ -1,18 +1,22 @@
 export const NAVLINKS = [
   {
-    title: "Profile",
-    href: "/profile",
+    title: "About",
+    href: "/about-me",
+  },
+  {
+    title: "Projects",
+    href: "/my-works",
   },
   {
     title: "Blog",
     href: "/blog",
   },
   {
-    title: "Guides",
-    href: "/guides",
+    title: "Talks",
+    href: "/talks",
   },
   {
-    title: "TechTomes",
-    href: "/techtomes",
+    title: "Contact",
+    href: "/contact-me",
   },
 ];

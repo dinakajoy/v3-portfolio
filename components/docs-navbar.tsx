@@ -1,18 +1,11 @@
 import Link from "next/link";
 import Anchor from "./anchor";
 import { SheetLeftbar } from "./leftbar";
-import AlgoliaSearch from "./algolia-search";
 import { buttonVariants } from "@/components/ui/button";
 import { SheetClose } from "@/components/ui/sheet";
 import { ModeToggle } from "@/components/theme-toggle";
 import { NAVLINKS } from "@/contents/nav-links";
 import { socials } from "./footer";
-
-const algolia_props = {
-  appId: process.env.ALGOLIA_APP_ID!,
-  indexName: process.env.ALGOLIA_INDEX!,
-  apiKey: process.env.ALGOLIA_SEARCH_API_KEY!,
-};
 
 export function Navbar({ menu }: { menu?: React.ReactNode }) {
   return (
