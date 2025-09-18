@@ -81,13 +81,23 @@ export default function Home() {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="aspect-video max-w-2xl mx-auto shadow-lg rounded-xl overflow-hidden"
           >
-            <iframe
-              src="https://youtu.be/_diInGGSMDg"
-              title="Intro video"
+            {/* <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/_diInGGSMDg"
+              title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            ></iframe> */}
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/_diInGGSMDg?si=6WSKpG-aLKMBY3P2"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
-              className="w-full h-full"
-            />
+            ></iframe>
           </motion.div>
         </motion.div>
       </section>
