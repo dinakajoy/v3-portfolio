@@ -82,7 +82,7 @@ export default function Home() {
             className="aspect-video max-w-2xl mx-auto shadow-lg rounded-xl overflow-hidden"
           >
             <iframe
-              src="https://www.youtube.com/embed/your-video-id"
+              src="https://youtu.be/_diInGGSMDg"
               title="Intro video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

@@ -11,9 +11,8 @@ import {
 import Layout from "@/components/layout";
 
 export default function ContactPage() {
-  // TODO: replace these with your real contact details
   const EMAIL = "odinakajoy@gmail.com";
-  const RESUME_LINK = "/resume.pdf";
+  const RESUME_LINK = "/dinakajoy-cv.pdf";
   const GITHUB = "https://github.com/dinakajoy";
   const LINKEDIN = "https://linkedin.com/in/dinakajoy";
   const TWITTER = "https://twitter.com/dinakajoy";
@@ -26,7 +25,6 @@ export default function ContactPage() {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
-      // ignore; user can still click mailto link
       setCopied(false);
     }
   }

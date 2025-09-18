@@ -19,7 +19,7 @@ export default function About() {
             About Me
           </motion.h2>
 
-          {/* About Me Story */}
+          {/* About Me */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

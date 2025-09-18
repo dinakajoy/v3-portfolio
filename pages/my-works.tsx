@@ -38,7 +38,7 @@ export default function Projects() {
             ))}
           </div>
 
-          {/* Mentions */}
+          {/* Explorations */}
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -62,16 +62,6 @@ export default function Projects() {
                 <p className="text-gray-700 dark:text-gray-300 mb-3">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {/* {project.tech.map((t, idx) => (
-                  <span
-                    key={idx}
-                    className="px-3 py-1 text-sm bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300 rounded-full"
-                  >
-                    {t}
-                  </span>
-                ))} */}
-                </div>
                 <a
                   href={project.link}
                   target="_blank"
