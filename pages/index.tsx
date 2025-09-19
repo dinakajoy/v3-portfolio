@@ -79,25 +79,17 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.8 }}
-            className="aspect-video max-w-2xl mx-auto shadow-lg rounded-xl overflow-hidden"
+            className="aspect-video mx-auto shadow-lg rounded-xl relative w-full overflow-hidden pb-[56.25%]"
           >
-            {/* <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/_diInGGSMDg"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            ></iframe> */}
             <iframe
-              width="560"
-              height="315"
+              className="absolute top-0 left-0 h-full w-full"
               src="https://www.youtube.com/embed/_diInGGSMDg?si=6WSKpG-aLKMBY3P2"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
-            ></iframe>
+            />
           </motion.div>
         </motion.div>
       </section>

@@ -43,7 +43,8 @@ export default function ContactPage() {
               Get in touch
             </h1>
             <p className="mt-3 text-gray-600 dark:text-gray-300">
-              You can reach out via email or LinkedIn, your choince. I typically respond within a few days. No forms, just direct messages.
+              You can reach out via email or LinkedIn, your choince. I typically
+              respond within a few days. No forms, just direct messages.
             </p>
           </header>
 
@@ -77,7 +78,9 @@ export default function ContactPage() {
               </div>
 
               <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
-                Tip: For Portfolio inquiry, you can also attach your CV when emailing. Mention "Portfolio inquiry" in the subject so I don't miss it.
+                Tip: For Portfolio inquiry, you can also attach your CV when
+                emailing. Mention "Portfolio inquiry" in the subject so I don't
+                miss it.
               </p>
             </div>
 
@@ -145,7 +148,7 @@ export default function ContactPage() {
             className="mt-12 text-center"
           >
             <p className="text-gray-700 dark:text-gray-300">
-              Or check out my work - {" "}
+              Or check out my work -{" "}
               <a
                 href={GITHUB}
                 target="_blank"

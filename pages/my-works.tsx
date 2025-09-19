@@ -8,10 +8,7 @@ import { FaGithub } from "react-icons/fa";
 export default function Projects() {
   return (
     <Layout>
-      <section
-        id="projects"
-        className="min-h-screen px-6 py-16"
-      >
+      <section id="projects" className="min-h-screen px-6 py-16">
         <div className="max-w-5xl mx-auto">
           {/* Section Title */}
           <motion.h2

@@ -24,7 +24,8 @@ export default function TalksPage() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          Recordings, slides, and keynotes from past presentations. Also open to more speaking engagements -{" "}
+          Recordings, slides, and keynotes from past presentations. Also open to
+          more speaking engagements -{" "}
           <Link
             href="mailto:dinakajoy@gmail.com"
             className="text-yellow-600 dark:text-yellow-400 underline"
