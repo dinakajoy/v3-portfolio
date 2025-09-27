@@ -54,34 +54,34 @@ export default function About() {
           <div className="relative border-l border-gray-300 dark:border-gray-700 pl-6 space-y-10">
             {[
               {
-                role: "Backend Developer",
+                role: "Sofware Engineer",
                 org: "AcceleratorApp",
                 period: "2022 – 2024",
-                desc: "Built incubation management tools for startups and accelerators.",
+                desc: "Built incubation management tools for startups and accelerators. Technologies: TypeScript, React.js, Node.js, Express.js, PostgreSQL, MongoDB",
               },
               {
                 role: "OCaml Intern",
                 org: "Tarides",
                 period: "2022",
-                desc: "Worked on OCaml developer tools, Irmin (Git-like database), and GraphQL APIs.",
+                desc: "Worked on OCaml developer tools, Irmin (Git-like database), and GraphQL APIs. Technologies: OCaml, GraphQL, Git",
               },
               {
                 role: "Intern & Mentor",
                 org: "Outreachy",
                 period: "Intern (2021), Mentor (2022 – 2024)",
-                desc: "Contributed to the OCaml ecosystem and guided new contributors.",
+                desc: "Contributed to the OCaml ecosystem and guided new contributors. Technologies: OCaml, Dune, Opam",
               },
               {
-                role: "Team Lead & Backend Developer",
+                role: "Team Lead & Sofware Developer",
                 org: "Loctech IT Solutions",
                 period: "2020",
-                desc: "Led a small team to build an ERP system with JavaScript.",
+                desc: "Led a small team to build an ERP system with JavaScript. Technologies: JavaScript, React.js, Node.js, Express.js, MongoDB",
               },
               {
                 role: "Web Engineer II",
                 org: "Codelab LLC",
                 period: "2020",
-                desc: "Worked on client projects using JavaScript and WordPress.",
+                desc: "Worked on client projects using JavaScript and WordPress. Technologies: JavaScript, WordPress, PHP",
               },
             ].map((item, i) => (
               <motion.div

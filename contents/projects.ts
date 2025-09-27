@@ -65,12 +65,6 @@ export const mentions = [
     link: "https://github.com/dinakajoy/teamcollab-graphQL-API",
   },
   {
-    title: "Machine Learning Projects",
-    description:
-      "A collection of machine learning projects and experiments covering classification, regression, and soon, clustering. Designed to demonstrate core ML concepts, model evaluation, and real-world applications.",
-    link: "https://github.com/dinakajoy/projects-machine_learning_courses",
-  },
-  {
     title: "Mental Health Treatment Prediction",
     description:
       "A predictive machine learning model that explores healthcare data to forecast mental health treatment outcomes. Focuses on data preprocessing, feature engineering, and model training for real-world social impact.",
@@ -93,6 +87,12 @@ export const mentions = [
     description:
       "A Retrieval-Augmented Generation (RAG) implementation using large language models. Demonstrates how to combine external knowledge bases with LLMs for accurate, context-aware question answering.",
     link: "https://github.com/dinakajoy/UsingLLMs-RAG-course",
+  },
+  {
+    title: "Machine Learning Projects",
+    description:
+      "A collection of machine learning projects and experiments covering classification, regression, and soon, clustering. Designed to demonstrate core ML concepts, model evaluation, and real-world applications.",
+    link: "https://github.com/dinakajoy/projects-machine_learning_courses",
   },
 ];
 

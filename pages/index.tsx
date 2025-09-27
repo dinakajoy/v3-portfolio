@@ -32,8 +32,8 @@ export default function Home() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-6"
           >
-            Backend developer passionate about{" "}
-            <span className="font-semibold">AI</span>,{" "}
+            Software Engineer passionate about{" "}
+            <span className="font-semibold">backend and optimization</span>,{" "}
             <span className="font-semibold">developer tools</span>, and{" "}
             <span className="font-semibold">open source</span>. Experienced with{" "}
             <span className="font-semibold">Node.js</span>,{" "}
