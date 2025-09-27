@@ -36,6 +36,8 @@ export default function Home() {
             <span className="font-semibold">backend and optimization</span>,{" "}
             <span className="font-semibold">developer tools</span>, and{" "}
             <span className="font-semibold">open source</span>. Experienced with{" "}
+            <span className="font-semibold">React.js</span>,{" "}
+            <span className="font-semibold">Next.js</span>,{" "}
             <span className="font-semibold">Node.js</span>,{" "}
             <span className="font-semibold">OCaml</span>, and{" "}
             <span className="font-semibold">AI-powered web applications</span>.

@@ -31,10 +31,10 @@ export default function About() {
             led me into{" "}
             <span className="font-semibold">functional programming</span> and
             the OCaml ecosystem, where I worked on developer tools, databases,
-            and APIs. More recently, I’ve been exploring{" "}
+            and APIs. More recently, I have been exploring{" "}
             <span className="font-semibold">AI and Large Language Models</span>,
             combining them with my web development expertise to build
-            intelligent applications. Along the way, I’ve contributed to{" "}
+            intelligent applications. Along the way, I have contributed to{" "}
             <span className="font-semibold">open source</span>, mentored
             developers through She Codes Africa and Outreachy, trained people on
             the use of digital technologies for improvement, and spoken at
